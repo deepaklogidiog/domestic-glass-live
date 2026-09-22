@@ -51,11 +51,13 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 .ph-teal{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--teal);}
 .prod-section{padding:80px 0;border-bottom:1px solid var(--g200);}
 .prod-section:last-of-type{border-bottom:none;}
-.prod-header{margin-bottom:40px;}
+.prod-header{margin-bottom:0;}
 .prod-header h2{font-family:var(--fm);font-size:clamp(24px,3vw,36px);font-weight:300;color:var(--black);margin-top:14px;}
-.prod-header p{font-size:14px;color:var(--g600);margin-top:8px;max-width:600px;}
+.prod-header p{font-size:14px;color:var(--g600);margin-top:8px;max-width:520px;line-height:1.7;}
+.prod-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
 .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;}
 .prod-item{position:relative;overflow:hidden;cursor:pointer;background:var(--g100);aspect-ratio:1/1;}
+.prod-item.prod-visual{aspect-ratio:4/3;border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,.10);}
 .prod-item img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s ease;display:block;}
 .prod-item:hover img{transform:scale(1.05);}
 .prod-ov{position:absolute;inset:0;background:rgba(10,10,10,0);transition:background .3s;}
@@ -130,7 +132,7 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 .wa-fab{position:fixed;bottom:28px;right:28px;z-index:8000;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .22s,box-shadow .22s;text-decoration:none;}
 .wa-fab:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55);}
 @media(max-width:1024px){.prod-grid{grid-template-columns:repeat(3,1fr);}.ftg{grid-template-columns:1fr 1fr;}}
-@media(max-width:900px){.nl,.nr .btn-blk{display:none;}.hbg{display:flex;}.wrap,.nav{padding-left:24px;padding-right:24px;}.ph-inner{grid-template-columns:1fr;}.ph-img{display:none;}.prod-grid{grid-template-columns:repeat(3,1fr);}.scta-i{flex-direction:column;align-items:flex-start;}.pdf-inner{flex-direction:column;align-items:flex-start;}}
+@media(max-width:900px){.nl,.nr .btn-blk{display:none;}.hbg{display:flex;}.wrap,.nav{padding-left:24px;padding-right:24px;}.ph-inner{grid-template-columns:1fr;}.ph-img{display:none;}.prod-grid{grid-template-columns:repeat(3,1fr);}.prod-split{grid-template-columns:1fr;gap:28px;}.scta-i{flex-direction:column;align-items:flex-start;}.pdf-inner{flex-direction:column;align-items:flex-start;}}
 @media(max-width:640px){.wrap,.nav{padding-left:18px;padding-right:18px;}.prod-grid{grid-template-columns:repeat(2,1fr);}.ftg{grid-template-columns:1fr;}.fbb{flex-direction:column;align-items:flex-start;}.pdf-row{grid-template-columns:1fr;}.pdf-modal-body{padding:32px 20px 28px;}}</style>
 </head>
 <body>
@@ -211,14 +213,15 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 <!-- D40 -->
 <section class="prod-section">
   <div class="wrap">
-    <div class="prod-header rev">
+    <div class="prod-split">
+      <div class="prod-header rev">
       <span class="teal-bar"></span>
       <span class="eyebrow-g">Windows</span>
       <h2>D40 Window System</h2>
       <p>A versatile casement and sliding window system with a 40mm profile depth. Ideal for residential applications requiring slim sightlines.</p>
     </div>
-    <div class="prod-grid">
-      <div class="prod-item" onclick="lbOpen(d40,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Window-D40.JPG" alt="D40 Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>D40 Window System</span></div></div>
+      <div class="prod-item prod-visual" onclick="lbOpen(d40,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Window-D40.JPG" alt="D40 Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>D40 Window System</span></div>
+    </div>
     </div>
   </div>
 </section>
@@ -226,14 +229,15 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 <!-- GALENE GTi -->
 <section class="prod-section">
   <div class="wrap">
-    <div class="prod-header rev">
+    <div class="prod-split">
+      <div class="prod-header rev">
       <span class="teal-bar"></span>
       <span class="eyebrow-g">Windows</span>
       <h2>Galene GTi Window System</h2>
       <p>A high-performance tilt and turn window system offering excellent thermal and acoustic insulation. Suitable for high-rise and premium residential projects.</p>
     </div>
-    <div class="prod-grid">
-      <div class="prod-item" onclick="lbOpen(galene,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Window-GALENEGTi.JPG" alt="Galene GTi Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Galene GTi</span></div></div>
+      <div class="prod-item prod-visual" onclick="lbOpen(galene,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Window-GALENEGTi.JPG" alt="Galene GTi Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Galene GTi</span></div>
+    </div>
     </div>
   </div>
 </section>
@@ -241,14 +245,15 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 <!-- LOUVER -->
 <section class="prod-section">
   <div class="wrap">
-    <div class="prod-header rev">
+    <div class="prod-split">
+      <div class="prod-header rev">
       <span class="teal-bar"></span>
       <span class="eyebrow-g">Windows</span>
       <h2>Louver Window System</h2>
       <p>Horizontal louvred glass blades for maximum ventilation with privacy. Ideal for bathrooms, kitchens and utility spaces.</p>
     </div>
-    <div class="prod-grid">
-      <div class="prod-item" onclick="lbOpen(louver,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Louver.JPG" alt="Louver Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Louver System</span></div></div>
+      <div class="prod-item prod-visual" onclick="lbOpen(louver,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Louver.JPG" alt="Louver Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Louver System</span></div>
+    </div>
     </div>
   </div>
 </section>
@@ -256,14 +261,15 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 <!-- LUMEAL GAn -->
 <section class="prod-section">
   <div class="wrap">
-    <div class="prod-header rev">
+    <div class="prod-split">
+      <div class="prod-header rev">
       <span class="teal-bar"></span>
       <span class="eyebrow-g">Windows</span>
       <h2>Lumeal GAn Window System</h2>
       <p>A premium lift-and-slide window system delivering large glass panels with ultra-slim profiles. Maximises natural light and views.</p>
     </div>
-    <div class="prod-grid">
-      <div class="prod-item" onclick="lbOpen(lumeal,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Window-LUMEALGAn.JPG" alt="Lumeal GAn Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Lumeal GAn</span></div></div>
+      <div class="prod-item prod-visual" onclick="lbOpen(lumeal,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Window-LUMEALGAn.JPG" alt="Lumeal GAn Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Lumeal GAn</span></div>
+    </div>
     </div>
   </div>
 </section>
@@ -271,14 +277,15 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 <!-- TOPAZE GB+ -->
 <section class="prod-section">
   <div class="wrap">
-    <div class="prod-header rev">
+    <div class="prod-split">
+      <div class="prod-header rev">
       <span class="teal-bar"></span>
       <span class="eyebrow-g">Windows</span>
       <h2>Topaze GB+ Window System</h2>
       <p>A robust aluminium window system offering excellent weather performance. Suitable for large openings in high-wind and coastal environments.</p>
     </div>
-    <div class="prod-grid">
-      <div class="prod-item" onclick="lbOpen(topazplus,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Window-TOPAZEGB+.JPG" alt="Topaze GB+ Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Topaze GB+</span></div></div>
+      <div class="prod-item prod-visual" onclick="lbOpen(topazplus,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Window-TOPAZEGB+.JPG" alt="Topaze GB+ Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Topaze GB+</span></div>
+    </div>
     </div>
   </div>
 </section>
@@ -286,14 +293,15 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 <!-- TOPAZE GB24 -->
 <section class="prod-section">
   <div class="wrap">
-    <div class="prod-header rev">
+    <div class="prod-split">
+      <div class="prod-header rev">
       <span class="teal-bar"></span>
       <span class="eyebrow-g">Windows</span>
       <h2>Topaze GB24 Window System</h2>
       <p>A slim 24mm profile window system for applications where minimal sight lines are essential. Contemporary aesthetics with reliable performance.</p>
     </div>
-    <div class="prod-grid">
-      <div class="prod-item" onclick="lbOpen(topaz24,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Window-TOPAZEGB24.JPG" alt="Topaze GB24 Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Topaze GB24</span></div></div>
+      <div class="prod-item prod-visual" onclick="lbOpen(topaz24,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Windows/Window-TOPAZEGB24.JPG" alt="Topaze GB24 Window System" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Topaze GB24</span></div>
+    </div>
     </div>
   </div>
 </section>
