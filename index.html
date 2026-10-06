@@ -123,16 +123,20 @@ a{text-decoration:none;color:inherit;}
 
 /* ===== SOLUTIONS ===== */
 #solutions{background:var(--white);padding:110px 0;}
-.sg{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:52px;}
-.sc2{background:var(--g50);border:1px solid var(--g200);padding:32px 28px 28px;display:flex;flex-direction:column;gap:14px;transition:transform .22s,box-shadow .22s,border-color .22s;position:relative;overflow:hidden;}
-.sc2::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
-.sc2:hover::after{transform:scaleX(1);}
-.sc2:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.07);border-color:var(--g200);}
-.sc2-icon{width:52px;height:52px;background:var(--black);display:flex;align-items:center;justify-content:center;color:var(--white);flex-shrink:0;margin-bottom:4px;}
-.sc2 h3{font-family:var(--fm);font-size:15px;font-weight:600;color:var(--black);}
-.sc2 p{font-size:12.5px;color:var(--g600);line-height:1.6;flex:1;}
-.sc2-link{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:5px;margin-top:4px;}
+.sg{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:52px;}
+.sc2{display:flex;flex-direction:column;overflow:hidden;position:relative;transition:transform .25s,box-shadow .25s;}
+.sc2:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.10);}
+.sc2-img{aspect-ratio:3/4;position:relative;overflow:hidden;background:var(--g100);}
+.sc2-img img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease;}
+.sc2:hover .sc2-img img{transform:scale(1.06);}
+.sc2-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.08) 55%,transparent 100%);}
+.sc2-cap{position:absolute;bottom:0;left:0;right:0;padding:22px 20px;z-index:1;}
+.sc2-cap h3{font-family:var(--fm);font-size:15px;font-weight:600;color:var(--white);margin-bottom:6px;}
+.sc2-cap p{font-size:12px;color:rgba(255,255,255,.6);line-height:1.55;margin-bottom:10px;}
+.sc2-link{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:5px;}
 .sc2:hover .sc2-link{gap:9px;}
+.sc2-teal{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);z-index:2;transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.sc2:hover .sc2-teal{transform:scaleX(1);}
 
 /* ===== WHY DG ===== */
 #why{background:var(--black);padding:110px 0;position:relative;overflow:hidden;}
@@ -226,6 +230,7 @@ a{text-decoration:none;color:inherit;}
   .sitems{grid-template-columns:repeat(3,1fr);}
   .si{border-bottom:1px solid var(--g200);}
   .sg{grid-template-columns:repeat(3,1fr);}
+  .sc2-img{aspect-ratio:1/1;}
   .wi{grid-template-columns:1fr;gap:52px;}
   .ft{grid-template-columns:1fr 1fr;}
   .sh{grid-template-columns:1fr;gap:28px;}
@@ -286,7 +291,7 @@ a{text-decoration:none;color:inherit;}
           <li><a href="mirrors.html">Mirrors</a></li>
         </ul>
       </li>
-      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="products.html">Products</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="architects.html">Architects</a></li>
@@ -305,7 +310,7 @@ a{text-decoration:none;color:inherit;}
     <a href="partitions.html">Partitions and Doors</a>
     <a href="shower-cubicles.html">Shower Cubicles</a>
     <a href="mirrors.html">Mirrors</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="products.html">Products</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About Us</a>
     <a href="architects.html">Architects</a>
@@ -397,44 +402,59 @@ a{text-decoration:none;color:inherit;}
     </div>
     <div class="sg">
       <a href="windows-doors.html" class="sc2 rev d1">
-        <div class="sc2-icon">
-          <svg width="32" height="32" fill="none" viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="3" width="12" height="26" rx="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="21" cy="16" r="1.8" fill="currentColor"/></svg>
+        <div class="sc2-img">
+          <img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Thumbnail/Thumbnail%20Windows.JPG" alt="Windows"/>
         </div>
-        <h3>Windows</h3>
-        <p>Premium European aluminium window systems for modern homes and commercial spaces.</p>
-        <span class="sc2-link">Explore <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M1 5h8M5 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        <div class="sc2-cap">
+          <h3>Windows</h3>
+          <p>Premium European aluminium window systems for modern homes and commercial spaces.</p>
+          <span class="sc2-link">Explore <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M1 5h8M5 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="sc2-teal"></div>
       </a>
       <a href="railings.html" class="sc2 rev d2">
-        <div class="sc2-icon">
-          <svg width="32" height="32" fill="none" viewBox="0 0 32 32"><line x1="3" y1="13" x2="29" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="13" x2="7" y2="29" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="13" x2="16" y2="29" stroke="currentColor" stroke-width="1.5"/><line x1="25" y1="13" x2="25" y2="29" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="8" width="26" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+        <div class="sc2-img">
+          <img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Thumbnail/Thumbnail%20Railings.jpg" alt="Railings"/>
         </div>
-        <h3>Railings</h3>
-        <p>Minimalist glass railing systems with uncompromised safety.</p>
-        <span class="sc2-link">Explore <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M1 5h8M5 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        <div class="sc2-cap">
+          <h3>Railings</h3>
+          <p>Minimalist glass railing systems with uncompromised safety.</p>
+          <span class="sc2-link">Explore <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M1 5h8M5 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="sc2-teal"></div>
       </a>
       <a href="partitions.html" class="sc2 rev d3">
-        <div class="sc2-icon">
-          <svg width="32" height="32" fill="none" viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" rx="1.5" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="3" x2="16" y2="29" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="1.8" fill="currentColor"/></svg>
+        <div class="sc2-img">
+          <img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Thumbnail/Thumbnail%20Partition%20%26%20Doors.jpg" alt="Partitions and Doors"/>
         </div>
-        <h3>Partitions and Doors</h3>
-        <p>Flexible office and residential partition systems.</p>
-        <span class="sc2-link">Explore <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M1 5h8M5 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        <div class="sc2-cap">
+          <h3>Partitions and Doors</h3>
+          <p>Flexible office and residential partition systems.</p>
+          <span class="sc2-link">Explore <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M1 5h8M5 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="sc2-teal"></div>
       </a>
       <a href="shower-cubicles.html" class="sc2 rev d4">
-        <div class="sc2-icon">
-          <svg width="32" height="32" fill="none" viewBox="0 0 32 32"><path d="M8 29L8 11Q8 6 12 6L20 6Q24 6 24 11L24 29" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/><line x1="5" y1="29" x2="27" y2="29" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 6V4M20 6V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div class="sc2-img">
+          <img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Thumbnail/Thumbnail%20Shower%20Cubicals.jpg" alt="Shower Cubicles"/>
         </div>
-        <h3>Shower Cubicles</h3>
-        <p>Custom frameless shower enclosures.</p>
-        <span class="sc2-link">Explore <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M1 5h8M5 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        <div class="sc2-cap">
+          <h3>Shower Cubicles</h3>
+          <p>Custom frameless shower enclosures.</p>
+          <span class="sc2-link">Explore <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M1 5h8M5 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="sc2-teal"></div>
       </a>
       <a href="mirrors.html" class="sc2 rev d4">
-        <div class="sc2-icon">
-          <svg width="32" height="32" fill="none" viewBox="0 0 32 32"><rect x="5" y="3" width="22" height="26" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 10C2 13 2 19 5 22" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2.5 2.5"/><path d="M27 10C30 13 30 19 27 22" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2.5 2.5"/><circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.2"/></svg>
+        <div class="sc2-img">
+          <img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Thumbnail/Thumbnail%20Mirrors.jpg" alt="Mirrors"/>
         </div>
-        <h3>Mirrors</h3>
-        <p>Decorative and functional mirrors tailored to every interior.</p>
-        <span class="sc2-link">Explore <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M1 5h8M5 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        <div class="sc2-cap">
+          <h3>Mirrors</h3>
+          <p>Decorative and functional mirrors tailored to every interior.</p>
+          <span class="sc2-link">Explore <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M1 5h8M5 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="sc2-teal"></div>
       </a>
     </div>
   </div>
@@ -561,8 +581,8 @@ a{text-decoration:none;color:inherit;}
           <a href="#" class="fsl">wa</a>
         </div>
       </div>
-      <div class="fc"><h4>Solutions</h4><ul><li><a href="windows-doors.html">Windows</a></li><li><a href="railings.html">Railings</a></li><li><a href="partitions.html">Partitions and Doors</a></li><li><a href="shower-cubicles.html">Shower Cubicles</a></li><li><a href="mirrors.html">Mirrors</a></li></ul></div>
-      <div class="fc"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="fc"><h4>Solutions</h4><ul><li><a href="windows-doors.html">Windows</a></li><li><a href="railings.html">Railings</a></li><li><a href="partitions.html">Partitions and Doors</a></li><li><a href="shower-cubicles.html">Shower Cubicles</a></li><li><a href="mirrors.html">Mirrors</a></li><li><a href="products.html">Products</a></li></ul></div>
+      <div class="fc"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div class="fc"><h4>Contact</h4><div class="fci"><a href="tel:+919553371114" class="fca">+91 95533 71114</a><a href="mailto:info@domesticglass.in" class="fca">info@domesticglass.in</a><span class="fca" style="cursor:default;">Hyderabad, Telangana</span></div></div>
     </div>
     <div class="fb"><p class="fbcp">2025 Domestic Glass. All rights reserved.</p><div class="fbl"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
