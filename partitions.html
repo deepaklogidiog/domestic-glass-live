@@ -1,139 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Partitions and Doors – Domestic Glass</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--black:#0A0A0A;--white:#FFFFFF;--g50:#F8F8F8;--g100:#F2F2F2;--g200:#E4E4E4;--g400:#9A9A9A;--g600:#5A5A5A;--g800:#2A2A2A;--teal:#458895;--teal-d:#336670;--fm:'Montserrat',system-ui,sans-serif;--fb:'DM Sans',system-ui,sans-serif;}
-html{scroll-behavior:smooth;}body{font-family:var(--fb);font-size:16px;line-height:1.6;color:var(--black);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
-.rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}.rev.on{opacity:1;transform:none;}
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Partitions & Door Systems – Domestic Glass</title>
+<meta name="description" content="Slim-frame glass doors, fixed and sliding partitions and smart glass, designed, fabricated and installed in-house by Domestic Glass, Hyderabad."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://wsrv.nl"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--black:#0A0A0A;--white:#FFFFFF;--g50:#F7F7F5;--g100:#EFEFEC;--g200:#E2E2DE;--g400:#8A8A86;--g600:#4A4A47;--g700:#333331;--g800:#1F1F1E;--teal:#458895;--teal-d:#336670;--teal-dk:#1E4249;--fm:'Montserrat',system-ui,sans-serif;--fb:'DM Sans',system-ui,sans-serif;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);font-size:17px;line-height:1.7;color:var(--g700);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;height:auto;}
+a{text-decoration:none;color:inherit;}
+.rev{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+.rev.on{opacity:1;transform:none;}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
-.wrap{max-width:1200px;margin:0 auto;padding:0 48px;}
-.teal-bar{display:block;width:36px;height:2px;background:var(--teal);margin-bottom:18px;}
-.eyebrow-g{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--g400);}
-.eyebrow-w{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;cursor:pointer;border:none;}
+.wrap{max-width:1360px;margin:0 auto;padding:0 56px;}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);}
+.eyebrow::before{content:'';width:32px;height:2px;background:currentColor;}
+.eyebrow.light{color:#9fd0d8;}
+.h2{font-family:var(--fm);font-size:clamp(30px,3.4vw,48px);font-weight:500;line-height:1.15;letter-spacing:-.015em;color:var(--black);margin-top:18px;}
+.h2.light{color:var(--white);}
+.lead{font-size:18px;line-height:1.75;color:var(--g600);}
+.lead.light{color:rgba(255,255,255,.82);}
+.sec{padding:110px 0;}
+.sec.alt{background:var(--g50);}
+.sec.dark{background:var(--black);color:var(--white);}
+.sec.tight{padding:80px 0;}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:44px;flex-wrap:wrap;}
+.sec-head .lead{margin-top:16px;max-width:640px;}
+.sec-head .acts{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.count{font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--g400);}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:16px 30px;transition:all .25s;cursor:pointer;border:none;white-space:nowrap;}
+.btn svg{transition:transform .25s;}
+.btn:hover svg{transform:translateX(3px);}
 .btn-blk{background:var(--black);color:var(--white);}.btn-blk:hover{background:var(--teal);}
-#hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--g200);transition:box-shadow .3s;}
-#hdr.sc{box-shadow:0 4px 24px rgba(0,0,0,.07);}
-.nav{max-width:1200px;margin:0 auto;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
-.logo img{height:40px;width:auto;display:block;}
-.logo-fb{font-family:var(--fm);font-size:16px;font-weight:600;color:var(--black);display:none;}.logo-fb span{color:var(--teal);}
+.btn-teal{background:var(--teal);color:var(--white);}.btn-teal:hover{background:var(--teal-d);}
+.btn-w{background:var(--white);color:var(--black);}.btn-w:hover{background:var(--teal);color:var(--white);}
+.btn-ol{background:transparent;color:var(--black);border:1.5px solid var(--black);}.btn-ol:hover{background:var(--black);color:var(--white);}
+.btn-ol-w{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.7);}.btn-ol-w:hover{background:var(--white);color:var(--black);}
+
+/* HEADER */
+#hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--g200);transition:box-shadow .3s;}
+#hdr.sc{box-shadow:0 6px 28px rgba(0,0,0,.08);}
+.nav{max-width:1360px;margin:0 auto;padding:0 56px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.logo img{height:44px;width:auto;}
+.logo-fb{font-family:var(--fm);font-size:18px;font-weight:600;color:var(--black);display:none;}.logo-fb span{color:var(--teal);}
 .nl{display:flex;align-items:center;list-style:none;}
-.nl>li>a{font-size:12.5px;font-weight:500;letter-spacing:.04em;color:var(--g600);padding:8px 14px;display:flex;align-items:center;gap:4px;transition:color .2s;}
-.nl>li>a:hover,.nl>li.act>a{color:var(--black);}
-.drop{position:relative;}.drop>a svg{transition:transform .2s;}.drop:hover>a svg{transform:rotate(180deg);}
-.dd{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--g200);min-width:210px;padding:8px 0;box-shadow:0 16px 40px rgba(0,0,0,.10);opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .2s;list-style:none;}
-.drop:hover .dd{opacity:1;visibility:visible;transform:none;}
-.dd li a{display:block;padding:10px 18px;font-size:12.5px;color:var(--g600);transition:background .15s,color .15s;}.dd li a:hover{background:var(--g50);color:var(--teal);}
+.nl>li>a{font-family:var(--fm);font-size:13.5px;font-weight:500;color:var(--g700);padding:10px 13px;display:flex;align-items:center;gap:5px;transition:color .2s;}
+.nl>li>a:hover,.nl>li.act>a{color:var(--teal);}
+.drop{position:relative;}
+.drop>a svg{transition:transform .2s;}.drop:hover>a svg{transform:rotate(180deg);}
+.dd{position:absolute;top:calc(100% + 10px);left:0;background:var(--white);border:1px solid var(--g200);min-width:260px;padding:10px 0;box-shadow:0 18px 44px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .2s;list-style:none;}
+.dd::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px;}
+.drop:hover .dd,.drop:focus-within .dd{opacity:1;visibility:visible;transform:none;}
+.dd li a{display:block;padding:11px 20px;font-size:15px;color:var(--g700);transition:background .15s,color .15s;}
+.dd li a:hover,.dd li.act a{background:var(--g50);color:var(--teal);}
 .nr{display:flex;align-items:center;gap:14px;flex-shrink:0;}
-.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
-.hbg span{display:block;width:22px;height:1.5px;background:var(--black);transition:transform .25s,opacity .25s;}
-.hbg.op span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}.hbg.op span:nth-child(2){opacity:0;}.hbg.op span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-.mob{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--g200);padding:16px 24px 24px;}
-.mob.op{display:flex;}.mob a{font-size:15px;color:var(--g800);padding:13px 0;border-bottom:1px solid var(--g100);transition:color .2s;}.mob a:last-child{border-bottom:none;}.mob a:hover{color:var(--teal);}
-.mob-cta{margin-top:16px;background:var(--black);color:var(--white)!important;text-align:center;padding:13px!important;border-bottom:none!important;font-weight:600;font-size:11px!important;text-transform:uppercase;}
-.ph{padding:148px 0 0;background:var(--black);position:relative;overflow:hidden;}
-.ph::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;}
-.ph-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:stretch;}
-.ph-left{padding-bottom:80px;}
-.ph h1{font-family:var(--fm);font-size:clamp(42px,5vw,76px);font-weight:300;line-height:1.05;color:var(--white);margin:18px 0 24px;}
-.ph h1 em{font-style:normal;font-weight:600;color:var(--teal);}
-.ph-left p{font-size:16px;line-height:1.75;color:rgba(255,255,255,.48);margin-bottom:32px;}
-.apps-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);padding:28px 24px;margin-top:36px;}
-.apps-box h3{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px;}
-.apps{display:flex;flex-wrap:wrap;gap:8px;}
-.app-tag{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);padding:6px 14px;font-size:12px;color:rgba(255,255,255,.58);}
-.ph-img{position:relative;overflow:hidden;min-height:560px;align-self:stretch;}
-.ph-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
-.ph-teal{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--teal);}
-.prod-section{padding:80px 0;border-bottom:1px solid var(--g200);}
-.prod-section:last-of-type{border-bottom:none;}
-.prod-header{margin-bottom:40px;}
-.prod-header h2{font-family:var(--fm);font-size:clamp(24px,3vw,36px);font-weight:300;color:var(--black);margin-top:14px;}
-.prod-header p{font-size:14px;color:var(--g600);margin-top:8px;max-width:600px;}
-.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;}
-.prod-item{position:relative;overflow:hidden;cursor:pointer;background:var(--g100);aspect-ratio:1/1;}
-.prod-item img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s ease;display:block;}
-.prod-item:hover img{transform:scale(1.05);}
-.prod-ov{position:absolute;inset:0;background:rgba(10,10,10,0);transition:background .3s;}
-.prod-item:hover .prod-ov{background:rgba(10,10,10,.3);}
-.prod-label{position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(to top,rgba(0,0,0,.75),transparent);opacity:0;transform:translateY(4px);transition:opacity .3s,transform .3s;z-index:1;}
-.prod-item:hover .prod-label{opacity:1;transform:none;}
-.prod-label span{font-size:11px;font-weight:500;color:var(--white);letter-spacing:.04em;}
-.pdf-section{background:var(--g50);border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);padding:56px 0;}
-.pdf-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
-.pdf-left{display:flex;align-items:center;gap:20px;}
-.pdf-icon{width:56px;height:56px;background:var(--black);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.pdf-text h3{font-family:var(--fm);font-size:17px;font-weight:500;color:var(--black);margin-bottom:4px;}
-.pdf-text p{font-size:13px;color:var(--g600);line-height:1.5;}
-.pdf-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:rgba(69,136,149,.08);border:1px solid rgba(69,136,149,.2);padding:4px 10px;margin-top:8px;}
-.pdf-btn{display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:var(--white);font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;cursor:pointer;border:none;flex-shrink:0;}
-.pdf-btn:hover{background:var(--teal-d);}
-.pdf-modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9000;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);}
-.pdf-modal-bg.on{display:flex;}
-.pdf-modal{background:var(--white);width:100%;max-width:460px;position:relative;animation:mslide .25s ease;}
-@keyframes mslide{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
-.pdf-modal::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--teal);}
-.pdf-modal-body{padding:40px 36px 36px;}
-.pdf-modal-close{position:absolute;top:14px;right:16px;background:none;border:none;cursor:pointer;color:var(--g400);font-size:22px;line-height:1;transition:color .2s;}
-.pdf-modal-close:hover{color:var(--black);}
-.pdf-modal h3{font-family:var(--fm);font-size:20px;font-weight:400;color:var(--black);margin-bottom:6px;}
-.pdf-modal-sub{font-size:13px;color:var(--g600);margin-bottom:28px;line-height:1.55;}
-.pdf-modal-sub strong{color:var(--teal);}
-.pdf-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.pdf-field{margin-bottom:16px;}
-.pdf-field label{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--g600);margin-bottom:6px;}
-.pdf-field input{width:100%;border:1px solid var(--g200);padding:11px 14px;font-family:var(--fb);font-size:14px;color:var(--black);outline:none;transition:border-color .2s;background:var(--white);}
-.pdf-field input:focus{border-color:var(--teal);}
-.pdf-field input.err{border-color:#e53e3e;}
-.pdf-field .opt-label{font-size:10px;color:var(--g400);font-weight:400;margin-left:4px;text-transform:none;letter-spacing:0;}
-.pdf-err{font-size:11px;color:#e53e3e;margin-top:4px;display:none;}
-.pdf-err.on{display:block;}
-.pdf-submit{width:100%;background:var(--teal);color:var(--white);border:none;padding:14px;font-family:var(--fb);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;margin-top:8px;transition:background .22s;display:flex;align-items:center;justify-content:center;gap:10px;}
-.pdf-submit:hover{background:var(--teal-d);}
-.pdf-note{font-size:11px;color:var(--g400);text-align:center;margin-top:14px;line-height:1.5;}
-.pdf-success{display:none;text-align:center;padding:20px 0 8px;}
-.pdf-success.on{display:block;}
-.pdf-success-icon{width:56px;height:56px;background:rgba(69,136,149,.1);border:2px solid var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
-.pdf-success h4{font-family:var(--fm);font-size:18px;font-weight:400;color:var(--black);margin-bottom:8px;}
-.pdf-success p{font-size:13px;color:var(--g600);line-height:1.6;margin-bottom:24px;}
-.pdf-dl-btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--white);font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px 24px;transition:background .22s;cursor:pointer;border:none;}
-.pdf-dl-btn:hover{background:var(--teal-d);}
-.scta{background:var(--black);padding:80px 0;}
-.scta-i{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
-.scta h2{font-family:var(--fm);font-size:clamp(24px,3.5vw,40px);font-weight:300;color:var(--white);margin-bottom:8px;}
-.scta p{font-size:15px;color:rgba(255,255,255,.5);}
-.btn-ws{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--white);font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;}
-.btn-ws:hover{background:var(--teal-d);}
-.lb{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:9999;display:none;align-items:center;justify-content:center;}
+.nr .btn{padding:12px 20px;font-size:12px;}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.hbg span{display:block;width:24px;height:2px;background:var(--black);transition:transform .25s,opacity .25s;}
+.hbg.op span:nth-child(1){transform:translateY(7px) rotate(45deg);}.hbg.op span:nth-child(2){opacity:0;}.hbg.op span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mob{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--g200);padding:12px 24px 24px;max-height:calc(100vh - 76px);overflow-y:auto;}
+.mob.op{display:flex;}
+.mob a{font-size:17px;color:var(--g800);padding:14px 0;border-bottom:1px solid var(--g100);}
+.mob a.sub{padding-left:16px;font-size:15.5px;color:var(--g600);}
+.mob a:hover{color:var(--teal);}
+.mob-cta{margin-top:18px;background:var(--black);color:var(--white)!important;text-align:center;padding:15px!important;border-bottom:none!important;font-family:var(--fm);font-weight:600;letter-spacing:.08em;font-size:13px!important;text-transform:uppercase;}
+
+/* PAGE HERO (image, replaces the old black band) */
+.phero{position:relative;margin-top:76px;min-height:clamp(560px,calc(82vh - 76px),820px);padding-top:110px;color:var(--white);overflow:hidden;background:var(--g800);display:flex;align-items:flex-end;}
+.phero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:phz 9s ease-out forwards;}
+@keyframes phz{from{transform:scale(1.07);}to{transform:scale(1);}}
+.phero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 55%,rgba(0,0,0,0) 85%),linear-gradient(0deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,0) 50%);}
+.phero .wrap{position:relative;z-index:2;width:100%;padding-bottom:64px;}
+.crumb{font-family:var(--fm);font-size:12.5px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.75);margin-bottom:20px;display:flex;gap:10px;align-items:center;}
+.crumb a:hover{color:var(--white);}
+.phero h1{font-family:var(--fm);font-size:clamp(40px,5.4vw,76px);font-weight:500;line-height:1.05;letter-spacing:-.025em;margin:18px 0 20px;max-width:900px;}
+.phero h1 em{font-style:normal;color:#9fd0d8;}
+.phero p{font-size:19px;line-height:1.65;color:rgba(255,255,255,.9);max-width:640px;}
+.phero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px;}
+.chip{font-family:var(--fm);font-size:13px;font-weight:500;padding:10px 18px;border:1px solid rgba(255,255,255,.45);color:var(--white);background:rgba(255,255,255,.08);backdrop-filter:blur(6px);transition:all .2s;}
+.chip:hover{background:var(--white);color:var(--black);}
+
+/* MASONRY GALLERY */
+.mason{columns:4 260px;column-gap:14px;}
+.mason.c3{columns:3 300px;}
+.mi{break-inside:avoid;margin-bottom:14px;position:relative;display:block;overflow:hidden;background:var(--g100);cursor:zoom-in;}
+.mi img{width:100%;transition:transform .9s cubic-bezier(.2,.7,.2,1);}
+.mi:hover img{transform:scale(1.05);}
+.mi::after{content:'';position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(0deg,rgba(0,0,0,.66),transparent);opacity:.9;transition:opacity .3s;pointer-events:none;}
+.mi span{position:absolute;left:16px;right:16px;bottom:14px;z-index:1;font-family:var(--fm);font-size:14px;font-weight:600;color:var(--white);line-height:1.35;}
+.dark .mi{background:var(--g800);}
+.mi.nocap::after{display:none;}
+
+/* SPLIT */
+.split{display:grid;grid-template-columns:1.15fr 1fr;gap:80px;align-items:center;}
+.split.rev-o{grid-template-columns:1fr 1.15fr;}
+.split.rev-o>:first-child{order:2;}
+.split .pic{position:relative;overflow:hidden;}
+.split .pic img{width:100%;height:100%;object-fit:cover;}
+.split .txt .lead{margin:22px 0 30px;}
+.ticks{list-style:none;display:flex;flex-direction:column;gap:14px;margin:6px 0 34px;}
+.ticks li{display:flex;gap:14px;align-items:flex-start;font-size:17px;color:var(--g700);}
+.ticks li::before{content:'';width:10px;height:10px;background:var(--teal);flex-shrink:0;margin-top:9px;}
+.dark .ticks li{color:rgba(255,255,255,.85);}
+
+/* IMAGE CARDS */
+.icards{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:20px;}
+.icard{position:relative;display:block;overflow:hidden;background:var(--g800);color:var(--white);aspect-ratio:var(--ar,4/5);}
+.icard img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1);}
+.icard:hover img{transform:scale(1.05);}
+.icard::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.4) 38%,rgba(0,0,0,0) 65%);}
+.icard .cap{position:absolute;left:0;right:0;bottom:0;padding:28px 28px 26px;z-index:1;}
+.icard .num{font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.14em;color:#9fd0d8;}
+.icard h3{font-family:var(--fm);font-size:clamp(20px,1.8vw,26px);font-weight:600;line-height:1.25;margin:8px 0 8px;}
+.icard p{font-size:15.5px;line-height:1.55;color:rgba(255,255,255,.9);}
+.icard .go{display:inline-flex;align-items:center;gap:10px;margin-top:14px;font-family:var(--fm);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-bottom:1.5px solid rgba(255,255,255,.6);padding-bottom:4px;}
+
+/* STEP CARDS (image on top) */
+.steps{display:grid;grid-template-columns:repeat(var(--cols,4),1fr);gap:20px;}
+.step{background:var(--white);display:flex;flex-direction:column;}
+.alt .step{background:var(--white);}
+.step .pic{aspect-ratio:4/3;overflow:hidden;position:relative;}
+.step .pic img{width:100%;height:100%;object-fit:cover;transition:transform .9s;}
+.step:hover .pic img{transform:scale(1.05);}
+.step .pic b{position:absolute;left:18px;top:16px;font-family:var(--fm);font-size:14px;font-weight:600;letter-spacing:.1em;color:var(--white);background:var(--teal);padding:6px 10px;}
+.step .bd{padding:26px 26px 30px;border:1px solid var(--g200);border-top:none;flex:1;}
+.step h3{font-family:var(--fm);font-size:20px;font-weight:600;color:var(--black);margin-bottom:10px;}
+.step p{font-size:16px;line-height:1.65;color:var(--g600);}
+
+/* FULL-BLEED IMAGE BAND */
+.band{position:relative;padding:150px 0;color:var(--white);overflow:hidden;background:var(--black);}
+.band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.band::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.35));}
+.band .wrap{position:relative;z-index:1;}
+.band h2{font-family:var(--fm);font-size:clamp(30px,4vw,56px);font-weight:500;line-height:1.12;letter-spacing:-.02em;margin:20px 0 22px;max-width:860px;}
+.band p{font-size:19px;color:rgba(255,255,255,.88);max-width:640px;}
+
+/* STATS STRIP */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);}
+.stat{padding:40px 32px;border-right:1px solid var(--g200);}
+.stat:last-child{border-right:none;}
+.stat b{display:block;font-family:var(--fm);font-size:48px;font-weight:600;line-height:1;color:var(--black);letter-spacing:-.02em;}
+.stat b sup{font-size:24px;color:var(--teal);vertical-align:top;position:relative;top:4px;}
+.stat span{display:block;margin-top:12px;font-family:var(--fm);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--g600);}
+
+/* CATALOGUE BAND (light, sits above the teal CTA) */
+.catb{background:var(--g100);padding:0;}
+.catb-in{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:360px;}
+.catb .pic{position:relative;overflow:hidden;}
+.catb .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.catb .txt{padding:64px 64px 64px 72px;display:flex;flex-direction:column;justify-content:center;}
+.catb h2{font-family:var(--fm);font-size:clamp(26px,2.6vw,38px);font-weight:500;line-height:1.2;color:var(--black);margin:16px 0 14px;}
+.catb p{font-size:17px;color:var(--g600);margin-bottom:28px;max-width:460px;}
+
+/* PRE-FOOTER CTA (teal, distinct from black footer) */
+.ctab{position:relative;padding:100px 0;color:var(--white);overflow:hidden;background:var(--teal);}
+.ctab>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.ctab::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,66,73,.95) 0%,rgba(30,66,73,.82) 55%,rgba(30,66,73,.55) 100%);}
+.ctai{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;}
+.ctai h2{font-family:var(--fm);font-size:clamp(30px,3.6vw,50px);font-weight:500;line-height:1.15;letter-spacing:-.015em;margin-bottom:14px;}
+.ctai p{font-size:18px;color:rgba(255,255,255,.88);max-width:560px;}
+.ctaa{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.ctaa .btn{justify-content:center;}
+
+/* FOOTER */
+#ft{background:var(--black);padding:88px 0 0;color:rgba(255,255,255,.72);}
+.ft{display:grid;grid-template-columns:1.5fr 1.1fr 1fr 1.4fr;gap:56px;padding-bottom:64px;border-bottom:1px solid rgba(255,255,255,.1);}
+.fli{height:44px;width:auto;display:block;margin-bottom:22px;filter:brightness(0) invert(1);}
+.ftag{font-size:16px;line-height:1.7;color:rgba(255,255,255,.7);max-width:300px;margin-bottom:26px;}
+.fso{display:flex;gap:10px;flex-wrap:wrap;}
+.fsl{width:42px;height:42px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.85);transition:all .2s;}
+.fsl:hover{border-color:var(--teal);background:var(--teal);color:var(--white);}
+.fc h4{font-family:var(--fm);font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--white);margin-bottom:22px;}
+.fc ul{list-style:none;}
+.fc ul li{margin-bottom:12px;}
+.fc ul li a{font-size:16px;color:rgba(255,255,255,.7);transition:color .2s;}
+.fc ul li a:hover{color:#9fd0d8;}
+.fc address{font-style:normal;font-size:15px;line-height:1.65;color:rgba(255,255,255,.7);margin-bottom:18px;}
+.fc address b{display:block;font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.95);margin-bottom:4px;}
+.fb{padding:26px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.fbcp,.fbl a{font-size:14px;color:rgba(255,255,255,.5);}
+.fbl{display:flex;gap:22px;}.fbl a:hover{color:#9fd0d8;}
+.wa-fab{position:fixed;bottom:28px;right:28px;z-index:8000;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .22s;color:#fff;}
+.wa-fab:hover{transform:scale(1.08);}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:9500;background:rgba(5,5,5,.94);display:none;align-items:center;justify-content:center;padding:70px 80px;}
 .lb.on{display:flex;}
-.lb img{max-width:88vw;max-height:88vh;object-fit:contain;}
-.lb-x{position:fixed;top:16px;right:20px;background:none;border:none;color:rgba(255,255,255,.7);font-size:32px;cursor:pointer;line-height:1;}
-.lb-x:hover{color:var(--white);}
-.lb-p,.lb-n{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:var(--white);font-size:22px;width:44px;height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;}
-.lb-p{left:12px;}.lb-n{right:12px;}
-.lb-p:hover,.lb-n:hover{background:var(--teal);}
-.lb-ct{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.1em;}
-#ft{background:var(--black);padding:72px 0 0;}
-.ftg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:52px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.07);}
-.fli{height:38px;width:auto;display:block;margin-bottom:18px;opacity:.85;}
-.ftag{font-size:13px;line-height:1.65;color:rgba(255,255,255,.38);max-width:240px;}
-.fc h4{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;}
-.fc ul{list-style:none;}.fc ul li{margin-bottom:9px;}.fc ul li a{font-size:13px;color:rgba(255,255,255,.42);transition:color .2s;}.fc ul li a:hover{color:var(--teal);}
-.fci{display:flex;flex-direction:column;gap:9px;}.fca{font-size:13px;color:rgba(255,255,255,.42);transition:color .2s;}.fca:hover{color:var(--teal);}
-.fbb{padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
-.fbcp{font-size:11px;color:rgba(255,255,255,.18);}
-.fbl{display:flex;gap:18px;}.fbl a{font-size:11px;color:rgba(255,255,255,.18);transition:color .2s;}.fbl a:hover{color:var(--teal);}
-.wa-fab{position:fixed;bottom:28px;right:28px;z-index:8000;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .22s,box-shadow .22s;text-decoration:none;}
-.wa-fab:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55);}
-@media(max-width:1024px){.prod-grid{grid-template-columns:repeat(3,1fr);}.ftg{grid-template-columns:1fr 1fr;}}
-@media(max-width:900px){.nl,.nr .btn-blk{display:none;}.hbg{display:flex;}.wrap,.nav{padding-left:24px;padding-right:24px;}.ph-inner{grid-template-columns:1fr;}.ph-img{display:none;}.prod-grid{grid-template-columns:repeat(3,1fr);}.scta-i{flex-direction:column;align-items:flex-start;}.pdf-inner{flex-direction:column;align-items:flex-start;}}
-@media(max-width:640px){.wrap,.nav{padding-left:18px;padding-right:18px;}.prod-grid{grid-template-columns:repeat(2,1fr);}.ftg{grid-template-columns:1fr;}.fbb{flex-direction:column;align-items:flex-start;}.pdf-row{grid-template-columns:1fr;}.pdf-modal-body{padding:32px 20px 28px;}}</style>
+.lb img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.lb button{position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);color:var(--white);width:52px;height:52px;font-size:26px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.lb button:hover{background:var(--teal);}
+.lb-x{top:18px;right:18px;}.lb-p{left:18px;top:50%;transform:translateY(-50%);}.lb-n{right:18px;top:50%;transform:translateY(-50%);}
+.lb-c{position:absolute;bottom:20px;left:0;right:0;text-align:center;font-family:var(--fm);font-size:14px;color:rgba(255,255,255,.85);letter-spacing:.04em;}
+
+/* MODAL */
+.mdl{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9000;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);}
+.mdl.on{display:flex;}
+.mdl-b{background:#fff;width:100%;max-width:460px;position:relative;border-top:3px solid var(--teal);padding:40px 36px 34px;}
+.mdl-x{position:absolute;top:12px;right:16px;background:none;border:none;cursor:pointer;color:#6a6a6a;font-size:28px;line-height:1;}
+.mdl h3{font-family:var(--fm);font-size:24px;font-weight:600;color:var(--black);margin-bottom:8px;}
+.mdl p{font-size:16px;color:var(--g600);margin-bottom:24px;}
+.fld{margin-bottom:18px;}
+.fld label{display:block;font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--g700);margin-bottom:8px;}
+.fld label span{font-weight:400;text-transform:none;letter-spacing:0;color:var(--g400);}
+.fld input,.fld select,.fld textarea{width:100%;border:1px solid #CFCFCB;padding:13px 15px;font-size:16px;color:var(--black);outline:none;font-family:var(--fb);background:#fff;transition:border-color .2s;}
+.fld textarea{min-height:120px;resize:vertical;}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--teal);}
+.fld input.err{border-color:#c53030;}
+.fld .em{font-size:13px;color:#c53030;margin-top:5px;display:none;}
+.fld .em.on{display:block;}
+.mdl .btn{width:100%;justify-content:center;}
+.mdl small{display:block;font-size:13px;color:var(--g400);text-align:center;margin-top:14px;}
+.okb{display:none;text-align:center;padding:12px 0 6px;}
+.okb.on{display:block;}
+.okb i{width:60px;height:60px;border:2px solid var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:var(--teal);font-style:normal;font-size:26px;}
+
+/* TABS */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px;}
+.tab{font-family:var(--fm);font-size:13.5px;font-weight:600;letter-spacing:.04em;padding:11px 20px;border:1.5px solid var(--g200);background:var(--white);color:var(--g700);cursor:pointer;transition:all .2s;}
+.tab:hover{border-color:var(--black);}
+.tab.on{background:var(--black);border-color:var(--black);color:var(--white);}
+.dark .tab{background:transparent;color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25);}
+.dark .tab.on{background:var(--white);color:var(--black);border-color:var(--white);}
+
+/* RESPONSIVE */
+@media(max-width:1180px){.nl,.nr .btn{display:none;}.hbg{display:flex;}}
+@media(max-width:1024px){
+  .wrap,.nav{padding-left:32px;padding-right:32px;}
+  .split,.split.rev-o{grid-template-columns:1fr;gap:48px;}
+  .split.rev-o>:first-child{order:0;}
+  .icards{grid-template-columns:repeat(2,1fr);}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .stat:nth-child(2){border-right:none;}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--g200);}
+  .catb-in{grid-template-columns:1fr;}
+  .catb .pic{min-height:280px;}
+  .catb .txt{padding:56px 32px;}
+  .ft{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  body{font-size:16.5px;}
+  .wrap,.nav{padding-left:20px;padding-right:20px;}
+  .nav{height:68px;}
+  .phero{margin-top:68px;min-height:calc(78svh - 68px);padding-top:90px;}
+  .phero .chips{display:none;}
+  .phero h1{font-size:38px;}
+  .phero .wrap{padding-bottom:40px;}
+  .phero p{font-size:17px;}
+  .mob{max-height:calc(100vh - 68px);}
+  .sec{padding:76px 0;}
+  .band{padding:100px 0;}
+  .mason,.mason.c3{columns:2;column-gap:8px;}
+  .mi{margin-bottom:8px;}
+  .mi span{font-size:12.5px;left:10px;right:10px;bottom:9px;}
+  .icards,.steps{grid-template-columns:1fr;}
+  .stat{padding:28px 20px;}.stat b{font-size:36px;}
+  .ctaa{grid-template-columns:1fr;width:100%;}
+  .ft{grid-template-columns:1fr;}
+  .lb{padding:70px 12px;}
+  .lb-p,.lb-n{top:auto!important;bottom:14px;transform:none!important;}
+  .catb .txt{padding:48px 20px;}
+}
+@media(prefers-reduced-motion:reduce){.rev,.phero>img{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;}}
+</style>
 </head>
 <body>
+
 <header id="hdr">
   <div class="nav">
     <a href="index.html" class="logo">
@@ -142,36 +281,36 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
     </a>
     <ul class="nl">
       <li><a href="index.html">Home</a></li>
-      <li class="drop">
-        <a href="#">Solutions <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+      <li class="drop act">
+        <a href="partitions.html">Solutions <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
         <ul class="dd">
-          <li><a href="windows-doors.html">Windows</a></li>
-          <li><a href="railings.html">Railings</a></li>
-          <li><a href="partitions.html">Partitions and Doors</a></li>
-          <li><a href="shower-cubicles.html">Shower Cubicles</a></li>
-          <li><a href="mirrors.html">Mirrors</a></li>
+          <li class="act"><a href="partitions.html">Partitions &amp; Door Systems</a></li>
+          <li><a href="shower-cubicles.html">Shower Partition Systems</a></li>
+          <li><a href="railings.html">Railing Systems</a></li>
+          <li><a href="mirrors.html">Architectural Mirrors</a></li>
+          <li><a href="windows-doors.html">Window Systems</a></li>
         </ul>
       </li>
       <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Inspiration</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="architects.html">Architects</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nr">
-      <a href="contact.html" class="btn btn-blk" style="padding:9px 18px;font-size:11px;">Book a Visit</a>
-    </div>
-    <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+    <div class="nr"><a href="contact.html" class="btn btn-blk">Book a Visit</a></div>
+    <button class="hbg" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
   <nav class="mob" id="mob">
     <a href="index.html">Home</a>
-    <a href="windows-doors.html">Windows</a>
-    <a href="railings.html">Railings</a>
-    <a href="partitions.html">Partitions and Doors</a>
-    <a href="shower-cubicles.html">Shower Cubicles</a>
-    <a href="mirrors.html">Mirrors</a>
+    <a href="partitions.html" class="sub">Partitions &amp; Door Systems</a>
+    <a href="shower-cubicles.html" class="sub">Shower Partition Systems</a>
+    <a href="railings.html" class="sub">Railing Systems</a>
+    <a href="mirrors.html" class="sub">Architectural Mirrors</a>
+    <a href="windows-doors.html" class="sub">Window Systems</a>
     <a href="products.html">Products</a>
+    <a href="gallery.html">Inspiration</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About Us</a>
     <a href="architects.html">Architects</a>
@@ -181,307 +320,280 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
   </nav>
 </header>
 
-<section class="ph">
+<section class="phero">
+  <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FThumbnail%2FThumbnail%2520Partition%2520%2526%2520Doors.jpg&w=2200&q=80&output=webp" alt="" width="6240" height="4160" fetchpriority="high" style="object-position:center" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Thumbnail/Thumbnail%20Partition%20%26%20Doors.jpg'"/>
   <div class="wrap">
-    <div class="ph-inner">
-      <div class="ph-left">
-        <span class="eyebrow-w rev">Solutions</span>
-        <h1 class="rev d1">Partitions <em>and Doors</em></h1>
-        <p class="rev d2">Glass partition systems and doors for residential and commercial spaces. Fixed, sliding and smart glass — all designed, fabricated and installed in-house.</p>
-        <div class="apps-box rev d3">
-          <h3>System Types</h3>
-          <div class="apps">
-            <span class="app-tag">Doors</span>
-            <span class="app-tag">Fixed Partitions</span>
-            <span class="app-tag">Sliding Partitions</span>
-            <span class="app-tag">Smart Glass</span>
-          </div>
-        </div>
+    <div class="crumb rev"><a href="index.html">Home</a><span>/</span><span>Solutions</span><span>/</span><span>Partitions &amp; Door Systems</span></div>
+    <span class="eyebrow light rev">Solutions</span>
+    <h1 class="rev d1">Partitions &amp; <em>Door Systems</em></h1>
+    <p class="rev d2">Glass partition systems and doors for residential and commercial spaces. Fixed, sliding and smart glass, all designed, fabricated and installed in-house.</p>
+    <div class="acts rev d3"><a href="#" onclick="openCat();return false;" class="btn btn-w"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Download Catalogue</a><a href="contact.html" class="btn btn-ol-w">Book a Site Visit</a></div><div class="chips rev d4"><a href="#sys-1" class="chip">Doors</a><a href="#sys-2" class="chip">Fixed Partitions</a><a href="#sys-3" class="chip">Sliding Partitions</a><a href="#sys-4" class="chip">Smart Glass</a><a href="#installed" class="chip">Installed Projects</a></div>
+  </div>
+</section>
+
+<section class="sec" id="sys-1">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow rev">01 / 04</span>
+        <h2 class="h2 rev d1">Doors</h2>
+        <p class="lead rev d2">Slim-frame glass doors in Midnight Black, Majestic Gold, Bronze Reverie, Champezella Mist and Rosy Glimmer finishes. Single, double and storefront options for residential and commercial applications.</p>
       </div>
-      <div class="ph-img rev d2">
-        <img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Thumbnail/Thumbnail%20Partition%20%26%20Doors.jpg" alt="Partitions and Doors" loading="eager" onerror="this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Frame-Glass-Door-Black-01.jpg'"/>
-        <div class="ph-teal"></div>
-      </div>
+      <div class="acts rev d2"><span class="count">19 designs</span><a href="contact.html" class="btn btn-ol">Enquire <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a></div>
     </div>
-  </div>
-</section>
-
-<!-- DOORS -->
-<section class="prod-section">
-  <div class="wrap">
-    <div class="prod-header rev">
-      <span class="teal-bar"></span>
-      <span class="eyebrow-g">Partitions and Doors</span>
-      <h2>Doors</h2>
-      <p>Slim-frame glass doors in black, gold and bronze finishes. Single, double and storefront options for residential and commercial applications.</p>
-    </div>
-    <div class="prod-grid">
-      <div class="prod-item" onclick="lbOpen(doors,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Corner-Glass-Partition-Black-01.jpg" alt="Corner Glass Partition" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Corner Partition Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,1)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Designer-Grid-Double-Door-Gold-01.jpg" alt="Designer Grid Double Door Gold" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Designer Grid Double Door Gold</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,2)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Fabric-Glass-Double-Door-Wood-Finish-01.jpg" alt="Fabric Glass Double Door" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Fabric Glass Double Door Wood</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,3)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Fluted-Ghost-Glass-Door-Bronze-01.jpg" alt="Fluted Ghost Glass Door Bronze" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Fluted Ghost Door Bronze</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,4)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Fluted-Glass-Double-Door-Wood-Finish-01.jpg" alt="Fluted Glass Double Door Wood" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Fluted Double Door Wood</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,5)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Full-Height-Glass-Door-Black-01.jpg" alt="Full Height Glass Door Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Full Height Door Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,6)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Grid-Glass-Door-Black-01.jpg" alt="Grid Glass Door Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Grid Door Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,7)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Office-Glass-Partition-Black-01.jpg" alt="Office Glass Partition Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Office Partition Black 01</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,8)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Office-Glass-Partition-Black-02.jpg" alt="Office Glass Partition Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Office Partition Black 02</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,9)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Office-Grid-Glass-Door-Black-01.jpg" alt="Office Grid Glass Door Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Office Grid Door Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,10)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Frame-Double-Door-Black-01.jpg" alt="Slim Frame Double Door Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Slim Frame Double Door Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,11)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Frame-Double-Glass-Door-Gold-01.jpg" alt="Slim Frame Double Door Gold" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Slim Frame Double Door Gold</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,12)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Frame-Glass-Door-Black-01.jpg" alt="Slim Frame Glass Door Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Slim Frame Door Black 01</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,13)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Frame-Glass-Door-Black-02.jpg" alt="Slim Frame Glass Door Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Slim Frame Door Black 02</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,14)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Frame-Glass-Door-Bronze-03.jpg" alt="Slim Frame Glass Door Bronze" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Slim Frame Door Bronze</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,15)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Glass-Door-Black-02.jpg" alt="Slim Glass Door Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Slim Door Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,16)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Glass-Partition-Bronze-01.jpg" alt="Slim Glass Partition Bronze" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Slim Partition Bronze</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,17)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Storefront-Glass-Door-Black-01.jpg" alt="Storefront Glass Door Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Storefront Door Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(doors,18)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Tinted-Glass-Door-Bronze-01.jpg" alt="Tinted Glass Door Bronze" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Tinted Door Bronze</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FIXED PARTITIONS -->
-<section class="prod-section">
-  <div class="wrap">
-    <div class="prod-header rev">
-      <span class="teal-bar"></span>
-      <span class="eyebrow-g">Partitions and Doors</span>
-      <h2>Fixed Partitions</h2>
-      <p>Floor-to-ceiling fixed glass partitions in clear, frosted, textured and specialty glass. Ideal for offices, residences and retail environments.</p>
-    </div>
-    <div class="prod-grid">
-      <div class="prod-item" onclick="lbOpen(fixed,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Clear-Glass-Corner-Fixed-Partition-Black-01.jpg" alt="Clear Glass Corner Fixed Partition" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Corner Fixed Partition Black 01</span></div></div>
-      <div class="prod-item" onclick="lbOpen(fixed,1)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Clear-Glass-Corner-Fixed-Partition-Black-02.jpg" alt="Clear Glass Corner Fixed Partition" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Corner Fixed Partition Black 02</span></div></div>
-      <div class="prod-item" onclick="lbOpen(fixed,2)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Clear-Glass-Fixed-Partition-Black-01.jpg" alt="Clear Glass Fixed Partition" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Clear Fixed Partition Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(fixed,3)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Clear-Glass-Grid-Fixed-Partition-Black-01.jpg" alt="Clear Glass Grid Fixed Partition" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Grid Fixed Partition Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(fixed,4)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Curved-Tinted-Texured-Glass-Fixed-Partition-Black-01.jpg" alt="Curved Tinted Textured Fixed Partition" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Curved Tinted Textured Black 01</span></div></div>
-      <div class="prod-item" onclick="lbOpen(fixed,5)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Curved-Tinted-Texured-Glass-Fixed-Partition-Black-02.jpg" alt="Curved Tinted Textured Fixed Partition" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Curved Tinted Textured Black 02</span></div></div>
-      <div class="prod-item" onclick="lbOpen(fixed,6)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Custom-Capsule-Fluted-Fabric-Glass-Fixed-Partition-Gold-02.jpg" alt="Custom Capsule Fluted Fabric Fixed Partition Gold" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Capsule Fluted Fabric Gold</span></div></div>
-      <div class="prod-item" onclick="lbOpen(fixed,7)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Fabric-Glass-Fixed-Partition-Gold-01.jpg" alt="Fabric Glass Fixed Partition Gold" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Fabric Fixed Partition Gold</span></div></div>
-      <div class="prod-item" onclick="lbOpen(fixed,8)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Frosted-Glass-Fixed-Partition-Black-01.jpg" alt="Frosted Glass Fixed Partition Black" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Frosted Fixed Partition Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(fixed,9)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Glass-Brick-Fixed-Partition-Gold-01.jpg" alt="Glass Brick Fixed Partition Gold" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Glass Brick Partition Gold</span></div></div>
-      <div class="prod-item" onclick="lbOpen(fixed,10)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Textured-Glass-Fixed-Partition-Wood-Finish-01.jpg" alt="Textured Glass Fixed Partition Wood Finish" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Textured Fixed Partition Wood</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SLIDING PARTITIONS -->
-<section class="prod-section">
-  <div class="wrap">
-    <div class="prod-header rev">
-      <span class="teal-bar"></span>
-      <span class="eyebrow-g">Partitions and Doors</span>
-      <h2>Sliding Partitions</h2>
-      <p>Telescopic and synchronised sliding glass partition systems for flexible spaces. Single, double and multi-panel configurations.</p>
-    </div>
-    <div class="prod-grid">
-      <div class="prod-item" onclick="lbOpen(sliding,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Double-Telescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg" alt="Double Telescopic Sliding Fluted Glass" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Double Telescopic Fluted Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(sliding,1)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Synchro-Sliding-Clear-Glass-Midnight-Black-01.jpg" alt="Synchro Sliding Clear Glass" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Synchro Sliding Clear Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(sliding,2)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Telescopic-Sliding-Clear-Glass-Midnight-Black-01.jpg" alt="Telescopic Sliding Clear Glass" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Telescopic Clear Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(sliding,3)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Telescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg" alt="Telescopic Sliding Fluted Glass" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Telescopic Fluted Black</span></div></div>
-      <div class="prod-item" onclick="lbOpen(sliding,4)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Telescopic-Sliding-Grid-Fabric-Glass-Bronze-01.jpg" alt="Telescopic Sliding Grid Fabric Glass Bronze" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Telescopic Grid Fabric Bronze</span></div></div>
-      <div class="prod-item" onclick="lbOpen(sliding,5)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Telescopic-Sliding-Patterned-Glass-Majestic-Gold-01.jpg" alt="Telescopic Sliding Patterned Glass Gold" loading="lazy"/><div class="prod-ov"></div><div class="prod-label"><span>Telescopic Patterned Gold</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SMART GLASS -->
-<section class="prod-section">
-  <div class="wrap">
-    <div class="prod-header rev">
-      <span class="teal-bar"></span>
-      <span class="eyebrow-g">Partitions and Doors</span>
-      <h2>Smart Glass</h2>
-      <p>Switchable smart glass that transitions from transparent to opaque at the flick of a switch. Ideal for office cabins, conference rooms and private spaces.</p>
-    </div>
-    <div class="prod-grid">
-      <div class="prod-item" onclick="lbOpen(smart,0)"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Smart%20Glass/Smart-Glass-Office-Cabin.jpg" alt="Smart Glass Office Cabin" loading="lazy" onerror="this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/SmartGlass_0083%20copy.jpg'"/><div class="prod-ov"></div><div class="prod-label"><span>Smart Glass Office Cabin</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="pdf-section">
-  <div class="wrap">
-    <div class="pdf-inner rev">
-      <div class="pdf-left">
-        <div class="pdf-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="white" stroke-width="1.5" stroke-linecap="round"/><polyline points="14,2 14,8 20,8" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="13" x2="8" y2="13" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="17" x2="8" y2="17" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <div class="pdf-text"><h3>Download Our Partitions Portfolio</h3><p>Detailed specifications, product photos and finish options.</p><span class="pdf-badge">PDF — Free Download</span></div>
-      </div>
-      <button class="pdf-btn" onclick="openPdfModal()">Download Portfolio PDF</button>
-    </div>
-  </div>
-</section>
-
-<div class="pdf-modal-bg" id="pdfModal">
-  <div class="pdf-modal">
-    <button class="pdf-modal-close" onclick="closePdfModal()">&#215;</button>
-    <div class="pdf-modal-body">
-      <div id="pdfForm">
-        <h3>Get the Free PDF</h3>
-        <p class="pdf-modal-sub">Enter your details to download our <strong>Partitions and Doors Portfolio</strong>.</p>
-        <div class="pdf-row">
-          <div class="pdf-field"><label>Name *</label><input type="text" id="pdfName" placeholder="Your full name"/><div class="pdf-err" id="nameErr">Please enter your name.</div></div>
-          <div class="pdf-field"><label>Mobile *</label><input type="tel" id="pdfMobile" placeholder="+91 XXXXX XXXXX"/><div class="pdf-err" id="mobileErr">Enter a valid 10-digit number.</div></div>
-        </div>
-        <div class="pdf-row">
-          <div class="pdf-field"><label>Firm Name <span class="opt-label">(optional)</span></label><input type="text" id="pdfFirm" placeholder="Architecture / Design firm"/></div>
-          <div class="pdf-field"><label>Location <span class="opt-label">(optional)</span></label><input type="text" id="pdfLocation" placeholder="City / Area"/></div>
-        </div>
-        <button class="pdf-submit" onclick="submitPdfForm()">Get PDF Now</button>
-        <p class="pdf-note">We respect your privacy. No spam, ever.</p>
-      </div>
-      <div class="pdf-success" id="pdfSuccess">
-        <div class="pdf-success-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="#458895" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h4>Your PDF is Ready</h4>
-        <p>Thank you! Our team will follow up to answer any questions.</p>
-        <button class="pdf-dl-btn" onclick="triggerDownload()">Download PDF</button>
-      </div>
-    </div>
-  </div>
+    <div class="mason ">
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2Fsecond%2520imageFull-Height-Glass-Door-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Full Height Glass Door Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2Fsecond%2520imageFull-Height-Glass-Door-Black-01.jpg&w=800&q=80&output=webp" alt="Full Height Glass Door Black" width="2278" height="3743" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/second%20imageFull-Height-Glass-Door-Black-01.jpg'"/><span>Full Height Glass Door Black</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2F%2520Slim-Frame-Glass-Door-Bronze-03.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Slim Frame Glass Door Bronze"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2F%2520Slim-Frame-Glass-Door-Bronze-03.jpg&w=800&q=80&output=webp" alt="Slim Frame Glass Door Bronze" width="4162" height="6243" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/%20Slim-Frame-Glass-Door-Bronze-03.jpg'"/><span>Slim Frame Glass Door Bronze</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FCorner-Glass-Partition-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Corner Glass Partition Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FCorner-Glass-Partition-Black-01.jpg&w=800&q=80&output=webp" alt="Corner Glass Partition Black" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Corner-Glass-Partition-Black-01.jpg'"/><span>Corner Glass Partition Black</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FDesigner-Grid-Double-Door-Gold-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Designer Grid Double Door Gold"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FDesigner-Grid-Double-Door-Gold-01.jpg&w=800&q=80&output=webp" alt="Designer Grid Double Door Gold" width="3858" height="6478" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Designer-Grid-Double-Door-Gold-01.jpg'"/><span>Designer Grid Double Door Gold</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FFabric-Glass-Double-Door-Wood-Finish-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Fabric Glass Double Door Wood Finish"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FFabric-Glass-Double-Door-Wood-Finish-01.jpg&w=800&q=80&output=webp" alt="Fabric Glass Double Door Wood Finish" width="4160" height="6240" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Fabric-Glass-Double-Door-Wood-Finish-01.jpg'"/><span>Fabric Glass Double Door Wood Finish</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FFluted-Ghost-Glass-Door-Bronze-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Fluted Ghost Glass Door Bronze"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FFluted-Ghost-Glass-Door-Bronze-01.jpg&w=800&q=80&output=webp" alt="Fluted Ghost Glass Door Bronze" width="3980" height="6247" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Fluted-Ghost-Glass-Door-Bronze-01.jpg'"/><span>Fluted Ghost Glass Door Bronze</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FFluted-Glass-Double-Door-Wood-Finish-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Fluted Glass Double Door Wood Finish"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FFluted-Glass-Double-Door-Wood-Finish-01.jpg&w=800&q=80&output=webp" alt="Fluted Glass Double Door Wood Finish" width="4536" height="8064" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Fluted-Glass-Double-Door-Wood-Finish-01.jpg'"/><span>Fluted Glass Double Door Wood Finish</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FGrid-Glass-Door-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Grid Glass Door Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FGrid-Glass-Door-Black-01.jpg&w=800&q=80&output=webp" alt="Grid Glass Door Black" width="1056" height="1352" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Grid-Glass-Door-Black-01.jpg'"/><span>Grid Glass Door Black</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FOffice-Glass-Partition-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Office Glass Partition Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FOffice-Glass-Partition-Black-01.jpg&w=800&q=80&output=webp" alt="Office Glass Partition Black" width="4710" height="6241" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Office-Glass-Partition-Black-01.jpg'"/><span>Office Glass Partition Black</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FOffice-Glass-Partition-Black-02.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Office Glass Partition Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FOffice-Glass-Partition-Black-02.jpg&w=800&q=80&output=webp" alt="Office Glass Partition Black" width="1280" height="857" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Office-Glass-Partition-Black-02.jpg'"/><span>Office Glass Partition Black</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FOffice-Grid-Glass-Door-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Office Grid Glass Door Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FOffice-Grid-Glass-Door-Black-01.jpg&w=800&q=80&output=webp" alt="Office Grid Glass Door Black" width="2268" height="3372" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Office-Grid-Glass-Door-Black-01.jpg'"/><span>Office Grid Glass Door Black</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Frame-Double-Door-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Slim Frame Double Door Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Frame-Double-Door-Black-01.jpg&w=800&q=80&output=webp" alt="Slim Frame Double Door Black" width="4160" height="6240" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Frame-Double-Door-Black-01.jpg'"/><span>Slim Frame Double Door Black</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Frame-Double-Glass-Door-Gold-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Slim Frame Double Glass Door Gold"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Frame-Double-Glass-Door-Gold-01.jpg&w=800&q=80&output=webp" alt="Slim Frame Double Glass Door Gold" width="4282" height="6613" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Frame-Double-Glass-Door-Gold-01.jpg'"/><span>Slim Frame Double Glass Door Gold</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Frame-Glass-Door-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Slim Frame Glass Door Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Frame-Glass-Door-Black-01.jpg&w=800&q=80&output=webp" alt="Slim Frame Glass Door Black" width="5724" height="4108" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Frame-Glass-Door-Black-01.jpg'"/><span>Slim Frame Glass Door Black</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Frame-Glass-Door-Black-02.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Slim Frame Glass Door Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Frame-Glass-Door-Black-02.jpg&w=800&q=80&output=webp" alt="Slim Frame Glass Door Black" width="4160" height="6240" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Frame-Glass-Door-Black-02.jpg'"/><span>Slim Frame Glass Door Black</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Glass-Door-Black-02.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Slim Glass Door Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Glass-Door-Black-02.jpg&w=800&q=80&output=webp" alt="Slim Glass Door Black" width="4160" height="6240" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Glass-Door-Black-02.jpg'"/><span>Slim Glass Door Black</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Glass-Partition-Bronze-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Slim Glass Partition Bronze"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FSlim-Glass-Partition-Bronze-01.jpg&w=800&q=80&output=webp" alt="Slim Glass Partition Bronze" width="4032" height="2268" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Slim-Glass-Partition-Bronze-01.jpg'"/><span>Slim Glass Partition Bronze</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FStorefront-Glass-Door-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Storefront Glass Door Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FStorefront-Glass-Door-Black-01.jpg&w=800&q=80&output=webp" alt="Storefront Glass Door Black" width="5658" height="4169" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Storefront-Glass-Door-Black-01.jpg'"/><span>Storefront Glass Door Black</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FTinted-Glass-Door-Bronze-01.jpg&w=2000&q=80&output=webp" data-lb="sys-1" data-cap="Tinted Glass Door Bronze"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FDoors%2FTinted-Glass-Door-Bronze-01.jpg&w=800&q=80&output=webp" alt="Tinted Glass Door Bronze" width="2440" height="4296" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Doors/Tinted-Glass-Door-Bronze-01.jpg'"/><span>Tinted Glass Door Bronze</span></a>
 </div>
-
-<div class="lb" id="lb">
-  <button class="lb-x" onclick="lbClose()">&#215;</button>
-  <button class="lb-p" onclick="lbGo(-1)">&#8249;</button>
-  <img id="lbI" src="" alt=""/>
-  <button class="lb-n" onclick="lbGo(1)">&#8250;</button>
-  <div class="lb-ct" id="lbC"></div>
-</div>
-
-<section class="scta">
-  <div class="wrap scta-i">
-    <div class="rev"><h2>Planning a Partition System?</h2><p>Our team will assess your space and design the right solution.</p></div>
-    <a href="contact.html" class="btn-ws rev d2">Get in Touch</a>
   </div>
 </section>
-
-
-
-
-<section style="background:var(--black);padding:64px 0;">
+<section class="sec alt" id="sys-2">
   <div class="wrap">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
-      <div style="display:flex;align-items:center;gap:20px;">
-        <div style="width:60px;height:60px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="28" height="28" fill="none" viewBox="0 0 28 28"><path d="M16 3H8a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" stroke="white" stroke-width="1.5" stroke-linecap="round"/><polyline points="16,3 16,9 22,9" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="15" x2="10" y2="15" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="19" x2="10" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div>
-          <div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px;">Product Catalogue</div>
-          <div style="font-family:var(--fm);font-size:18px;font-weight:400;color:var(--white);margin-bottom:4px;">Download Our Catalogue</div>
-          <div style="font-size:13px;color:rgba(255,255,255,.45);">Detailed specifications, product photos and finish options</div>
-        </div>
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow rev">02 / 04</span>
+        <h2 class="h2 rev d1">Fixed Partitions</h2>
+        <p class="lead rev d2">Floor-to-ceiling fixed glass partitions in clear, frosted, textured and specialty glass. Ideal for offices, residences and retail environments.</p>
       </div>
-      <button onclick="openCatModal()" style="display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--black);font-family:var(--fb);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;border:none;cursor:pointer;flex-shrink:0;transition:all .22s;" onmouseover="this.style.background='#458895';this.style.color='white'" onmouseout="this.style.background='white';this.style.color='#0A0A0A'">
-        <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M8 2v8M4.5 7l3.5 3.5L11.5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M2 12h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-        Download PDF
-      </button>
+      <div class="acts rev d2"><span class="count">11 designs</span><a href="contact.html" class="btn btn-ol">Enquire <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a></div>
+    </div>
+    <div class="mason ">
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FClear-Glass-Corner-Fixed-Partition-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Clear Glass Corner Fixed Partition Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FClear-Glass-Corner-Fixed-Partition-Black-01.jpg&w=800&q=80&output=webp" alt="Clear Glass Corner Fixed Partition Black" width="4032" height="2268" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Clear-Glass-Corner-Fixed-Partition-Black-01.jpg'"/><span>Clear Glass Corner Fixed Partition Black</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FClear-Glass-Corner-Fixed-Partition-Black-02.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Clear Glass Corner Fixed Partition Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FClear-Glass-Corner-Fixed-Partition-Black-02.jpg&w=800&q=80&output=webp" alt="Clear Glass Corner Fixed Partition Black" width="1054" height="1352" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Clear-Glass-Corner-Fixed-Partition-Black-02.jpg'"/><span>Clear Glass Corner Fixed Partition Black</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FClear-Glass-Fixed-Partition-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Clear Glass Fixed Partition Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FClear-Glass-Fixed-Partition-Black-01.jpg&w=800&q=80&output=webp" alt="Clear Glass Fixed Partition Black" width="4032" height="2269" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Clear-Glass-Fixed-Partition-Black-01.jpg'"/><span>Clear Glass Fixed Partition Black</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FClear-Glass-Grid-Fixed-Partition-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Clear Glass Grid Fixed Partition Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FClear-Glass-Grid-Fixed-Partition-Black-01.jpg&w=800&q=80&output=webp" alt="Clear Glass Grid Fixed Partition Black" width="853" height="1280" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Clear-Glass-Grid-Fixed-Partition-Black-01.jpg'"/><span>Clear Glass Grid Fixed Partition Black</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FCurved-Tinted-Texured-Glass-Fixed-Partition-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Curved Tinted Textured Glass Fixed Partition Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FCurved-Tinted-Texured-Glass-Fixed-Partition-Black-01.jpg&w=800&q=80&output=webp" alt="Curved Tinted Textured Glass Fixed Partition Black" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Curved-Tinted-Texured-Glass-Fixed-Partition-Black-01.jpg'"/><span>Curved Tinted Textured Glass Fixed Partition Black</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FCurved-Tinted-Texured-Glass-Fixed-Partition-Black-02.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Curved Tinted Textured Glass Fixed Partition Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FCurved-Tinted-Texured-Glass-Fixed-Partition-Black-02.jpg&w=800&q=80&output=webp" alt="Curved Tinted Textured Glass Fixed Partition Black" width="4418" height="2480" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Curved-Tinted-Texured-Glass-Fixed-Partition-Black-02.jpg'"/><span>Curved Tinted Textured Glass Fixed Partition Black</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FCustom-Capsule-Fluted-Fabric-Glass-Fixed-Partition-Gold-02.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Custom Capsule Fluted Fabric Glass Fixed Partition Gold"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FCustom-Capsule-Fluted-Fabric-Glass-Fixed-Partition-Gold-02.jpg&w=800&q=80&output=webp" alt="Custom Capsule Fluted Fabric Glass Fixed Partition Gold" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Custom-Capsule-Fluted-Fabric-Glass-Fixed-Partition-Gold-02.jpg'"/><span>Custom Capsule Fluted Fabric Glass Fixed Partition Gold</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FFabric-Glass-Fixed-Partition-Gold-01.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Fabric Glass Fixed Partition Gold"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FFabric-Glass-Fixed-Partition-Gold-01.jpg&w=800&q=80&output=webp" alt="Fabric Glass Fixed Partition Gold" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Fabric-Glass-Fixed-Partition-Gold-01.jpg'"/><span>Fabric Glass Fixed Partition Gold</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FFrosted-Glass-Fixed-Partition-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Frosted Glass Fixed Partition Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FFrosted-Glass-Fixed-Partition-Black-01.jpg&w=800&q=80&output=webp" alt="Frosted Glass Fixed Partition Black" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Frosted-Glass-Fixed-Partition-Black-01.jpg'"/><span>Frosted Glass Fixed Partition Black</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FGlass-Brick-Fixed-Partition-Gold-01.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Glass Brick Fixed Partition Gold"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FGlass-Brick-Fixed-Partition-Gold-01.jpg&w=800&q=80&output=webp" alt="Glass Brick Fixed Partition Gold" width="4586" height="3034" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Glass-Brick-Fixed-Partition-Gold-01.jpg'"/><span>Glass Brick Fixed Partition Gold</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FTextured-Glass-Fixed-Partition-Wood-Finish-01.jpg&w=2000&q=80&output=webp" data-lb="sys-2" data-cap="Textured Glass Fixed Partition Wood Finish"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FTextured-Glass-Fixed-Partition-Wood-Finish-01.jpg&w=800&q=80&output=webp" alt="Textured Glass Fixed Partition Wood Finish" width="2758" height="2211" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Textured-Glass-Fixed-Partition-Wood-Finish-01.jpg'"/><span>Textured Glass Fixed Partition Wood Finish</span></a>
+</div>
+  </div>
+</section>
+<section class="sec" id="sys-3">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow rev">03 / 04</span>
+        <h2 class="h2 rev d1">Sliding Partitions</h2>
+        <p class="lead rev d2">Telescopic and synchronised sliding glass partition systems for flexible spaces. Single, double and multi-panel configurations.</p>
+      </div>
+      <div class="acts rev d2"><span class="count">23 designs</span><a href="contact.html" class="btn btn-ol">Enquire <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a></div>
+    </div>
+    <div class="mason ">
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FThumbnail%2520Telescopic-Sliding-Patterned-Glass-Majestic-Gold-01.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Telescopic Sliding Patterned Glass Majestic Gold"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FThumbnail%2520Telescopic-Sliding-Patterned-Glass-Majestic-Gold-01.jpg&w=800&q=80&output=webp" alt="Telescopic Sliding Patterned Glass Majestic Gold" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Thumbnail%20Telescopic-Sliding-Patterned-Glass-Majestic-Gold-01.jpg'"/><span>Telescopic Sliding Patterned Glass Majestic Gold</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FDouble-Telescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Double Telescopic Sliding Fluted Glass Midnight Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FDouble-Telescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg&w=800&q=80&output=webp" alt="Double Telescopic Sliding Fluted Glass Midnight Black" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Double-Telescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg'"/><span>Double Telescopic Sliding Fluted Glass Midnight Black</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FSynchro-Sliding-Clear-Glass-Midnight-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Synchro Sliding Clear Glass Midnight Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FSynchro-Sliding-Clear-Glass-Midnight-Black-01.jpg&w=800&q=80&output=webp" alt="Synchro Sliding Clear Glass Midnight Black" width="5515" height="3662" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Synchro-Sliding-Clear-Glass-Midnight-Black-01.jpg'"/><span>Synchro Sliding Clear Glass Midnight Black</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FTelescopic-Sliding-Clear-Glass-Midnight-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Telescopic Sliding Clear Glass Midnight Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FTelescopic-Sliding-Clear-Glass-Midnight-Black-01.jpg&w=800&q=80&output=webp" alt="Telescopic Sliding Clear Glass Midnight Black" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Telescopic-Sliding-Clear-Glass-Midnight-Black-01.jpg'"/><span>Telescopic Sliding Clear Glass Midnight Black</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FTelescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Telescopic Sliding Fluted Glass Midnight Black"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FTelescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg&w=800&q=80&output=webp" alt="Telescopic Sliding Fluted Glass Midnight Black" width="6504" height="4352" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Telescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg'"/><span>Telescopic Sliding Fluted Glass Midnight Black</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FTelescopic-Sliding-Grid-Fabric-Glass-Bronze-01.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Telescopic Sliding Grid Fabric Glass Bronze"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FTelescopic-Sliding-Grid-Fabric-Glass-Bronze-01.jpg&w=800&q=80&output=webp" alt="Telescopic Sliding Grid Fabric Glass Bronze" width="4536" height="7593" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Telescopic-Sliding-Grid-Fabric-Glass-Bronze-01.jpg'"/><span>Telescopic Sliding Grid Fabric Glass Bronze</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSynchroSliding_5216.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Synchro Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSynchroSliding_5216.jpg&w=800&q=80&output=webp" alt="Synchro Sliding Partition" width="2538" height="2160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/SynchroSliding_5216.jpg'"/><span>Synchro Sliding Partition</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0029.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0029.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="4171" height="6248" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_0029.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0030.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0030.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="4160" height="6240" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_0030.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0031.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0031.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="3875" height="6566" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_0031.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0032.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0032.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="3847" height="6241" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_0032.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0033.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0033.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="3935" height="6152" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_0033.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0034.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0034.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="3519" height="6243" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_0034.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0035.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0035.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="4019" height="6614" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_0035.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0036.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0036.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_0036.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0037.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0037.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="4096" height="6242" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_0037.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_8040.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_8040.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="2389" height="3961" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_8040.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_8041.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Decorative Sliding Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_8041.jpg&w=800&q=80&output=webp" alt="Decorative Sliding Partition" width="2700" height="4405" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_8041.jpg'"/><span>Decorative Sliding Partition</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSlidingDoor001.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Sliding Glass Door"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSlidingDoor001.jpg&w=800&q=80&output=webp" alt="Sliding Glass Door" width="1080" height="1615" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/SlidingDoor001.jpg'"/><span>Sliding Glass Door</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSlidingDoor002.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Sliding Glass Door"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSlidingDoor002.jpg&w=800&q=80&output=webp" alt="Sliding Glass Door" width="1080" height="1592" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/SlidingDoor002.jpg'"/><span>Sliding Glass Door</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSlidingDoor003.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Sliding Glass Door"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSlidingDoor003.jpg&w=800&q=80&output=webp" alt="Sliding Glass Door" width="1080" height="1615" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/SlidingDoor003.jpg'"/><span>Sliding Glass Door</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSlidingDoor004.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Sliding Glass Door"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSlidingDoor004.jpg&w=800&q=80&output=webp" alt="Sliding Glass Door" width="1782" height="891" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/SlidingDoor004.jpg'"/><span>Sliding Glass Door</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSlidingDoor005.jpg&w=2000&q=80&output=webp" data-lb="sys-3" data-cap="Sliding Glass Door"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSlidingDoor005.jpg&w=800&q=80&output=webp" alt="Sliding Glass Door" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/SlidingDoor005.jpg'"/><span>Sliding Glass Door</span></a>
+</div>
+  </div>
+</section>
+<section class="sec alt" id="sys-4">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow rev">04 / 04</span>
+        <h2 class="h2 rev d1">Smart Glass</h2>
+        <p class="lead rev d2">Switchable smart glass that turns from transparent to opaque at the flick of a switch. Ideal for office cabins, conference rooms and private spaces.</p>
+      </div>
+      <div class="acts rev d2"><a href="contact.html" class="btn btn-ol">Enquire <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a></div>
+    </div>
+    <div class="mason c3" style="columns:2 320px;max-width:980px"><a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSmart%2520Glass%2F%2520Smart-Glass-Office%2520Cabin.jpg&w=2000&q=80&output=webp" data-lb="sys-4" data-cap="Smart Glass Office Cabin"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSmart%2520Glass%2F%2520Smart-Glass-Office%2520Cabin.jpg&w=1400&q=80&output=webp" alt="Smart Glass Office Cabin" width="4005" height="5800" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Smart%20Glass/%20Smart-Glass-Office%20Cabin.jpg'"/><span>Smart Glass Office Cabin</span></a><a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSmartGlass_0083%2520copy.jpg&w=2000&q=80&output=webp" data-lb="sys-4" data-cap="Smart Glass Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FSmartGlass_0083%2520copy.jpg&w=1400&q=80&output=webp" alt="Smart Glass Partition" width="4005" height="5800" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/SmartGlass_0083%20copy.jpg'"/><span>Smart Glass Partition</span></a></div>
+  </div>
+</section>
+<section class="sec dark" id="installed">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow light rev">Our Work</span>
+        <h2 class="h2 light rev d1">Installed Across Hyderabad</h2>
+        <p class="lead light rev d2">Real partitions & door systems projects, measured, fabricated and installed by our own team.</p>
+      </div>
+      <div class="acts rev d2"><a href="portfolio.html" class="btn btn-w">View Portfolio <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a></div>
+    </div>
+    <div class="mason c3">
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0084%2520%281%29.jpg&w=2000&q=80&output=webp" data-lb="installed" data-cap="Framed Office Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0084%2520%281%29.jpg&w=800&q=80&output=webp" alt="Framed Office Partition" width="5916" height="4161" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/IMG_0084%20(1).jpg'"/><span>Framed Office Partition</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fkompally.JPG&w=2000&q=80&output=webp" data-lb="installed" data-cap="Fluted Sliding Partition, Kompally"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fkompally.JPG&w=800&q=80&output=webp" alt="Fluted Sliding Partition, Kompally" width="6504" height="4352" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/kompally.JPG'"/><span>Fluted Sliding Partition, Kompally</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0087%2520%281%29.jpg&w=2000&q=80&output=webp" data-lb="installed" data-cap="Glass Cabin Door"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0087%2520%281%29.jpg&w=800&q=80&output=webp" alt="Glass Cabin Door" width="4163" height="5573" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/IMG_0087%20(1).jpg'"/><span>Glass Cabin Door</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fnarsingi.JPG&w=2000&q=80&output=webp" data-lb="installed" data-cap="Restaurant Partitions, Narsingi"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fnarsingi.JPG&w=800&q=80&output=webp" alt="Restaurant Partitions, Narsingi" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/narsingi.JPG'"/><span>Restaurant Partitions, Narsingi</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0015.jpg&w=2000&q=80&output=webp" data-lb="installed" data-cap="Restaurant Glass Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0015.jpg&w=800&q=80&output=webp" alt="Restaurant Glass Partition" width="4160" height="6240" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/IMG_0015.jpg'"/><span>Restaurant Glass Partition</span></a>
+<a class="mi rev d1" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2F002.jpg&w=2000&q=80&output=webp" data-lb="installed" data-cap="Contemporary Office, Financial District"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2F002.jpg&w=800&q=80&output=webp" alt="Contemporary Office, Financial District" width="4032" height="2269" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/002.jpg'"/><span>Contemporary Office, Financial District</span></a>
+<a class="mi rev d2" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FWhatsApp%2520Image%25202026-04-09%2520at%25202.05.18%2520PM%2520%283%29%2520%281%29.jpeg&w=2000&q=80&output=webp" data-lb="installed" data-cap="Office Cafeteria Partitions"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FWhatsApp%2520Image%25202026-04-09%2520at%25202.05.18%2520PM%2520%283%29%2520%281%29.jpeg&w=800&q=80&output=webp" alt="Office Cafeteria Partitions" width="1280" height="801" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/WhatsApp%20Image%202026-04-09%20at%202.05.18%20PM%20(3)%20(1).jpeg'"/><span>Office Cafeteria Partitions</span></a>
+<a class="mi rev d3" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2F01.jpg&w=2000&q=80&output=webp" data-lb="installed" data-cap="Bedroom Glass Partition"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2F01.jpg&w=800&q=80&output=webp" alt="Bedroom Glass Partition" width="4245" height="6340" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/01.jpg'"/><span>Bedroom Glass Partition</span></a>
+<a class="mi rev" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0243.JPG&w=2000&q=80&output=webp" data-lb="installed" data-cap="Living Room Glass Doors"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0243.JPG&w=800&q=80&output=webp" alt="Living Room Glass Doors" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/IMG_0243.JPG'"/><span>Living Room Glass Doors</span></a>
+</div>
+  </div>
+</section>
+<section class="catb">
+  <div class="catb-in">
+    <div class="pic"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FTelescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg&w=1400&q=80&output=webp" alt="" width="6504" height="4352" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Telescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg'"/></div>
+    <div class="txt rev">
+      <span class="eyebrow">Product Catalogue</span>
+      <h2>Partitions and Doors Catalogue</h2>
+      <p>Specifications, finish options and system details for every door and partition we make.</p>
+      <div><button class="btn btn-blk" onclick="openCat()"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Download Catalogue</button></div>
     </div>
   </div>
 </section>
+
+<section class="ctab">
+  <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0084%2520%281%29.jpg&w=1800&q=80&output=webp" alt="" width="5916" height="4161" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/IMG_0084%20(1).jpg'"/>
+  <div class="wrap">
+    <div class="ctai">
+      <div class="rev"><h2>Planning a Partition System?</h2><p>Our team will assess your space and design the right solution.</p></div>
+      <div class="ctaa rev d2">
+        <a href="contact.html" class="btn btn-w">Book a Consultation</a>
+        <a href="tel:+919000420253" class="btn btn-ol-w">Call Now</a>
+        <a href="https://wa.me/919553371114" target="_blank" rel="noopener" class="btn btn-ol-w">WhatsApp Us</a>
+        <a href="#" onclick="openCat();return false;" class="btn btn-ol-w">Download Catalogue</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer id="ft">
   <div class="wrap">
-    <div class="ftg">
-      <div><img class="fli" src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none'"/><p class="ftag">Designing, fabricating, and installing custom glass solutions across India since 1991.</p></div>
-      <div class="fc"><h4>Solutions</h4><ul><li><a href="windows-doors.html">Windows</a></li><li><a href="railings.html">Railings</a></li><li><a href="partitions.html">Partitions and Doors</a></li><li><a href="shower-cubicles.html">Shower Cubicles</a></li><li><a href="mirrors.html">Mirrors</a></li><li><a href="products.html">Products</a></li></ul></div>
-      <div class="fc"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="fc"><h4>Contact</h4><div class="fci"><a href="tel:+919553371114" class="fca">+91 95533 71114</a><a href="mailto:info@domesticglass.in" class="fca">info@domesticglass.in</a><span class="fca" style="cursor:default;">Hyderabad, Telangana</span></div></div>
+    <div class="ft">
+      <div>
+        <img class="fli" src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none'"/>
+        <p class="ftag">Designing, fabricating, and installing custom glass solutions across India since 1991.</p>
+        <div class="fso"><a href="https://www.instagram.com/domesticglass/" target="_blank" rel="noopener" class="fsl" aria-label="Instagram"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/company/domesticglass/home/" target="_blank" rel="noopener" class="fsl" aria-label="LinkedIn"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.3 21 14.7V21h-4v-5.6c0-1.34-.03-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V21H9z"/></svg></a><a href="https://pin.it/2w9liAjEJ" target="_blank" rel="noopener" class="fsl" aria-label="Pinterest"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.64 19.31c-.09-.79-.17-2 .03-2.86l1.2-5.08s-.3-.61-.3-1.5c0-1.41.82-2.46 1.83-2.46.87 0 1.29.65 1.29 1.43 0 .87-.56 2.18-.84 3.39-.24 1.01.51 1.84 1.51 1.84 1.81 0 3.2-1.91 3.2-4.66 0-2.44-1.75-4.14-4.25-4.14-2.9 0-4.6 2.17-4.6 4.42 0 .87.34 1.81.76 2.32a.3.3 0 01.07.29l-.28 1.14c-.05.18-.15.22-.34.13-1.27-.59-2.06-2.44-2.06-3.93 0-3.2 2.32-6.13 6.7-6.13 3.52 0 6.25 2.5 6.25 5.85 0 3.5-2.2 6.3-5.26 6.3-1.03 0-2-.53-2.33-1.17l-.63 2.42c-.23.88-.85 1.98-1.26 2.66A10 10 0 1012 2z"/></svg></a><a href="https://youtube.com/@domesticglass?si=Kw6w-u86L7hpt3pt" target="_blank" rel="noopener" class="fsl" aria-label="YouTube"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12 31 31 0 001 16.8a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.75 15.02V8.98L15.5 12z"/></svg></a><a href="https://wa.me/919553371114" target="_blank" rel="noopener" class="fsl" aria-label="WhatsApp"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.2L2 22l4.8-1.4A10 10 0 0012 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18a8 8 0 01-4.3-1.2l-.3-.2-3.2.8.9-3.1-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 00-.7.3 2.8 2.8 0 00-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.2z"/></svg></a></div>
+      </div>
+      <div class="fc"><h4>Solutions</h4><ul><li><a href="partitions.html">Partitions &amp; Door Systems</a></li><li><a href="shower-cubicles.html">Shower Partition Systems</a></li><li><a href="railings.html">Railing Systems</a></li><li><a href="mirrors.html">Architectural Mirrors</a></li><li><a href="windows-doors.html">Window Systems</a></li><li><a href="products.html">Products</a></li></ul></div>
+      <div class="fc"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Inspiration</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <address><b>Showroom</b>8-2-681/A/1/A, 2nd Floor, Zoom Tower, above HDFC Bank, Banjara Hills Road No. 12, Hyderabad 500034</address>
+        <address><b>Factory</b>5-6-171/1, near Charkandil, Agapura, Nampally, Hyderabad 500001</address>
+        <ul>
+          <li><a href="tel:+919000420253">+91 90004 20253</a></li>
+          <li><a href="tel:+917893455590">+91 78934 55590</a></li>
+          <li><a href="tel:+919247522655">+91 92475 22655</a></li>
+          <li><a href="mailto:hello@domesticglass.in">hello@domesticglass.in</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="fbb"><p class="fbcp">2025 Domestic Glass. All rights reserved.</p><div class="fbl"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
+    <div class="fb"><p class="fbcp">&copy; <span class="yr">2026</span> Domestic Glass. All rights reserved.</p><div class="fbl"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
   </div>
 </footer>
-<a href="https://wa.me/919553371114" target="_blank" rel="noopener" class="wa-fab" aria-label="Chat on WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.549 4.112 1.515 5.845L.057 23.428a.75.75 0 0 0 .921.944l5.798-1.456A11.941 11.941 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.9 0-3.7-.51-5.25-1.398l-.377-.213-3.906.98.994-3.813-.228-.374A9.718 9.718 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
-</a>
+<a href="https://wa.me/919553371114" target="_blank" rel="noopener" class="wa-fab" aria-label="Chat on WhatsApp"><svg width="28" height="28" fill="#fff" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.17L2 22l4.83-1.44A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a8 8 0 01-4.29-1.25l-.29-.17-3.18.83.85-3.1-.19-.3A7.96 7.96 0 014 12a8 8 0 1116 0 8 8 0 01-8 8z"/></svg></a>
 
-<script>
-const hdr=document.getElementById("hdr");
-window.addEventListener("scroll",()=>hdr.classList.toggle("sc",window.scrollY>20));
-const hbg=document.getElementById("hbg"),mob=document.getElementById("mob");
-hbg.addEventListener("click",()=>{hbg.classList.toggle("op");mob.classList.toggle("op");});
-const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");ro.unobserve(e.target);}});},{threshold:.08,rootMargin:"0px 0px -20px 0px"});
-document.querySelectorAll(".rev").forEach(el=>ro.observe(el));
-document.querySelectorAll(".ph .rev").forEach(el=>el.classList.add("on"));
-const BASE="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/";
-let lbSet=[],lbIdx=0;
-function lbOpen(arr,i){lbSet=arr;lbIdx=i;document.getElementById("lbI").src=BASE+arr[i];document.getElementById("lbC").textContent=(i+1)+" / "+arr.length;document.getElementById("lb").classList.add("on");document.body.style.overflow="hidden";}
-function lbClose(){document.getElementById("lb").classList.remove("on");document.body.style.overflow="";}
-function lbGo(d){lbIdx=(lbIdx+d+lbSet.length)%lbSet.length;document.getElementById("lbI").src=BASE+lbSet[lbIdx];document.getElementById("lbC").textContent=(lbIdx+1)+" / "+lbSet.length;}
-document.getElementById("lb").addEventListener("click",e=>{if(e.target===e.currentTarget)lbClose();});
-document.addEventListener("keydown",e=>{if(!document.getElementById("lb").classList.contains("on"))return;if(e.key==="ArrowRight")lbGo(1);if(e.key==="ArrowLeft")lbGo(-1);if(e.key==="Escape")lbClose();});
-function openPdfModal(){document.getElementById("pdfModal").classList.add("on");document.body.style.overflow="hidden";}
-function closePdfModal(){document.getElementById("pdfModal").classList.remove("on");document.body.style.overflow="";setTimeout(()=>{document.getElementById("pdfForm").style.display="block";document.getElementById("pdfSuccess").classList.remove("on");["pdfName","pdfMobile","pdfFirm","pdfLocation"].forEach(id=>{document.getElementById(id).value="";});},300);}
-document.getElementById("pdfModal").addEventListener("click",e=>{if(e.target===e.currentTarget)closePdfModal();});
-function submitPdfForm(){
-  const name=document.getElementById("pdfName").value.trim();
-  const mobile=document.getElementById("pdfMobile").value.trim().replace(/\D/g,"");
-  const firm=document.getElementById("pdfFirm").value.trim();
-  const location=document.getElementById("pdfLocation").value.trim();
-  let valid=true;
-  if(!name){document.getElementById("pdfName").classList.add("err");document.getElementById("nameErr").classList.add("on");valid=false;}else{document.getElementById("pdfName").classList.remove("err");document.getElementById("nameErr").classList.remove("on");}
-  if(mobile.length<10){document.getElementById("pdfMobile").classList.add("err");document.getElementById("mobileErr").classList.add("on");valid=false;}else{document.getElementById("pdfMobile").classList.remove("err");document.getElementById("mobileErr").classList.remove("on");}
-  if(!valid)return;
-  console.log("PDF Lead:",{name,mobile:document.getElementById("pdfMobile").value.trim(),firm,location});
-  document.getElementById("pdfForm").style.display="none";
-  document.getElementById("pdfSuccess").classList.add("on");
-}
-function triggerDownload(){const url="#";if(url!=="#"){const a=document.createElement("a");a.href=url;a.download="Domestic-Glass-Portfolio.pdf";a.click();}else{alert("PDF coming soon! Our team will reach out to you shortly.");}}
-const doors=['Corner-Glass-Partition-Black-01.jpg','Designer-Grid-Double-Door-Gold-01.jpg','Fabric-Glass-Double-Door-Wood-Finish-01.jpg','Fluted-Ghost-Glass-Door-Bronze-01.jpg','Fluted-Glass-Double-Door-Wood-Finish-01.jpg','Full-Height-Glass-Door-Black-01.jpg','Grid-Glass-Door-Black-01.jpg','Office-Glass-Partition-Black-01.jpg','Office-Glass-Partition-Black-02.jpg','Office-Grid-Glass-Door-Black-01.jpg','Slim-Frame-Double-Door-Black-01.jpg','Slim-Frame-Double-Glass-Door-Gold-01.jpg','Slim-Frame-Glass-Door-Black-01.jpg','Slim-Frame-Glass-Door-Black-02.jpg','Slim-Frame-Glass-Door-Bronze-03.jpg','Slim-Glass-Door-Black-02.jpg','Slim-Glass-Partition-Bronze-01.jpg','Storefront-Glass-Door-Black-01.jpg','Tinted-Glass-Door-Bronze-01.jpg'];
-const fixed=['Clear-Glass-Corner-Fixed-Partition-Black-01.jpg','Clear-Glass-Corner-Fixed-Partition-Black-02.jpg','Clear-Glass-Fixed-Partition-Black-01.jpg','Clear-Glass-Grid-Fixed-Partition-Black-01.jpg','Curved-Tinted-Texured-Glass-Fixed-Partition-Black-01.jpg','Curved-Tinted-Texured-Glass-Fixed-Partition-Black-02.jpg','Custom-Capsule-Fluted-Fabric-Glass-Fixed-Partition-Gold-02.jpg','Fabric-Glass-Fixed-Partition-Gold-01.jpg','Frosted-Glass-Fixed-Partition-Black-01.jpg','Glass-Brick-Fixed-Partition-Gold-01.jpg','Textured-Glass-Fixed-Partition-Wood-Finish-01.jpg'];
-const sliding=['Double-Telescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg','Synchro-Sliding-Clear-Glass-Midnight-Black-01.jpg','Telescopic-Sliding-Clear-Glass-Midnight-Black-01.jpg','Telescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg','Telescopic-Sliding-Grid-Fabric-Glass-Bronze-01.jpg','Telescopic-Sliding-Patterned-Glass-Majestic-Gold-01.jpg'];
-const smart=['Smart-Glass-Office-Cabin.jpg'];
-</script>
-<!-- CATALOGUE MODAL -->
-<div id="catModal" style="position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9000;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);">
-  <div style="background:#fff;width:100%;max-width:440px;position:relative;">
-    <div style="height:3px;background:#458895;"></div>
-    <div style="padding:36px 32px 32px;">
-      <button onclick="closeCatModal()" style="position:absolute;top:12px;right:16px;background:none;border:none;cursor:pointer;color:#9A9A9A;font-size:24px;line-height:1;">&#215;</button>
-      <div id="catForm">
-        <h3 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:400;color:#0A0A0A;margin-bottom:6px;">Download Catalogue</h3>
-        <p style="font-size:13px;color:#5A5A5A;margin-bottom:24px;">Enter your details to download the PDF.</p>
-        <div style="margin-bottom:16px;">
-          <label style="display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#5A5A5A;margin-bottom:6px;">Name *</label>
-          <input type="text" id="catName" placeholder="Your full name" style="width:100%;border:1px solid #E4E4E4;padding:11px 14px;font-size:14px;color:#0A0A0A;outline:none;font-family:'DM Sans',sans-serif;" onfocus="this.style.borderColor='#458895'" onblur="this.style.borderColor='#E4E4E4'"/>
-          <div id="catNameErr" style="font-size:11px;color:#e53e3e;margin-top:4px;display:none;">Please enter your name.</div>
-        </div>
-        <div style="margin-bottom:20px;">
-          <label style="display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#5A5A5A;margin-bottom:6px;">Mobile *</label>
-          <input type="tel" id="catPhone" placeholder="+91 XXXXX XXXXX" style="width:100%;border:1px solid #E4E4E4;padding:11px 14px;font-size:14px;color:#0A0A0A;outline:none;font-family:'DM Sans',sans-serif;" onfocus="this.style.borderColor='#458895'" onblur="this.style.borderColor='#E4E4E4'"/>
-          <div id="catPhoneErr" style="font-size:11px;color:#e53e3e;margin-top:4px;display:none;">Please enter a valid 10-digit number.</div>
-        </div>
-        <button onclick="submitCatForm()" style="width:100%;background:#458895;color:#fff;border:none;padding:14px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'DM Sans',sans-serif;">Download Now</button>
-        <p style="font-size:11px;color:#9A9A9A;text-align:center;margin-top:12px;">We respect your privacy. No spam, ever.</p>
-      </div>
-      <div id="catSuccess" style="display:none;text-align:center;padding:16px 0 8px;">
-        <div style="width:56px;height:56px;background:rgba(69,136,149,.1);border:2px solid #458895;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="#458895" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h4 style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:400;color:#0A0A0A;margin-bottom:8px;">Downloading...</h4>
-        <p style="font-size:13px;color:#5A5A5A;line-height:1.6;">Your download has started. <a id="catManualLink" href="#" style="color:#458895;">Click here</a> if it doesn't begin automatically.</p>
-      </div>
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="lb-x" onclick="lbClose()" aria-label="Close">&#215;</button>
+  <button class="lb-p" onclick="lbGo(-1)" aria-label="Previous">&#8249;</button>
+  <img id="lbI" src="" alt=""/>
+  <button class="lb-n" onclick="lbGo(1)" aria-label="Next">&#8250;</button>
+  <div class="lb-c" id="lbC"></div>
+</div>
+<div class="mdl" id="catM">
+  <div class="mdl-b">
+    <button class="mdl-x" onclick="closeCat()" aria-label="Close">&#215;</button>
+    <div id="catF">
+      <h3>Download Catalogue</h3>
+      <p>Enter your details to download the PDF.</p>
+      <div class="fld"><label>Name *</label><input type="text" id="catN" placeholder="Your full name"/><div class="em" id="catNE">Please enter your name.</div></div>
+      <div class="fld"><label>Mobile *</label><input type="tel" id="catP" placeholder="+91 XXXXX XXXXX"/><div class="em" id="catPE">Please enter a valid 10-digit number.</div></div>
+      <button class="btn btn-teal" onclick="submitCat()"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Download Now</button>
+      <small>We respect your privacy. No spam, ever.</small>
     </div>
+    <div class="okb" id="catOK"><i>&#10003;</i><h3>Downloading...</h3><p>Your download has started. <a id="catL" href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Partitions.pdf" target="_blank" style="color:var(--teal);">Click here</a> if it doesn't begin automatically.</p></div>
   </div>
 </div>
-
 <script>
 var CAT_PDF_URL="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Partitions.pdf";
+</script>
 
-function openCatModal(){document.getElementById('catModal').style.display='flex';document.body.style.overflow='hidden';}
-function closeCatModal(){document.getElementById('catModal').style.display='none';document.body.style.overflow='';setTimeout(function(){document.getElementById('catForm').style.display='block';document.getElementById('catSuccess').style.display='none';document.getElementById('catName').value='';document.getElementById('catPhone').value='';},300);}
-document.getElementById('catModal').addEventListener('click',function(e){if(e.target===e.currentTarget)closeCatModal();});
-function submitCatForm(){
-  var name=document.getElementById('catName').value.trim();
-  var phone=document.getElementById('catPhone').value.trim().replace(/\D/g,'');
-  var ok=true;
-  if(!name){document.getElementById('catName').style.borderColor='#e53e3e';document.getElementById('catNameErr').style.display='block';ok=false;}else{document.getElementById('catName').style.borderColor='#E4E4E4';document.getElementById('catNameErr').style.display='none';}
-  if(phone.length<10){document.getElementById('catPhone').style.borderColor='#e53e3e';document.getElementById('catPhoneErr').style.display='block';ok=false;}else{document.getElementById('catPhone').style.borderColor='#E4E4E4';document.getElementById('catPhoneErr').style.display='none';}
+<script>
+(function(){
+var hdr=document.getElementById('hdr');
+window.addEventListener('scroll',function(){hdr.classList.toggle('sc',window.scrollY>20);},{passive:true});
+var hbg=document.getElementById('hbg'),mob=document.getElementById('mob');
+hbg.addEventListener('click',function(){hbg.classList.toggle('op');mob.classList.toggle('op');});
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rev').forEach(function(el){ro.observe(el);});
+document.querySelectorAll('.phero .rev').forEach(function(el){el.classList.add('on');});
+document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
+})();
+/* Lightbox: any element with data-lb="group" */
+var lbSet=[],lbIdx=0;
+function lbShow(){var it=lbSet[lbIdx];document.getElementById('lbI').src=it.href;document.getElementById('lbI').alt=it.cap;document.getElementById('lbC').textContent=it.cap+'  ·  '+(lbIdx+1)+' / '+lbSet.length;}
+function lbClose(){document.getElementById('lb').classList.remove('on');document.body.style.overflow='';}
+function lbGo(d){lbIdx=(lbIdx+d+lbSet.length)%lbSet.length;lbShow();}
+document.addEventListener('click',function(e){
+  var a=e.target.closest('[data-lb]');if(!a)return;e.preventDefault();
+  var g=a.getAttribute('data-lb');
+  var all=[].slice.call(document.querySelectorAll('[data-lb="'+g+'"]')).filter(function(x){return x.offsetParent!==null;});
+  lbSet=all.map(function(x){return{href:x.getAttribute('href'),cap:x.getAttribute('data-cap')||''};});
+  lbIdx=Math.max(0,all.indexOf(a));lbShow();
+  document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';
+});
+document.getElementById('lb').addEventListener('click',function(e){if(e.target===e.currentTarget)lbClose();});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){lbClose();closeCat();}
+  if(!document.getElementById('lb').classList.contains('on'))return;
+  if(e.key==='ArrowRight')lbGo(1);if(e.key==='ArrowLeft')lbGo(-1);
+});
+var lbIm=document.getElementById('lbI');
+lbIm.addEventListener('error',function(){var u=lbIm.src;var m=u.match(/[?&]url=([^&]+)/);if(m){lbIm.src=decodeURIComponent(m[1]);}});
+/* Catalogue modal */
+function openCat(){document.getElementById('catM').classList.add('on');document.body.style.overflow='hidden';}
+function closeCat(){var m=document.getElementById('catM');if(!m.classList.contains('on'))return;m.classList.remove('on');document.body.style.overflow='';setTimeout(function(){document.getElementById('catF').style.display='block';document.getElementById('catOK').classList.remove('on');},300);}
+document.getElementById('catM').addEventListener('click',function(e){if(e.target===e.currentTarget)closeCat();});
+function submitCat(){
+  var n=document.getElementById('catN'),p=document.getElementById('catP'),ok=true;
+  if(!n.value.trim()){n.classList.add('err');document.getElementById('catNE').classList.add('on');ok=false;}else{n.classList.remove('err');document.getElementById('catNE').classList.remove('on');}
+  if(p.value.replace(/\D/g,'').length<10){p.classList.add('err');document.getElementById('catPE').classList.add('on');ok=false;}else{p.classList.remove('err');document.getElementById('catPE').classList.remove('on');}
   if(!ok)return;
-  console.log('Catalogue lead:',{name:name,phone:document.getElementById('catPhone').value.trim(),pdf:CAT_PDF_URL});
-  document.getElementById('catForm').style.display='none';
-  document.getElementById('catSuccess').style.display='block';
-  document.getElementById('catManualLink').href=CAT_PDF_URL;
-  var a=document.createElement('a');a.href=CAT_PDF_URL;a.download='';a.target='_blank';document.body.appendChild(a);a.click();document.body.removeChild(a);
+  document.getElementById('catF').style.display='none';document.getElementById('catOK').classList.add('on');
+  var a=document.createElement('a');a.href=CAT_PDF_URL;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
 }
-
+/* Filter tabs: <div class="tabs" data-for="ID"><button class="tab" data-f="cat"> ... items have data-cat */
+document.querySelectorAll('.tabs').forEach(function(t){
+  var box=document.getElementById(t.getAttribute('data-for'));
+  t.addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;
+    t.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on');});b.classList.add('on');
+    var f=b.getAttribute('data-f');
+    box.querySelectorAll('[data-cat]').forEach(function(it){it.style.display=(f==='all'||it.getAttribute('data-cat').split(' ').indexOf(f)>-1)?'':'none';});
+  });
+});
 </script>
 </body>
 </html>

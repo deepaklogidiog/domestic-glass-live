@@ -1,119 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Portfolio – Domestic Glass</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<meta name="description" content="Completed glass projects across Hyderabad, executed with leading architects and interior designers."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://wsrv.nl"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--black:#0A0A0A;--white:#FFFFFF;--g50:#F8F8F8;--g100:#F2F2F2;--g200:#E4E4E4;--g400:#9A9A9A;--g600:#5A5A5A;--g800:#2A2A2A;--teal:#458895;--teal-d:#336670;--fm:'Montserrat',system-ui,sans-serif;--fb:'DM Sans',system-ui,sans-serif;}
-html{scroll-behavior:smooth;}body{font-family:var(--fb);font-size:16px;line-height:1.6;color:var(--black);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
-.rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}.rev.on{opacity:1;transform:none;}
-.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
-.wrap{max-width:1400px;margin:0 auto;padding:0 48px;}
-.teal-bar{display:block;width:36px;height:2px;background:var(--teal);margin-bottom:18px;}
-.eyebrow-w{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);}
-.eyebrow-g{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--g400);}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;cursor:pointer;border:none;}
+:root{--black:#0A0A0A;--white:#FFFFFF;--g50:#F7F7F5;--g100:#EFEFEC;--g200:#E2E2DE;--g400:#8A8A86;--g600:#4A4A47;--g700:#333331;--g800:#1F1F1E;--teal:#458895;--teal-d:#336670;--teal-dk:#1E4249;--fm:'Montserrat',system-ui,sans-serif;--fb:'DM Sans',system-ui,sans-serif;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);font-size:17px;line-height:1.7;color:var(--g700);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;height:auto;}
+a{text-decoration:none;color:inherit;}
+.rev{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+.rev.on{opacity:1;transform:none;}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+.wrap{max-width:1360px;margin:0 auto;padding:0 56px;}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);}
+.eyebrow::before{content:'';width:32px;height:2px;background:currentColor;}
+.eyebrow.light{color:#9fd0d8;}
+.h2{font-family:var(--fm);font-size:clamp(30px,3.4vw,48px);font-weight:500;line-height:1.15;letter-spacing:-.015em;color:var(--black);margin-top:18px;}
+.h2.light{color:var(--white);}
+.lead{font-size:18px;line-height:1.75;color:var(--g600);}
+.lead.light{color:rgba(255,255,255,.82);}
+.sec{padding:110px 0;}
+.sec.alt{background:var(--g50);}
+.sec.dark{background:var(--black);color:var(--white);}
+.sec.tight{padding:80px 0;}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:44px;flex-wrap:wrap;}
+.sec-head .lead{margin-top:16px;max-width:640px;}
+.sec-head .acts{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.count{font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--g400);}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:16px 30px;transition:all .25s;cursor:pointer;border:none;white-space:nowrap;}
+.btn svg{transition:transform .25s;}
+.btn:hover svg{transform:translateX(3px);}
 .btn-blk{background:var(--black);color:var(--white);}.btn-blk:hover{background:var(--teal);}
-.btn-ol{background:transparent;color:var(--black);border:1px solid var(--g200);}.btn-ol:hover{border-color:var(--teal);color:var(--teal);}
+.btn-teal{background:var(--teal);color:var(--white);}.btn-teal:hover{background:var(--teal-d);}
+.btn-w{background:var(--white);color:var(--black);}.btn-w:hover{background:var(--teal);color:var(--white);}
+.btn-ol{background:transparent;color:var(--black);border:1.5px solid var(--black);}.btn-ol:hover{background:var(--black);color:var(--white);}
+.btn-ol-w{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.7);}.btn-ol-w:hover{background:var(--white);color:var(--black);}
 
 /* HEADER */
-#hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--g200);transition:box-shadow .3s;}
-#hdr.sc{box-shadow:0 4px 24px rgba(0,0,0,.07);}
-.nav{max-width:1400px;margin:0 auto;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
-.logo img{height:40px;width:auto;display:block;}
-.logo-fb{font-family:var(--fm);font-size:16px;font-weight:600;color:var(--black);display:none;}.logo-fb span{color:var(--teal);}
+#hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--g200);transition:box-shadow .3s;}
+#hdr.sc{box-shadow:0 6px 28px rgba(0,0,0,.08);}
+.nav{max-width:1360px;margin:0 auto;padding:0 56px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.logo img{height:44px;width:auto;}
+.logo-fb{font-family:var(--fm);font-size:18px;font-weight:600;color:var(--black);display:none;}.logo-fb span{color:var(--teal);}
 .nl{display:flex;align-items:center;list-style:none;}
-.nl>li>a{font-size:12.5px;font-weight:500;letter-spacing:.04em;color:var(--g600);padding:8px 14px;display:flex;align-items:center;gap:4px;transition:color .2s;}
-.nl>li>a:hover,.nl>li.act>a{color:var(--black);}
-.drop{position:relative;}.drop>a svg{transition:transform .2s;}.drop:hover>a svg{transform:rotate(180deg);}
-.dd{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--g200);min-width:210px;padding:8px 0;box-shadow:0 16px 40px rgba(0,0,0,.10);opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .2s;list-style:none;}
-.drop:hover .dd{opacity:1;visibility:visible;transform:none;}
-.dd li a{display:block;padding:10px 18px;font-size:12.5px;color:var(--g600);transition:background .15s,color .15s;}.dd li a:hover{background:var(--g50);color:var(--teal);}
+.nl>li>a{font-family:var(--fm);font-size:13.5px;font-weight:500;color:var(--g700);padding:10px 13px;display:flex;align-items:center;gap:5px;transition:color .2s;}
+.nl>li>a:hover,.nl>li.act>a{color:var(--teal);}
+.drop{position:relative;}
+.drop>a svg{transition:transform .2s;}.drop:hover>a svg{transform:rotate(180deg);}
+.dd{position:absolute;top:calc(100% + 10px);left:0;background:var(--white);border:1px solid var(--g200);min-width:260px;padding:10px 0;box-shadow:0 18px 44px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .2s;list-style:none;}
+.dd::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px;}
+.drop:hover .dd,.drop:focus-within .dd{opacity:1;visibility:visible;transform:none;}
+.dd li a{display:block;padding:11px 20px;font-size:15px;color:var(--g700);transition:background .15s,color .15s;}
+.dd li a:hover,.dd li.act a{background:var(--g50);color:var(--teal);}
 .nr{display:flex;align-items:center;gap:14px;flex-shrink:0;}
-.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
-.hbg span{display:block;width:22px;height:1.5px;background:var(--black);transition:transform .25s,opacity .25s;}
-.hbg.op span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}.hbg.op span:nth-child(2){opacity:0;}.hbg.op span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-.mob{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--g200);padding:16px 24px 24px;}
-.mob.op{display:flex;}.mob a{font-size:15px;color:var(--g800);padding:13px 0;border-bottom:1px solid var(--g100);transition:color .2s;}
-.mob a:last-child{border-bottom:none;}.mob a:hover{color:var(--teal);}
-.mob-cta{margin-top:16px;background:var(--black);color:var(--white)!important;text-align:center;padding:13px!important;border-bottom:none!important;font-weight:600;font-size:11px!important;text-transform:uppercase;}
+.nr .btn{padding:12px 20px;font-size:12px;}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.hbg span{display:block;width:24px;height:2px;background:var(--black);transition:transform .25s,opacity .25s;}
+.hbg.op span:nth-child(1){transform:translateY(7px) rotate(45deg);}.hbg.op span:nth-child(2){opacity:0;}.hbg.op span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mob{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--g200);padding:12px 24px 24px;max-height:calc(100vh - 76px);overflow-y:auto;}
+.mob.op{display:flex;}
+.mob a{font-size:17px;color:var(--g800);padding:14px 0;border-bottom:1px solid var(--g100);}
+.mob a.sub{padding-left:16px;font-size:15.5px;color:var(--g600);}
+.mob a:hover{color:var(--teal);}
+.mob-cta{margin-top:18px;background:var(--black);color:var(--white)!important;text-align:center;padding:15px!important;border-bottom:none!important;font-family:var(--fm);font-weight:600;letter-spacing:.08em;font-size:13px!important;text-transform:uppercase;}
 
-/* PAGE HERO */
-.ph{padding:148px 0 88px;background:var(--black);position:relative;overflow:hidden;}
-.ph::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;}
-.ph::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);}
-.phi{position:relative;z-index:1;}
-.ph h1{font-family:var(--fm);font-size:clamp(36px,5vw,64px);font-weight:300;line-height:1.1;color:var(--white);margin:18px 0 16px;letter-spacing:-.01em;}
-.ph h1 em{font-style:normal;font-weight:600;color:var(--teal);}
-.ph p{font-size:15px;line-height:1.75;color:rgba(255,255,255,.5);max-width:520px;}
+/* PAGE HERO (image, replaces the old black band) */
+.phero{position:relative;margin-top:76px;min-height:clamp(560px,calc(82vh - 76px),820px);padding-top:110px;color:var(--white);overflow:hidden;background:var(--g800);display:flex;align-items:flex-end;}
+.phero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:phz 9s ease-out forwards;}
+@keyframes phz{from{transform:scale(1.07);}to{transform:scale(1);}}
+.phero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 55%,rgba(0,0,0,0) 85%),linear-gradient(0deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,0) 50%);}
+.phero .wrap{position:relative;z-index:2;width:100%;padding-bottom:64px;}
+.crumb{font-family:var(--fm);font-size:12.5px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.75);margin-bottom:20px;display:flex;gap:10px;align-items:center;}
+.crumb a:hover{color:var(--white);}
+.phero h1{font-family:var(--fm);font-size:clamp(40px,5.4vw,76px);font-weight:500;line-height:1.05;letter-spacing:-.025em;margin:18px 0 20px;max-width:900px;}
+.phero h1 em{font-style:normal;color:#9fd0d8;}
+.phero p{font-size:19px;line-height:1.65;color:rgba(255,255,255,.9);max-width:640px;}
+.phero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px;}
+.chip{font-family:var(--fm);font-size:13px;font-weight:500;padding:10px 18px;border:1px solid rgba(255,255,255,.45);color:var(--white);background:rgba(255,255,255,.08);backdrop-filter:blur(6px);transition:all .2s;}
+.chip:hover{background:var(--white);color:var(--black);}
 
-/* FILTER TABS */
-.port-filter{padding:48px 0 0;background:var(--white);}
-.port-tabs{display:flex;border-bottom:2px solid var(--g200);overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.pt{font-family:var(--fm);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--g400);padding:13px 22px;cursor:pointer;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:color .2s,border-color .2s;}
-.pt.on,.pt:hover{color:var(--black);border-bottom-color:var(--teal);}
+/* MASONRY GALLERY */
+.mason{columns:4 260px;column-gap:14px;}
+.mason.c3{columns:3 300px;}
+.mi{break-inside:avoid;margin-bottom:14px;position:relative;display:block;overflow:hidden;background:var(--g100);cursor:zoom-in;}
+.mi img{width:100%;transition:transform .9s cubic-bezier(.2,.7,.2,1);}
+.mi:hover img{transform:scale(1.05);}
+.mi::after{content:'';position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(0deg,rgba(0,0,0,.66),transparent);opacity:.9;transition:opacity .3s;pointer-events:none;}
+.mi span{position:absolute;left:16px;right:16px;bottom:14px;z-index:1;font-family:var(--fm);font-size:14px;font-weight:600;color:var(--white);line-height:1.35;}
+.dark .mi{background:var(--g800);}
+.mi.nocap::after{display:none;}
 
-/* PORTFOLIO GRID */
-.port-grid-wrap{padding:48px 0 96px;background:var(--white);}
-.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--g200);}
+/* SPLIT */
+.split{display:grid;grid-template-columns:1.15fr 1fr;gap:80px;align-items:center;}
+.split.rev-o{grid-template-columns:1fr 1.15fr;}
+.split.rev-o>:first-child{order:2;}
+.split .pic{position:relative;overflow:hidden;}
+.split .pic img{width:100%;height:100%;object-fit:cover;}
+.split .txt .lead{margin:22px 0 30px;}
+.ticks{list-style:none;display:flex;flex-direction:column;gap:14px;margin:6px 0 34px;}
+.ticks li{display:flex;gap:14px;align-items:flex-start;font-size:17px;color:var(--g700);}
+.ticks li::before{content:'';width:10px;height:10px;background:var(--teal);flex-shrink:0;margin-top:9px;}
+.dark .ticks li{color:rgba(255,255,255,.85);}
 
-/* PROJECT CARD */
-.pcard{background:var(--white);position:relative;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;}
-.pcard-img{aspect-ratio:3/2;position:relative;overflow:hidden;background:var(--g100);}
-.pcard-img-bg{position:absolute;inset:0;background-size:cover;background-position:center 30%;transition:transform .55s ease;}
-.pcard:hover .pcard-img-bg{transform:scale(1.05);}
-.pcard-img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,transparent 60%);z-index:1;}
-.pcard-sector{position:absolute;top:14px;left:14px;z-index:2;font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);color:rgba(255,255,255,.8);padding:3px 9px;}
-.pcard-img-title{position:absolute;bottom:16px;left:16px;right:16px;z-index:2;font-family:var(--fm);font-size:17px;font-weight:400;color:var(--white);line-height:1.25;}
-.pcard-teal{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);z-index:3;transform:scaleX(0);transform-origin:left;transition:transform .3s;}
-.pcard:hover .pcard-teal{transform:scaleX(1);}
+/* IMAGE CARDS */
+.icards{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:20px;}
+.icard{position:relative;display:block;overflow:hidden;background:var(--g800);color:var(--white);aspect-ratio:var(--ar,4/5);}
+.icard img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1);}
+.icard:hover img{transform:scale(1.05);}
+.icard::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.4) 38%,rgba(0,0,0,0) 65%);}
+.icard .cap{position:absolute;left:0;right:0;bottom:0;padding:28px 28px 26px;z-index:1;}
+.icard .num{font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.14em;color:#9fd0d8;}
+.icard h3{font-family:var(--fm);font-size:clamp(20px,1.8vw,26px);font-weight:600;line-height:1.25;margin:8px 0 8px;}
+.icard p{font-size:15.5px;line-height:1.55;color:rgba(255,255,255,.9);}
+.icard .go{display:inline-flex;align-items:center;gap:10px;margin-top:14px;font-family:var(--fm);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-bottom:1.5px solid rgba(255,255,255,.6);padding-bottom:4px;}
 
-/* Card body */
-.pcard-body{padding:24px 24px 20px;flex:1;display:flex;flex-direction:column;gap:12px;border:1px solid var(--g200);border-top:none;}
-.pcard-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-.pcard-tag{font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--g400);background:var(--g50);border:1px solid var(--g200);padding:3px 8px;}
-.pcard-location{font-size:11px;color:var(--g400);display:flex;align-items:center;gap:4px;}
-.pcard-arch{font-size:12px;color:var(--g600);}
-.pcard-arch span{color:var(--teal);font-weight:500;}
-.pcard-overview{font-size:13px;line-height:1.65;color:var(--g600);}
-.pcard-actions{display:flex;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid var(--g100);}
-.pcard-btn{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;transition:all .22s;cursor:pointer;}
-.pcard-btn-gallery{background:var(--black);color:var(--white);}.pcard-btn-gallery:hover{background:var(--teal);}
-.pcard-btn-reel{background:transparent;color:var(--black);border:1px solid var(--g200);}.pcard-btn-reel:hover{border-color:var(--teal);color:var(--teal);}
+/* STEP CARDS (image on top) */
+.steps{display:grid;grid-template-columns:repeat(var(--cols,4),1fr);gap:20px;}
+.step{background:var(--white);display:flex;flex-direction:column;}
+.alt .step{background:var(--white);}
+.step .pic{aspect-ratio:4/3;overflow:hidden;position:relative;}
+.step .pic img{width:100%;height:100%;object-fit:cover;transition:transform .9s;}
+.step:hover .pic img{transform:scale(1.05);}
+.step .pic b{position:absolute;left:18px;top:16px;font-family:var(--fm);font-size:14px;font-weight:600;letter-spacing:.1em;color:var(--white);background:var(--teal);padding:6px 10px;}
+.step .bd{padding:26px 26px 30px;border:1px solid var(--g200);border-top:none;flex:1;}
+.step h3{font-family:var(--fm);font-size:20px;font-weight:600;color:var(--black);margin-bottom:10px;}
+.step p{font-size:16px;line-height:1.65;color:var(--g600);}
 
-/* No results */
-.port-empty{padding:64px;text-align:center;color:var(--g400);font-size:14px;display:none;}
-.port-empty.on{display:block;}
+/* FULL-BLEED IMAGE BAND */
+.band{position:relative;padding:150px 0;color:var(--white);overflow:hidden;background:var(--black);}
+.band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.band::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.35));}
+.band .wrap{position:relative;z-index:1;}
+.band h2{font-family:var(--fm);font-size:clamp(30px,4vw,56px);font-weight:500;line-height:1.12;letter-spacing:-.02em;margin:20px 0 22px;max-width:860px;}
+.band p{font-size:19px;color:rgba(255,255,255,.88);max-width:640px;}
 
-/* CTA */
-.port-cta{background:var(--teal);padding:80px 0;}
-.port-cta-i{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
-.port-cta h2{font-family:var(--fm);font-size:clamp(22px,3.5vw,40px);font-weight:300;color:var(--white);margin-bottom:8px;line-height:1.2;}
-.port-cta p{font-size:15px;color:rgba(255,255,255,.62);}
-.btn-ws{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--teal);font-family:var(--fb);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;}
-.btn-ws:hover{background:var(--black);color:var(--white);}
+/* STATS STRIP */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);}
+.stat{padding:40px 32px;border-right:1px solid var(--g200);}
+.stat:last-child{border-right:none;}
+.stat b{display:block;font-family:var(--fm);font-size:48px;font-weight:600;line-height:1;color:var(--black);letter-spacing:-.02em;}
+.stat b sup{font-size:24px;color:var(--teal);vertical-align:top;position:relative;top:4px;}
+.stat span{display:block;margin-top:12px;font-family:var(--fm);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--g600);}
+
+/* CATALOGUE BAND (light, sits above the teal CTA) */
+.catb{background:var(--g100);padding:0;}
+.catb-in{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:360px;}
+.catb .pic{position:relative;overflow:hidden;}
+.catb .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.catb .txt{padding:64px 64px 64px 72px;display:flex;flex-direction:column;justify-content:center;}
+.catb h2{font-family:var(--fm);font-size:clamp(26px,2.6vw,38px);font-weight:500;line-height:1.2;color:var(--black);margin:16px 0 14px;}
+.catb p{font-size:17px;color:var(--g600);margin-bottom:28px;max-width:460px;}
+
+/* PRE-FOOTER CTA (teal, distinct from black footer) */
+.ctab{position:relative;padding:100px 0;color:var(--white);overflow:hidden;background:var(--teal);}
+.ctab>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.ctab::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,66,73,.95) 0%,rgba(30,66,73,.82) 55%,rgba(30,66,73,.55) 100%);}
+.ctai{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;}
+.ctai h2{font-family:var(--fm);font-size:clamp(30px,3.6vw,50px);font-weight:500;line-height:1.15;letter-spacing:-.015em;margin-bottom:14px;}
+.ctai p{font-size:18px;color:rgba(255,255,255,.88);max-width:560px;}
+.ctaa{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.ctaa .btn{justify-content:center;}
 
 /* FOOTER */
-#ft{background:var(--black);padding:72px 0 0;}
-.ftg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:52px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.07);}
-.fli{height:38px;width:auto;display:block;margin-bottom:18px;opacity:.85;}
-.ftag{font-size:13px;line-height:1.65;color:rgba(255,255,255,.38);max-width:240px;margin-bottom:24px;}
-.fc h4{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;}
-.fc ul{list-style:none;}.fc ul li{margin-bottom:9px;}.fc ul li a{font-size:13px;color:rgba(255,255,255,.42);transition:color .2s;}.fc ul li a:hover{color:var(--teal);}
-.fci{display:flex;flex-direction:column;gap:9px;}.fca{font-size:13px;color:rgba(255,255,255,.42);transition:color .2s;}.fca:hover{color:var(--teal);}
-.fbb{padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
-.fbcp{font-size:11px;color:rgba(255,255,255,.18);}
-.fbl{display:flex;gap:18px;}.fbl a{font-size:11px;color:rgba(255,255,255,.18);transition:color .2s;}.fbl a:hover{color:var(--teal);}
+#ft{background:var(--black);padding:88px 0 0;color:rgba(255,255,255,.72);}
+.ft{display:grid;grid-template-columns:1.5fr 1.1fr 1fr 1.4fr;gap:56px;padding-bottom:64px;border-bottom:1px solid rgba(255,255,255,.1);}
+.fli{height:44px;width:auto;display:block;margin-bottom:22px;filter:brightness(0) invert(1);}
+.ftag{font-size:16px;line-height:1.7;color:rgba(255,255,255,.7);max-width:300px;margin-bottom:26px;}
+.fso{display:flex;gap:10px;flex-wrap:wrap;}
+.fsl{width:42px;height:42px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.85);transition:all .2s;}
+.fsl:hover{border-color:var(--teal);background:var(--teal);color:var(--white);}
+.fc h4{font-family:var(--fm);font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--white);margin-bottom:22px;}
+.fc ul{list-style:none;}
+.fc ul li{margin-bottom:12px;}
+.fc ul li a{font-size:16px;color:rgba(255,255,255,.7);transition:color .2s;}
+.fc ul li a:hover{color:#9fd0d8;}
+.fc address{font-style:normal;font-size:15px;line-height:1.65;color:rgba(255,255,255,.7);margin-bottom:18px;}
+.fc address b{display:block;font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.95);margin-bottom:4px;}
+.fb{padding:26px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.fbcp,.fbl a{font-size:14px;color:rgba(255,255,255,.5);}
+.fbl{display:flex;gap:22px;}.fbl a:hover{color:#9fd0d8;}
+.wa-fab{position:fixed;bottom:28px;right:28px;z-index:8000;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .22s;color:#fff;}
+.wa-fab:hover{transform:scale(1.08);}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:9500;background:rgba(5,5,5,.94);display:none;align-items:center;justify-content:center;padding:70px 80px;}
+.lb.on{display:flex;}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.lb button{position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);color:var(--white);width:52px;height:52px;font-size:26px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.lb button:hover{background:var(--teal);}
+.lb-x{top:18px;right:18px;}.lb-p{left:18px;top:50%;transform:translateY(-50%);}.lb-n{right:18px;top:50%;transform:translateY(-50%);}
+.lb-c{position:absolute;bottom:20px;left:0;right:0;text-align:center;font-family:var(--fm);font-size:14px;color:rgba(255,255,255,.85);letter-spacing:.04em;}
+
+/* MODAL */
+.mdl{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9000;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);}
+.mdl.on{display:flex;}
+.mdl-b{background:#fff;width:100%;max-width:460px;position:relative;border-top:3px solid var(--teal);padding:40px 36px 34px;}
+.mdl-x{position:absolute;top:12px;right:16px;background:none;border:none;cursor:pointer;color:#6a6a6a;font-size:28px;line-height:1;}
+.mdl h3{font-family:var(--fm);font-size:24px;font-weight:600;color:var(--black);margin-bottom:8px;}
+.mdl p{font-size:16px;color:var(--g600);margin-bottom:24px;}
+.fld{margin-bottom:18px;}
+.fld label{display:block;font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--g700);margin-bottom:8px;}
+.fld label span{font-weight:400;text-transform:none;letter-spacing:0;color:var(--g400);}
+.fld input,.fld select,.fld textarea{width:100%;border:1px solid #CFCFCB;padding:13px 15px;font-size:16px;color:var(--black);outline:none;font-family:var(--fb);background:#fff;transition:border-color .2s;}
+.fld textarea{min-height:120px;resize:vertical;}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--teal);}
+.fld input.err{border-color:#c53030;}
+.fld .em{font-size:13px;color:#c53030;margin-top:5px;display:none;}
+.fld .em.on{display:block;}
+.mdl .btn{width:100%;justify-content:center;}
+.mdl small{display:block;font-size:13px;color:var(--g400);text-align:center;margin-top:14px;}
+.okb{display:none;text-align:center;padding:12px 0 6px;}
+.okb.on{display:block;}
+.okb i{width:60px;height:60px;border:2px solid var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:var(--teal);font-style:normal;font-size:26px;}
+
+/* TABS */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px;}
+.tab{font-family:var(--fm);font-size:13.5px;font-weight:600;letter-spacing:.04em;padding:11px 20px;border:1.5px solid var(--g200);background:var(--white);color:var(--g700);cursor:pointer;transition:all .2s;}
+.tab:hover{border-color:var(--black);}
+.tab.on{background:var(--black);border-color:var(--black);color:var(--white);}
+.dark .tab{background:transparent;color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25);}
+.dark .tab.on{background:var(--white);color:var(--black);border-color:var(--white);}
 
 /* RESPONSIVE */
-@media(max-width:1024px){.port-grid{grid-template-columns:repeat(2,1fr);}.ftg{grid-template-columns:1fr 1fr;}}
-@media(max-width:900px){.nl,.nr .btn-blk{display:none;}.hbg{display:flex;}.wrap,.nav{padding-left:24px;padding-right:24px;}.port-cta-i{flex-direction:column;align-items:flex-start;}}
-@media(max-width:640px){.wrap,.nav{padding-left:18px;padding-right:18px;}.port-grid{grid-template-columns:1fr;}.ftg{grid-template-columns:1fr;}.fbb{flex-direction:column;align-items:flex-start;}.pcard-actions{flex-direction:column;}}
-.wa-fab{position:fixed;bottom:28px;right:28px;z-index:8000;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .22s,box-shadow .22s;text-decoration:none;}
-.wa-fab:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55);}
+@media(max-width:1180px){.nl,.nr .btn{display:none;}.hbg{display:flex;}}
+@media(max-width:1024px){
+  .wrap,.nav{padding-left:32px;padding-right:32px;}
+  .split,.split.rev-o{grid-template-columns:1fr;gap:48px;}
+  .split.rev-o>:first-child{order:0;}
+  .icards{grid-template-columns:repeat(2,1fr);}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .stat:nth-child(2){border-right:none;}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--g200);}
+  .catb-in{grid-template-columns:1fr;}
+  .catb .pic{min-height:280px;}
+  .catb .txt{padding:56px 32px;}
+  .ft{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  body{font-size:16.5px;}
+  .wrap,.nav{padding-left:20px;padding-right:20px;}
+  .nav{height:68px;}
+  .phero{margin-top:68px;min-height:calc(78svh - 68px);padding-top:90px;}
+  .phero .chips{display:none;}
+  .phero h1{font-size:38px;}
+  .phero .wrap{padding-bottom:40px;}
+  .phero p{font-size:17px;}
+  .mob{max-height:calc(100vh - 68px);}
+  .sec{padding:76px 0;}
+  .band{padding:100px 0;}
+  .mason,.mason.c3{columns:2;column-gap:8px;}
+  .mi{margin-bottom:8px;}
+  .mi span{font-size:12.5px;left:10px;right:10px;bottom:9px;}
+  .icards,.steps{grid-template-columns:1fr;}
+  .stat{padding:28px 20px;}.stat b{font-size:36px;}
+  .ctaa{grid-template-columns:1fr;width:100%;}
+  .ft{grid-template-columns:1fr;}
+  .lb{padding:70px 12px;}
+  .lb-p,.lb-n{top:auto!important;bottom:14px;transform:none!important;}
+  .catb .txt{padding:48px 20px;}
+}
+@media(prefers-reduced-motion:reduce){.rev,.phero>img{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;}}
+
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.pc{display:flex;flex-direction:column;background:var(--white);}
+.pc-img{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--g800);display:block;cursor:zoom-in;}
+.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1);}
+.pc:hover .pc-img img{transform:scale(1.05);}
+.pc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.25) 40%,rgba(0,0,0,0) 62%);pointer-events:none;}
+.pc-sec{position:absolute;top:16px;left:16px;z-index:1;font-family:var(--fm);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--white);background:rgba(0,0,0,.4);backdrop-filter:blur(8px);padding:6px 10px;}
+.pc-cap{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:24px 24px 22px;color:var(--white);}
+.pc-cap h3{font-family:var(--fm);font-size:24px;font-weight:600;line-height:1.2;margin-bottom:8px;}
+.pc-cap p{font-size:15px;color:rgba(255,255,255,.88);display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.pc-cap p i{font-style:normal;opacity:.5;}
+.pc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.pc-tags span{font-size:12px;font-weight:500;padding:4px 9px;border:1px solid rgba(255,255,255,.4);color:rgba(255,255,255,.95);}
+.pc-act{display:grid;grid-template-columns:1fr 1fr;}
+.pc-act a{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 10px;font-family:var(--fm);font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:all .2s;}
+.pc-act a:first-child{background:var(--black);color:var(--white);}
+.pc-act a:first-child:hover{background:var(--teal);}
+.pc-act a:last-child{border:1px solid var(--g200);border-left:none;color:var(--black);}
+.pc-act a:last-child:hover{color:var(--teal);border-color:var(--teal);}
+.pc-act a:only-child{grid-column:span 2;}
+@media(max-width:1024px){.pgrid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.pgrid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -127,35 +305,35 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
     <ul class="nl">
       <li><a href="index.html">Home</a></li>
       <li class="drop">
-        <a href="#">Solutions <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+        <a href="partitions.html">Solutions <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
         <ul class="dd">
-          <li><a href="windows-doors.html">Windows</a></li>
-          <li><a href="railings.html">Railings</a></li>
-          <li><a href="partitions.html">Partitions and Doors</a></li>
-          <li><a href="shower-cubicles.html">Shower Cubicles</a></li>
-          <li><a href="mirrors.html">Mirrors</a></li>
+          <li><a href="partitions.html">Partitions &amp; Door Systems</a></li>
+          <li><a href="shower-cubicles.html">Shower Partition Systems</a></li>
+          <li><a href="railings.html">Railing Systems</a></li>
+          <li><a href="mirrors.html">Architectural Mirrors</a></li>
+          <li><a href="windows-doors.html">Window Systems</a></li>
         </ul>
       </li>
       <li><a href="products.html">Products</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="gallery.html">Inspiration</a></li>
+      <li class="act"><a href="portfolio.html">Portfolio</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="architects.html">Architects</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nr">
-      <a href="contact.html" class="btn btn-blk" style="padding:9px 18px;font-size:11px;">Book a Visit</a>
-    </div>
-    <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+    <div class="nr"><a href="contact.html" class="btn btn-blk">Book a Visit</a></div>
+    <button class="hbg" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
   <nav class="mob" id="mob">
     <a href="index.html">Home</a>
-    <a href="windows-doors.html">Windows</a>
-    <a href="railings.html">Railings</a>
-    <a href="partitions.html">Partitions and Doors</a>
-    <a href="shower-cubicles.html">Shower Cubicles</a>
-    <a href="mirrors.html">Mirrors</a>
+    <a href="partitions.html" class="sub">Partitions &amp; Door Systems</a>
+    <a href="shower-cubicles.html" class="sub">Shower Partition Systems</a>
+    <a href="railings.html" class="sub">Railing Systems</a>
+    <a href="mirrors.html" class="sub">Architectural Mirrors</a>
+    <a href="windows-doors.html" class="sub">Window Systems</a>
     <a href="products.html">Products</a>
+    <a href="gallery.html">Inspiration</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About Us</a>
     <a href="architects.html">Architects</a>
@@ -165,465 +343,233 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
   </nav>
 </header>
 
-<section class="ph">
-  <div class="wrap phi">
-    <span class="eyebrow-w rev">Our Work</span>
+<section class="phero">
+  <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0423.jpg&w=2200&q=80&output=webp" alt="" width="5649" height="3215" fetchpriority="high" style="object-position:center" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/IMG_0423.jpg'"/>
+  <div class="wrap">
+    <div class="crumb rev"><a href="index.html">Home</a><span>/</span><span>Portfolio</span></div>
+    <span class="eyebrow light rev">Our Work</span>
     <h1 class="rev d1">Project <em>Portfolio</em></h1>
     <p class="rev d2">Completed projects across Hyderabad, executed in partnership with leading architects and interior designers.</p>
+    
   </div>
 </section>
 
-<section class="port-filter">
+<section class="sec">
   <div class="wrap">
-    <div class="port-tabs">
-      <button class="pt on" onclick="pfilt(this,'all')">All Projects</button>
-      <button class="pt" onclick="pfilt(this,'residential')">Residential</button>
-      <button class="pt" onclick="pfilt(this,'commercial')">Commercial</button>
-      <button class="pt" onclick="pfilt(this,'hospitality')">Hospitality</button>
+    <div class="tabs rev" data-for="pg">
+      <button class="tab on" data-f="all">All Projects</button>
+      <button class="tab" data-f="residential">Residential</button>
+      <button class="tab" data-f="commercial">Commercial</button>
+      <button class="tab" data-f="hospitality">Hospitality</button>
+    </div>
+    <div class="pgrid" id="pg">
+      <div class="pc rev d1" data-cat="commercial">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2F002.jpg&w=2000&q=80&output=webp" data-lb="port" data-cap="The Contemporary Office, Financial District"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2F002.jpg&w=1000&q=80&output=webp" alt="The Contemporary Office" width="4032" height="2269" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/002.jpg'"/>
+          <span class="pc-sec">Commercial</span>
+          <div class="pc-cap"><h3>The Contemporary Office</h3><p>Financial District<i>|</i>Architect: Naveen, NCDA</p><div class="pc-tags"><span>Partitions</span><span>Doors</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1AxuFZYlJ0pMyFZdlVKSfUj6fqfxNxShv" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/reel/DPvvS4IkzBq/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
+      <div class="pc rev d2" data-cat="residential">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fpraveen.jpg&w=2000&q=80&output=webp" data-lb="port" data-cap="The Luxe Residence, Banjara Hills"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fpraveen.jpg&w=1000&q=80&output=webp" alt="The Luxe Residence" width="3031" height="2390" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/praveen.jpg'"/>
+          <span class="pc-sec">Residential</span>
+          <div class="pc-cap"><h3>The Luxe Residence</h3><p>Banjara Hills<i>|</i>Architect: Praveen Jangid, Praveen Architects</p><div class="pc-tags"><span>Mirrors</span><span>Shower Cubicles</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1dlKeISoqM6V-eUzVMNN6I5cXX81lVLIw" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/p/DRwjRvPE0Co/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
+      <div class="pc rev d3" data-cat="residential">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fkompally.JPG&w=2000&q=80&output=webp" data-lb="port" data-cap="The Modern Villa, Kompally"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fkompally.JPG&w=1000&q=80&output=webp" alt="The Modern Villa" width="6504" height="4352" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/kompally.JPG'"/>
+          <span class="pc-sec">Residential</span>
+          <div class="pc-cap"><h3>The Modern Villa</h3><p>Kompally<i>|</i>Studio: Studio Origin Interior Design</p><div class="pc-tags"><span>Partitions</span><span>Doors</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1x_gujf2k7d2Rc_fEN9z3nqItLimwuSfi" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/reel/DRexDHvE74l/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
+      <div class="pc rev d1" data-cat="hospitality">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fnarsingi.JPG&w=2000&q=80&output=webp" data-lb="port" data-cap="The Bistro Project, Narsingi"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fnarsingi.JPG&w=1000&q=80&output=webp" alt="The Bistro Project" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/narsingi.JPG'"/>
+          <span class="pc-sec">Hospitality</span>
+          <div class="pc-cap"><h3>The Bistro Project</h3><p>Narsingi<i>|</i>Architect: Ankita</p><div class="pc-tags"><span>Partitions</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1k77cPIra-73QQ75o5ZyMM-h69pYmeXlV" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/reel/DYMkuUNIhOU/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
+      <div class="pc rev d2" data-cat="commercial">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FBanjara%2520hills.jpg&w=2000&q=80&output=webp" data-lb="port" data-cap="The Glass Front, Banjara Hills"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FBanjara%2520hills.jpg&w=1000&q=80&output=webp" alt="The Glass Front" width="2998" height="2430" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Banjara%20hills.jpg'"/>
+          <span class="pc-sec">Commercial</span>
+          <div class="pc-cap"><h3>The Glass Front</h3><p>Banjara Hills<i>|</i>Firm: Sunil Pillai Associates</p><div class="pc-tags"><span>Custom Glass</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1X6HKnlAj90GdfvA-m4bfnISqXnwYHkj7" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/p/Dbp_a7AFK7C/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
+      <div class="pc rev d3" data-cat="commercial">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fsunil%2520pillai.jpg&w=2000&q=80&output=webp" data-lb="port" data-cap="Architectural Glass Facade, Banjara Hills"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fsunil%2520pillai.jpg&w=1000&q=80&output=webp" alt="Architectural Glass Facade" width="2160" height="1216" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/sunil%20pillai.jpg'"/>
+          <span class="pc-sec">Commercial</span>
+          <div class="pc-cap"><h3>Architectural Glass Facade</h3><p>Banjara Hills<i>|</i>Custom Architectural Facade</p><div class="pc-tags"><span>Custom Glass</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1jvydxFQT5jlc41DyDHWLuTTHRKWrNZuX" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/p/DPqsXNck4P9/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
+      <div class="pc rev d1" data-cat="residential">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fshaikpet.jpg&w=2000&q=80&output=webp" data-lb="port" data-cap="The Elegant Villa, Shaikpet"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fshaikpet.jpg&w=1000&q=80&output=webp" alt="The Elegant Villa" width="4159" height="3114" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/shaikpet.jpg'"/>
+          <span class="pc-sec">Residential</span>
+          <div class="pc-cap"><h3>The Elegant Villa</h3><p>Shaikpet<i>|</i>Architect: Prashanti, Design Dialogues</p><div class="pc-tags"><span>Mirrors</span><span>Partitions</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1Vfq9eOCt8J1WJplrhkQGQfY5vi9-U7tP" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/reel/DR4ad3uExcX/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
+      <div class="pc rev d2" data-cat="residential">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fjubilee%2520hills.jpg&w=2000&q=80&output=webp" data-lb="port" data-cap="Signature Villa Project, Jubilee Hills"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fjubilee%2520hills.jpg&w=1000&q=80&output=webp" alt="Signature Villa Project" width="4032" height="2640" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/jubilee%20hills.jpg'"/>
+          <span class="pc-sec">Residential</span>
+          <div class="pc-cap"><h3>Signature Villa Project</h3><p>Jubilee Hills<i>|</i>Architect: Sudheer, Sudheer Associates</p><div class="pc-tags"><span>Railings</span><span>Mirrors</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1n_Q3vmsLBAb9clYkF2gw4I28egCxE7M2" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/reel/DO5Sff4E3c5/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
+      <div class="pc rev d3" data-cat="residential">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fbandlaguda.JPG&w=2000&q=80&output=webp" data-lb="port" data-cap="Private Villa Retreat, Bandlaguda"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fbandlaguda.JPG&w=1000&q=80&output=webp" alt="Private Villa Retreat" width="4032" height="2269" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/bandlaguda.JPG'"/>
+          <span class="pc-sec">Residential</span>
+          <div class="pc-cap"><h3>Private Villa Retreat</h3><p>Bandlaguda<i>|</i>Firm: Span Surat</p><div class="pc-tags"><span>Doors</span><span>Railings</span><span>Mirrors</span><span>Shower Cubicles</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1dRUf2hC6GoGtkzJp_gA1ZboXWtUMxeOe" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/reel/DRuFECikwd5/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
+      <div class="pc rev d1" data-cat="residential">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Ftirumulgiri.jpg&w=2000&q=80&output=webp" data-lb="port" data-cap="The Modern Residence, Tirumulgiri"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Ftirumulgiri.jpg&w=1000&q=80&output=webp" alt="The Modern Residence" width="2209" height="3289" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/tirumulgiri.jpg'"/>
+          <span class="pc-sec">Residential</span>
+          <div class="pc-cap"><h3>The Modern Residence</h3><p>Tirumulgiri<i>|</i>Architect: Vikas, Daftary Architects</p><div class="pc-tags"><span>Mirrors</span><span>Shower Cubicles</span><span>Custom Glass</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1jW7_B9ZPB04FHds7W8XPoWTJ9_FnvWmd" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/reel/DYwolVooHIs/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
+      <div class="pc rev d2" data-cat="residential">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Ffilmnagar.JPG&w=2000&q=80&output=webp" data-lb="port" data-cap="Refined Villa Spaces, Film Nagar"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Ffilmnagar.JPG&w=1000&q=80&output=webp" alt="Refined Villa Spaces" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/filmnagar.JPG'"/>
+          <span class="pc-sec">Residential</span>
+          <div class="pc-cap"><h3>Refined Villa Spaces</h3><p>Film Nagar<i>|</i>Architect: Mounika</p><div class="pc-tags"><span>Railings</span><span>Mirrors</span><span>Partitions</span><span>Shower Cubicles</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/1yjW8oNHkUxKMF4j6mHi5x1CizllT-uKN" target="_blank" rel="noopener">View Photos</a></div>
+      </div>
+      <div class="pc rev d3" data-cat="residential">
+        <a class="pc-img" href="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FBowenpally.JPG&w=2000&q=80&output=webp" data-lb="port" data-cap="Timeless Villa Design, Bowenpally"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FBowenpally.JPG&w=1000&q=80&output=webp" alt="Timeless Villa Design" width="3370" height="2268" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Bowenpally.JPG'"/>
+          <span class="pc-sec">Residential</span>
+          <div class="pc-cap"><h3>Timeless Villa Design</h3><p>Bowenpally<i>|</i>Complete Residential Package</p><div class="pc-tags"><span>Doors</span><span>Railings</span><span>Mirrors</span><span>Partitions</span></div></div>
+        </a>
+        <div class="pc-act"><a href="https://drive.google.com/drive/folders/11rkeSgqHUnhse7fy1J2ovn7LHbxbvR-M" target="_blank" rel="noopener">View Photos</a><a href="https://www.instagram.com/reel/DbA87mJI1ls/" target="_blank" rel="noopener"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg> View Reel</a></div>
+      </div>
     </div>
   </div>
 </section>
-
-<section class="port-grid-wrap">
+<section class="ctab">
+  <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2Fnarsingi.JPG&w=1800&q=80&output=webp" alt="" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/narsingi.JPG'"/>
   <div class="wrap">
-    <div class="port-grid" id="pg">
-
-      <!-- 1. Bharat Office -->
-      <div class="pcard rev d1" data-sector="commercial">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/002.jpg')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Commercial</span>
-          <div class="pcard-img-title">The Contemporary Office</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Partitions</span>
-            <span class="pcard-tag">Doors</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Financial District</span>
-          </div>
-          <div class="pcard-arch">Architect: <span>Naveen</span> — NCDA</div>
-          <p class="pcard-overview">Slim-frame glass partitions and doors executed for a contemporary open workspace, balancing transparency with privacy and precision architectural detailing.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1AxuFZYlJ0pMyFZdlVKSfUj6fqfxNxShv" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/reel/DPvvS4IkzBq/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Reel
-            </a>
-          </div>
-        </div>
+    <div class="ctai">
+      <div class="rev"><h2>Have a Project in Mind?</h2><p>Let us bring the same precision and craftsmanship to your space.</p></div>
+      <div class="ctaa rev d2">
+        <a href="contact.html" class="btn btn-w">Book a Consultation</a>
+        <a href="tel:+919000420253" class="btn btn-ol-w">Call Now</a>
+        <a href="https://wa.me/919553371114" target="_blank" rel="noopener" class="btn btn-ol-w">WhatsApp Us</a>
+        <a href="#" onclick="openCat();return false;" class="btn btn-ol-w">Download Catalogue</a>
       </div>
-
-      <!-- 2. Ajay Agarwal -->
-      <div class="pcard rev d2" data-sector="residential">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/praveen.jpg')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Residential</span>
-          <div class="pcard-img-title">The Luxe Residence</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Mirrors</span>
-            <span class="pcard-tag">Shower Cubicles</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Banjara Hills</span>
-          </div>
-          <div class="pcard-arch">Architect: <span>Praveen Jangid</span> — Praveen Architects</div>
-          <p class="pcard-overview">Bespoke framed shower cubicles and customised mirrors tailored to each bathroom, complementing the home's premium interiors with precision and craftsmanship.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1dlKeISoqM6V-eUzVMNN6I5cXX81lVLIw" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/p/DRwjRvPE0Co/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Reel
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. Avinash - Studio Origin -->
-      <div class="pcard rev d3" data-sector="residential">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/kompally.JPG')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Residential</span>
-          <div class="pcard-img-title">The Modern Villa</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Partitions</span>
-            <span class="pcard-tag">Doors</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Kompally</span>
-          </div>
-          <div class="pcard-arch">Studio: <span>Studio Origin</span> Interior Design</div>
-          <p class="pcard-overview">20-foot-wide sliding partition system with concealed tracks, full-height glass doors and custom matt-finish fluted glass with fabric lamination for a contemporary villa.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1x_gujf2k7d2Rc_fEN9z3nqItLimwuSfi" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/reel/DRexDHvE74l/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Reel
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. Table 5 -->
-      <div class="pcard rev d1" data-sector="hospitality">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/narsingi.JPG')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Hospitality</span>
-          <div class="pcard-img-title">The Bistro Project</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Partitions</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Narsingi</span>
-          </div>
-          <div class="pcard-arch">Architect: <span>Ankita</span></div>
-          <p class="pcard-overview">Telescopic partitions, synchro sliding systems and slim-frame glass doors delivering operational flexibility for a contemporary restaurant adapting between intimate and open dining formats.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1k77cPIra-73QQ75o5ZyMM-h69pYmeXlV" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/reel/DYMkuUNIhOU/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Reel
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5. Roche Bobois -->
-      <div class="pcard rev d2" data-sector="commercial">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Banjara%20hills.jpg')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Commercial</span>
-          <div class="pcard-img-title">The Glass Front</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Custom Glass</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Banjara Hills</span>
-          </div>
-          <div class="pcard-arch">Firm: <span>Sunil Pillai Associates</span></div>
-          <p class="pcard-overview">Custom glass facade using extra-clear low-iron glass and premium Dormakaba hardware for a luxury retail showroom. Exceptional clarity, precision and seamless visual connectivity.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1X6HKnlAj90GdfvA-m4bfnISqXnwYHkj7" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/p/Dbp_a7AFK7C/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Post
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 6. Lovebirds -->
-      <div class="pcard rev d3" data-sector="commercial">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/sunil%20pillai.jpg')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Commercial</span>
-          <div class="pcard-img-title">Architectural Glass Facade</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Custom Glass</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Banjara Hills</span>
-          </div>
-          <div class="pcard-arch">Custom Architectural Facade</div>
-          <p class="pcard-overview">Custom architectural glass facade using red-tinted glass delivering a distinctive commercial exterior that balances bold aesthetics with precision engineering and durability.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1jvydxFQT5jlc41DyDHWLuTTHRKWrNZuX" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/p/DPqsXNck4P9/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Post
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 7. Keerthana Reddy -->
-      <div class="pcard rev d1" data-sector="residential">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/shaikpet.jpg')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Residential</span>
-          <div class="pcard-img-title">The Elegant Villa</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Mirrors</span>
-            <span class="pcard-tag">Partitions</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Shaikpet</span>
-          </div>
-          <div class="pcard-arch">Architect: <span>Prashanti</span> — Design Dialogues</div>
-          <p class="pcard-overview">Bespoke mirrors and glass partition systems executed with meticulous attention to proportion and alignment, enhancing light and spatial harmony throughout the residence.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1Vfq9eOCt8J1WJplrhkQGQfY5vi9-U7tP" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/reel/DR4ad3uExcX/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Reel
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 8. Srikanth - Signature Villa -->
-      <div class="pcard rev d2" data-sector="residential">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/jubilee%20hills.jpg')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Residential</span>
-          <div class="pcard-img-title">Signature Villa Project</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Railings</span>
-            <span class="pcard-tag">Mirrors</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Jubilee Hills</span>
-          </div>
-          <div class="pcard-arch">Architect: <span>Sudheer</span> — Sudheer Associates</div>
-          <p class="pcard-overview">Technorail glass railings with custom PVD finishes, laminated glass, handcrafted Indian teak handrails and bespoke metal-framed mirrors with matching PVD finishes.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1n_Q3vmsLBAb9clYkF2gw4I28egCxE7M2" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/reel/DO5Sff4E3c5/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Reel
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 9. Rishab - Private Villa Retreat -->
-      <div class="pcard rev d3" data-sector="residential">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/bandlaguda.JPG')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Residential</span>
-          <div class="pcard-img-title">Private Villa Retreat</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Doors</span>
-            <span class="pcard-tag">Railings</span>
-            <span class="pcard-tag">Mirrors</span>
-            <span class="pcard-tag">Shower Cubicles</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Bandlaguda</span>
-          </div>
-          <div class="pcard-arch">Firm: <span>Span Surat</span></div>
-          <p class="pcard-overview">Complete bespoke glass solutions across the residence: Technorail railings with bronze PVD finishes, extra-clear glass, custom timber handrails, framed shower cubicles and fabric-laminated pooja doors.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1dRUf2hC6GoGtkzJp_gA1ZboXWtUMxeOe" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/reel/DRuFECikwd5/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Reel
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 10. Vijay - The Modern Residence -->
-      <div class="pcard rev d1" data-sector="residential">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/tirumulgiri.jpg')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Residential</span>
-          <div class="pcard-img-title">The Modern Residence</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Mirrors</span>
-            <span class="pcard-tag">Shower Cubicles</span>
-            <span class="pcard-tag">Custom Glass</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Tirumulgiri</span>
-          </div>
-          <div class="pcard-arch">Architect: <span>Vikas</span> — Daftary Architects</div>
-          <p class="pcard-overview">Bespoke mirrors, framed shower cubicles and decorative fabric glass installations tailored to each unique space within a contemporary residence.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1jW7_B9ZPB04FHds7W8XPoWTJ9_FnvWmd" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/reel/DYwolVooHIs/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Reel
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 11. Karthik - Refined Villa Spaces -->
-      <div class="pcard rev d2" data-sector="residential">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/filmnagar.JPG')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Residential</span>
-          <div class="pcard-img-title">Refined Villa Spaces</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Railings</span>
-            <span class="pcard-tag">Mirrors</span>
-            <span class="pcard-tag">Partitions</span>
-            <span class="pcard-tag">Shower Cubicles</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Film Nagar</span>
-          </div>
-          <div class="pcard-arch">Architect: <span>Mounika</span></div>
-          <p class="pcard-overview">Antique and distressed mirrors, acid-etched patterns, leather-finish glass, fabric-laminated panels framed in Majestic Gold profiles, premium partitions and elegantly detailed shower cubicles.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/1yjW8oNHkUxKMF4j6mHi5x1CizllT-uKN" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 12. Surender Reddy - Timeless Villa -->
-      <div class="pcard rev d3" data-sector="residential">
-        <div class="pcard-img">
-          <div class="pcard-img-bg" style="background-image:url('https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Bowenpally.JPG')"></div>
-          <div class="pcard-img-ov"></div>
-          <span class="pcard-sector">Residential</span>
-          <div class="pcard-img-title">Timeless Villa Design</div>
-          <div class="pcard-teal"></div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-tag">Doors</span>
-            <span class="pcard-tag">Railings</span>
-            <span class="pcard-tag">Mirrors</span>
-            <span class="pcard-tag">Partitions</span>
-            <span class="pcard-location"><svg width="11" height="11" fill="none" viewBox="0 0 11 11"><circle cx="5.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1"/><path d="M5.5 1C3.3 1 1.5 2.8 1.5 5c0 3.2 4 6 4 6s4-2.8 4-6C9.5 2.8 7.7 1 5.5 1z" stroke="currentColor" stroke-width="1"/></svg>Bowenpally</span>
-          </div>
-          <div class="pcard-arch">Complete Residential Package</div>
-          <p class="pcard-overview">Full-range glass solution across the residence: premium glass doors, railing systems, interior partitions, framed shower cubicles, bespoke mirrors and custom glass, all with a consistent design language.</p>
-          <div class="pcard-actions">
-            <a href="https://drive.google.com/drive/folders/11rkeSgqHUnhse7fy1J2ovn7LHbxbvR-M" target="_blank" class="pcard-btn pcard-btn-gallery">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11M5 5v7" stroke="currentColor" stroke-width="1.2"/></svg>
-              View Photos
-            </a>
-            <a href="https://www.instagram.com/reel/DbA87mJI1ls/" target="_blank" class="pcard-btn pcard-btn-reel">
-              <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><rect x="1" y="1" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="6.5" cy="6.5" r="2.2" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="3.5" r=".7" fill="currentColor"/></svg>
-              View Reel
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="port-empty" id="pe">No projects found in this category.</div>
-  </div>
-</section>
-
-<section class="port-cta">
-  <div class="wrap port-cta-i">
-    <div class="rev">
-      <h2>Have a Project in Mind?</h2>
-      <p>Let's discuss how we can bring your vision to life.</p>
-    </div>
-    <a href="contact.html" class="btn-ws rev d2">Start a Conversation</a>
-  </div>
-</section>
-
-
-<!-- CATALOGUE DOWNLOAD -->
-<section style="background:var(--black);padding:64px 0;">
-  <div class="wrap">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
-      <div style="display:flex;align-items:center;gap:20px;">
-        <div style="width:60px;height:60px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="28" height="28" fill="none" viewBox="0 0 28 28"><path d="M16 3H8a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" stroke="white" stroke-width="1.5" stroke-linecap="round"/><polyline points="16,3 16,9 22,9" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="15" x2="10" y2="15" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="19" x2="10" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div>
-          <div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px;">Product Catalogue</div>
-          <div style="font-family:var(--fm);font-size:18px;font-weight:400;color:var(--white);margin-bottom:4px;">DG Completed Works</div>
-          <div style="font-size:13px;color:rgba(255,255,255,.45);">Portfolio of completed residential and commercial projects</div>
-        </div>
-      </div>
-      <a href="https://drive.google.com/uc?export=download&id=1mP1WmIP-auh0SJ1ARCwlKCfFi0mBesfT" target="_blank"
-         style="display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--black);font-family:var(--fb);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;flex-shrink:0;text-decoration:none;"
-         onmouseover="this.style.background='#458895';this.style.color='white'"
-         onmouseout="this.style.background='white';this.style.color='#0A0A0A'">
-        <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M8 2v8M4.5 7l3.5 3.5L11.5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M2 12h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-        Download PDF
-      </a>
     </div>
   </div>
 </section>
+
 <footer id="ft">
   <div class="wrap">
-    <div class="ftg">
-      <div><img class="fli" src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none'"/><p class="ftag">Designing, fabricating, and installing custom glass solutions across India since 1991.</p></div>
-      <div class="fc"><h4>Solutions</h4><ul><li><a href="windows-doors.html">Windows</a></li><li><a href="railings.html">Railings</a></li><li><a href="partitions.html">Partitions and Doors</a></li><li><a href="shower-cubicles.html">Shower Cubicles</a></li><li><a href="mirrors.html">Mirrors</a></li><li><a href="products.html">Products</a></li></ul></div>
-      <div class="fc"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="fc"><h4>Contact</h4><div class="fci"><a href="tel:+919553371114" class="fca">+91 95533 71114</a><a href="mailto:info@domesticglass.in" class="fca">info@domesticglass.in</a><span class="fca" style="cursor:default;">Hyderabad, Telangana</span></div></div>
+    <div class="ft">
+      <div>
+        <img class="fli" src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none'"/>
+        <p class="ftag">Designing, fabricating, and installing custom glass solutions across India since 1991.</p>
+        <div class="fso"><a href="https://www.instagram.com/domesticglass/" target="_blank" rel="noopener" class="fsl" aria-label="Instagram"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/company/domesticglass/home/" target="_blank" rel="noopener" class="fsl" aria-label="LinkedIn"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.3 21 14.7V21h-4v-5.6c0-1.34-.03-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V21H9z"/></svg></a><a href="https://pin.it/2w9liAjEJ" target="_blank" rel="noopener" class="fsl" aria-label="Pinterest"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.64 19.31c-.09-.79-.17-2 .03-2.86l1.2-5.08s-.3-.61-.3-1.5c0-1.41.82-2.46 1.83-2.46.87 0 1.29.65 1.29 1.43 0 .87-.56 2.18-.84 3.39-.24 1.01.51 1.84 1.51 1.84 1.81 0 3.2-1.91 3.2-4.66 0-2.44-1.75-4.14-4.25-4.14-2.9 0-4.6 2.17-4.6 4.42 0 .87.34 1.81.76 2.32a.3.3 0 01.07.29l-.28 1.14c-.05.18-.15.22-.34.13-1.27-.59-2.06-2.44-2.06-3.93 0-3.2 2.32-6.13 6.7-6.13 3.52 0 6.25 2.5 6.25 5.85 0 3.5-2.2 6.3-5.26 6.3-1.03 0-2-.53-2.33-1.17l-.63 2.42c-.23.88-.85 1.98-1.26 2.66A10 10 0 1012 2z"/></svg></a><a href="https://youtube.com/@domesticglass?si=Kw6w-u86L7hpt3pt" target="_blank" rel="noopener" class="fsl" aria-label="YouTube"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12 31 31 0 001 16.8a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.75 15.02V8.98L15.5 12z"/></svg></a><a href="https://wa.me/919553371114" target="_blank" rel="noopener" class="fsl" aria-label="WhatsApp"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.2L2 22l4.8-1.4A10 10 0 0012 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18a8 8 0 01-4.3-1.2l-.3-.2-3.2.8.9-3.1-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 00-.7.3 2.8 2.8 0 00-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.2z"/></svg></a></div>
+      </div>
+      <div class="fc"><h4>Solutions</h4><ul><li><a href="partitions.html">Partitions &amp; Door Systems</a></li><li><a href="shower-cubicles.html">Shower Partition Systems</a></li><li><a href="railings.html">Railing Systems</a></li><li><a href="mirrors.html">Architectural Mirrors</a></li><li><a href="windows-doors.html">Window Systems</a></li><li><a href="products.html">Products</a></li></ul></div>
+      <div class="fc"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Inspiration</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <address><b>Showroom</b>8-2-681/A/1/A, 2nd Floor, Zoom Tower, above HDFC Bank, Banjara Hills Road No. 12, Hyderabad 500034</address>
+        <address><b>Factory</b>5-6-171/1, near Charkandil, Agapura, Nampally, Hyderabad 500001</address>
+        <ul>
+          <li><a href="tel:+919000420253">+91 90004 20253</a></li>
+          <li><a href="tel:+917893455590">+91 78934 55590</a></li>
+          <li><a href="tel:+919247522655">+91 92475 22655</a></li>
+          <li><a href="mailto:hello@domesticglass.in">hello@domesticglass.in</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="fbb"><p class="fbcp">2025 Domestic Glass. All rights reserved.</p><div class="fbl"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
+    <div class="fb"><p class="fbcp">&copy; <span class="yr">2026</span> Domestic Glass. All rights reserved.</p><div class="fbl"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
   </div>
 </footer>
+<a href="https://wa.me/919553371114" target="_blank" rel="noopener" class="wa-fab" aria-label="Chat on WhatsApp"><svg width="28" height="28" fill="#fff" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.17L2 22l4.83-1.44A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a8 8 0 01-4.29-1.25l-.29-.17-3.18.83.85-3.1-.19-.3A7.96 7.96 0 014 12a8 8 0 1116 0 8 8 0 01-8 8z"/></svg></a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="lb-x" onclick="lbClose()" aria-label="Close">&#215;</button>
+  <button class="lb-p" onclick="lbGo(-1)" aria-label="Previous">&#8249;</button>
+  <img id="lbI" src="" alt=""/>
+  <button class="lb-n" onclick="lbGo(1)" aria-label="Next">&#8250;</button>
+  <div class="lb-c" id="lbC"></div>
+</div>
+<div class="mdl" id="catM">
+  <div class="mdl-b">
+    <button class="mdl-x" onclick="closeCat()" aria-label="Close">&#215;</button>
+    <div id="catF">
+      <h3>Download Catalogue</h3>
+      <p>Enter your details to download the PDF.</p>
+      <div class="fld"><label>Name *</label><input type="text" id="catN" placeholder="Your full name"/><div class="em" id="catNE">Please enter your name.</div></div>
+      <div class="fld"><label>Mobile *</label><input type="tel" id="catP" placeholder="+91 XXXXX XXXXX"/><div class="em" id="catPE">Please enter a valid 10-digit number.</div></div>
+      <button class="btn btn-teal" onclick="submitCat()"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Download Now</button>
+      <small>We respect your privacy. No spam, ever.</small>
+    </div>
+    <div class="okb" id="catOK"><i>&#10003;</i><h3>Downloading...</h3><p>Your download has started. <a id="catL" href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Completed%20works.pdf" target="_blank" style="color:var(--teal);">Click here</a> if it doesn't begin automatically.</p></div>
+  </div>
+</div>
+<script>
+var CAT_PDF_URL="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Completed%20works.pdf";
+</script>
 
 <script>
-const hdr=document.getElementById('hdr');
-window.addEventListener('scroll',()=>hdr.classList.toggle('sc',window.scrollY>20));
-const hbg=document.getElementById('hbg'),mob=document.getElementById('mob');
-hbg.addEventListener('click',()=>{hbg.classList.toggle('op');mob.classList.toggle('op');});
-
-// Filter
-function pfilt(btn,sector){
-  document.querySelectorAll('.pt').forEach(b=>b.classList.remove('on'));
-  btn.classList.add('on');
-  const cards=document.querySelectorAll('.pcard');
-  let count=0;
-  cards.forEach(c=>{
-    const show=sector==='all'||c.dataset.sector===sector;
-    c.style.display=show?'flex':'none';
-    if(show)count++;
-  });
-  document.getElementById('pe').classList.toggle('on',count===0);
+(function(){
+var hdr=document.getElementById('hdr');
+window.addEventListener('scroll',function(){hdr.classList.toggle('sc',window.scrollY>20);},{passive:true});
+var hbg=document.getElementById('hbg'),mob=document.getElementById('mob');
+hbg.addEventListener('click',function(){hbg.classList.toggle('op');mob.classList.toggle('op');});
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rev').forEach(function(el){ro.observe(el);});
+document.querySelectorAll('.phero .rev').forEach(function(el){el.classList.add('on');});
+document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
+})();
+/* Lightbox: any element with data-lb="group" */
+var lbSet=[],lbIdx=0;
+function lbShow(){var it=lbSet[lbIdx];document.getElementById('lbI').src=it.href;document.getElementById('lbI').alt=it.cap;document.getElementById('lbC').textContent=it.cap+'  ·  '+(lbIdx+1)+' / '+lbSet.length;}
+function lbClose(){document.getElementById('lb').classList.remove('on');document.body.style.overflow='';}
+function lbGo(d){lbIdx=(lbIdx+d+lbSet.length)%lbSet.length;lbShow();}
+document.addEventListener('click',function(e){
+  var a=e.target.closest('[data-lb]');if(!a)return;e.preventDefault();
+  var g=a.getAttribute('data-lb');
+  var all=[].slice.call(document.querySelectorAll('[data-lb="'+g+'"]')).filter(function(x){return x.offsetParent!==null;});
+  lbSet=all.map(function(x){return{href:x.getAttribute('href'),cap:x.getAttribute('data-cap')||''};});
+  lbIdx=Math.max(0,all.indexOf(a));lbShow();
+  document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';
+});
+document.getElementById('lb').addEventListener('click',function(e){if(e.target===e.currentTarget)lbClose();});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){lbClose();closeCat();}
+  if(!document.getElementById('lb').classList.contains('on'))return;
+  if(e.key==='ArrowRight')lbGo(1);if(e.key==='ArrowLeft')lbGo(-1);
+});
+var lbIm=document.getElementById('lbI');
+lbIm.addEventListener('error',function(){var u=lbIm.src;var m=u.match(/[?&]url=([^&]+)/);if(m){lbIm.src=decodeURIComponent(m[1]);}});
+/* Catalogue modal */
+function openCat(){document.getElementById('catM').classList.add('on');document.body.style.overflow='hidden';}
+function closeCat(){var m=document.getElementById('catM');if(!m.classList.contains('on'))return;m.classList.remove('on');document.body.style.overflow='';setTimeout(function(){document.getElementById('catF').style.display='block';document.getElementById('catOK').classList.remove('on');},300);}
+document.getElementById('catM').addEventListener('click',function(e){if(e.target===e.currentTarget)closeCat();});
+function submitCat(){
+  var n=document.getElementById('catN'),p=document.getElementById('catP'),ok=true;
+  if(!n.value.trim()){n.classList.add('err');document.getElementById('catNE').classList.add('on');ok=false;}else{n.classList.remove('err');document.getElementById('catNE').classList.remove('on');}
+  if(p.value.replace(/\D/g,'').length<10){p.classList.add('err');document.getElementById('catPE').classList.add('on');ok=false;}else{p.classList.remove('err');document.getElementById('catPE').classList.remove('on');}
+  if(!ok)return;
+  document.getElementById('catF').style.display='none';document.getElementById('catOK').classList.add('on');
+  var a=document.createElement('a');a.href=CAT_PDF_URL;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
 }
-
-// Reveal
-const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
-document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
-document.querySelectorAll('.ph .rev').forEach(el=>el.classList.add('on'));
+/* Filter tabs: <div class="tabs" data-for="ID"><button class="tab" data-f="cat"> ... items have data-cat */
+document.querySelectorAll('.tabs').forEach(function(t){
+  var box=document.getElementById(t.getAttribute('data-for'));
+  t.addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;
+    t.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on');});b.classList.add('on');
+    var f=b.getAttribute('data-f');
+    box.querySelectorAll('[data-cat]').forEach(function(it){it.style.display=(f==='all'||it.getAttribute('data-cat').split(' ').indexOf(f)>-1)?'':'none';});
+  });
+});
 </script>
 </body>
 </html>

@@ -1,109 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Products &ndash; Domestic Glass</title>
-<meta name="description" content="Browse our complete range of decorative, lacquered, tinted, digital and specialty glass products. Download catalogues for specifications and pricing."/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Glass Products – Domestic Glass</title>
+<meta name="description" content="Decorative, lacquered, tinted, fluted, mesh and specialty glass products. Download catalogues for specifications and finishes."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://wsrv.nl"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--black:#0A0A0A;--white:#FFFFFF;--g50:#F8F8F8;--g100:#F2F2F2;--g200:#E4E4E4;--g400:#9A9A9A;--g600:#5A5A5A;--g800:#2A2A2A;--teal:#458895;--teal-d:#336670;--fm:'Montserrat',system-ui,sans-serif;--fb:'DM Sans',system-ui,sans-serif;}
-html{scroll-behavior:smooth;}body{font-family:var(--fb);font-size:16px;line-height:1.6;color:var(--black);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
-.rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}.rev.on{opacity:1;transform:none;}
+:root{--black:#0A0A0A;--white:#FFFFFF;--g50:#F7F7F5;--g100:#EFEFEC;--g200:#E2E2DE;--g400:#8A8A86;--g600:#4A4A47;--g700:#333331;--g800:#1F1F1E;--teal:#458895;--teal-d:#336670;--teal-dk:#1E4249;--fm:'Montserrat',system-ui,sans-serif;--fb:'DM Sans',system-ui,sans-serif;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);font-size:17px;line-height:1.7;color:var(--g700);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;height:auto;}
+a{text-decoration:none;color:inherit;}
+.rev{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+.rev.on{opacity:1;transform:none;}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
-.wrap{max-width:1200px;margin:0 auto;padding:0 48px;}
-.teal-bar{display:block;width:36px;height:2px;background:var(--teal);margin-bottom:18px;}
-.eyebrow-g{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--g400);}
-.eyebrow-w{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;cursor:pointer;border:none;}
+.wrap{max-width:1360px;margin:0 auto;padding:0 56px;}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);}
+.eyebrow::before{content:'';width:32px;height:2px;background:currentColor;}
+.eyebrow.light{color:#9fd0d8;}
+.h2{font-family:var(--fm);font-size:clamp(30px,3.4vw,48px);font-weight:500;line-height:1.15;letter-spacing:-.015em;color:var(--black);margin-top:18px;}
+.h2.light{color:var(--white);}
+.lead{font-size:18px;line-height:1.75;color:var(--g600);}
+.lead.light{color:rgba(255,255,255,.82);}
+.sec{padding:110px 0;}
+.sec.alt{background:var(--g50);}
+.sec.dark{background:var(--black);color:var(--white);}
+.sec.tight{padding:80px 0;}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:44px;flex-wrap:wrap;}
+.sec-head .lead{margin-top:16px;max-width:640px;}
+.sec-head .acts{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.count{font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--g400);}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:16px 30px;transition:all .25s;cursor:pointer;border:none;white-space:nowrap;}
+.btn svg{transition:transform .25s;}
+.btn:hover svg{transform:translateX(3px);}
 .btn-blk{background:var(--black);color:var(--white);}.btn-blk:hover{background:var(--teal);}
 .btn-teal{background:var(--teal);color:var(--white);}.btn-teal:hover{background:var(--teal-d);}
-.btn-ol{background:transparent;color:var(--black);border:1px solid var(--g200);}.btn-ol:hover{border-color:var(--teal);color:var(--teal);}
+.btn-w{background:var(--white);color:var(--black);}.btn-w:hover{background:var(--teal);color:var(--white);}
+.btn-ol{background:transparent;color:var(--black);border:1.5px solid var(--black);}.btn-ol:hover{background:var(--black);color:var(--white);}
+.btn-ol-w{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.7);}.btn-ol-w:hover{background:var(--white);color:var(--black);}
 
 /* HEADER */
-#hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--g200);transition:box-shadow .3s;}
-#hdr.sc{box-shadow:0 4px 24px rgba(0,0,0,.07);}
-.nav{max-width:1200px;margin:0 auto;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
-.logo img{height:40px;width:auto;display:block;}
-.logo-fb{font-family:var(--fm);font-size:16px;font-weight:600;color:var(--black);display:none;}.logo-fb span{color:var(--teal);}
+#hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--g200);transition:box-shadow .3s;}
+#hdr.sc{box-shadow:0 6px 28px rgba(0,0,0,.08);}
+.nav{max-width:1360px;margin:0 auto;padding:0 56px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.logo img{height:44px;width:auto;}
+.logo-fb{font-family:var(--fm);font-size:18px;font-weight:600;color:var(--black);display:none;}.logo-fb span{color:var(--teal);}
 .nl{display:flex;align-items:center;list-style:none;}
-.nl>li>a{font-size:12.5px;font-weight:500;letter-spacing:.04em;color:var(--g600);padding:8px 14px;display:flex;align-items:center;gap:4px;transition:color .2s;}
-.nl>li>a:hover,.nl>li.act>a{color:var(--black);}
-.drop{position:relative;}.drop>a svg{transition:transform .2s;}.drop:hover>a svg{transform:rotate(180deg);}
-.dd{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--g200);min-width:210px;padding:8px 0;box-shadow:0 16px 40px rgba(0,0,0,.10);opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .2s;list-style:none;}
-.drop:hover .dd{opacity:1;visibility:visible;transform:none;}
-.dd li a{display:block;padding:10px 18px;font-size:12.5px;color:var(--g600);transition:background .15s,color .15s;}.dd li a:hover{background:var(--g50);color:var(--teal);}
+.nl>li>a{font-family:var(--fm);font-size:13.5px;font-weight:500;color:var(--g700);padding:10px 13px;display:flex;align-items:center;gap:5px;transition:color .2s;}
+.nl>li>a:hover,.nl>li.act>a{color:var(--teal);}
+.drop{position:relative;}
+.drop>a svg{transition:transform .2s;}.drop:hover>a svg{transform:rotate(180deg);}
+.dd{position:absolute;top:calc(100% + 10px);left:0;background:var(--white);border:1px solid var(--g200);min-width:260px;padding:10px 0;box-shadow:0 18px 44px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .2s;list-style:none;}
+.dd::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px;}
+.drop:hover .dd,.drop:focus-within .dd{opacity:1;visibility:visible;transform:none;}
+.dd li a{display:block;padding:11px 20px;font-size:15px;color:var(--g700);transition:background .15s,color .15s;}
+.dd li a:hover,.dd li.act a{background:var(--g50);color:var(--teal);}
 .nr{display:flex;align-items:center;gap:14px;flex-shrink:0;}
-.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
-.hbg span{display:block;width:22px;height:1.5px;background:var(--black);transition:transform .25s,opacity .25s;}
-.hbg.op span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}.hbg.op span:nth-child(2){opacity:0;}.hbg.op span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-.mob{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--g200);padding:16px 24px 24px;}
-.mob.op{display:flex;}.mob a{font-size:15px;color:var(--g800);padding:13px 0;border-bottom:1px solid var(--g100);transition:color .2s;}.mob a:last-child{border-bottom:none;}.mob a:hover{color:var(--teal);}
-.mob-cta{margin-top:16px;background:var(--black);color:var(--white)!important;text-align:center;padding:13px!important;border-bottom:none!important;font-weight:600;font-size:11px!important;text-transform:uppercase;}
+.nr .btn{padding:12px 20px;font-size:12px;}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.hbg span{display:block;width:24px;height:2px;background:var(--black);transition:transform .25s,opacity .25s;}
+.hbg.op span:nth-child(1){transform:translateY(7px) rotate(45deg);}.hbg.op span:nth-child(2){opacity:0;}.hbg.op span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mob{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--g200);padding:12px 24px 24px;max-height:calc(100vh - 76px);overflow-y:auto;}
+.mob.op{display:flex;}
+.mob a{font-size:17px;color:var(--g800);padding:14px 0;border-bottom:1px solid var(--g100);}
+.mob a.sub{padding-left:16px;font-size:15.5px;color:var(--g600);}
+.mob a:hover{color:var(--teal);}
+.mob-cta{margin-top:18px;background:var(--black);color:var(--white)!important;text-align:center;padding:15px!important;border-bottom:none!important;font-family:var(--fm);font-weight:600;letter-spacing:.08em;font-size:13px!important;text-transform:uppercase;}
 
-/* PAGE HERO */
-.ph{padding:148px 0 88px;background:var(--black);position:relative;overflow:hidden;}
-.ph::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;}
-.ph::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);}
-.phi{position:relative;z-index:1;}
-.ph h1{font-family:var(--fm);font-size:clamp(36px,5vw,64px);font-weight:300;line-height:1.1;color:var(--white);margin:18px 0 16px;letter-spacing:-.01em;}
-.ph h1 em{font-style:normal;font-weight:600;color:var(--teal);}
-.ph p{font-size:15px;line-height:1.75;color:rgba(255,255,255,.5);max-width:520px;}
+/* PAGE HERO (image, replaces the old black band) */
+.phero{position:relative;margin-top:76px;min-height:clamp(560px,calc(82vh - 76px),820px);padding-top:110px;color:var(--white);overflow:hidden;background:var(--g800);display:flex;align-items:flex-end;}
+.phero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:phz 9s ease-out forwards;}
+@keyframes phz{from{transform:scale(1.07);}to{transform:scale(1);}}
+.phero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 55%,rgba(0,0,0,0) 85%),linear-gradient(0deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,0) 50%);}
+.phero .wrap{position:relative;z-index:2;width:100%;padding-bottom:64px;}
+.crumb{font-family:var(--fm);font-size:12.5px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.75);margin-bottom:20px;display:flex;gap:10px;align-items:center;}
+.crumb a:hover{color:var(--white);}
+.phero h1{font-family:var(--fm);font-size:clamp(40px,5.4vw,76px);font-weight:500;line-height:1.05;letter-spacing:-.025em;margin:18px 0 20px;max-width:900px;}
+.phero h1 em{font-style:normal;color:#9fd0d8;}
+.phero p{font-size:19px;line-height:1.65;color:rgba(255,255,255,.9);max-width:640px;}
+.phero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px;}
+.chip{font-family:var(--fm);font-size:13px;font-weight:500;padding:10px 18px;border:1px solid rgba(255,255,255,.45);color:var(--white);background:rgba(255,255,255,.08);backdrop-filter:blur(6px);transition:all .2s;}
+.chip:hover{background:var(--white);color:var(--black);}
 
-/* PRODUCT GRID */
-.prod-sec{padding:80px 0 96px;background:var(--white);}
-.prod-sec h2{font-family:var(--fm);font-size:clamp(24px,3vw,36px);font-weight:300;color:var(--black);margin-top:14px;line-height:1.2;margin-bottom:12px;}
-.prod-sec>div>p{font-size:14px;color:var(--g600);margin-bottom:48px;max-width:560px;}
-.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.prod-card{background:var(--white);border:1px solid var(--g200);overflow:hidden;transition:transform .25s,box-shadow .25s;position:relative;}
-.prod-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08);}
-.prod-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
-.prod-card:hover::after{transform:scaleX(1);}
-.prod-card-img{aspect-ratio:16/10;background:var(--g100);overflow:hidden;position:relative;}
-.prod-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}.prod-card:hover .prod-card-img img{transform:scale(1.05);}
-.prod-card-body{padding:24px 24px 20px;}
-.prod-card-body h3{font-family:var(--fm);font-size:15px;font-weight:600;color:var(--black);margin-bottom:8px;}
-.prod-card-body p{font-size:13px;line-height:1.6;color:var(--g600);margin-bottom:16px;}
-.prod-dl{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);transition:gap .2s;}.prod-dl:hover{gap:11px;}
+/* MASONRY GALLERY */
+.mason{columns:4 260px;column-gap:14px;}
+.mason.c3{columns:3 300px;}
+.mi{break-inside:avoid;margin-bottom:14px;position:relative;display:block;overflow:hidden;background:var(--g100);cursor:zoom-in;}
+.mi img{width:100%;transition:transform .9s cubic-bezier(.2,.7,.2,1);}
+.mi:hover img{transform:scale(1.05);}
+.mi::after{content:'';position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(0deg,rgba(0,0,0,.66),transparent);opacity:.9;transition:opacity .3s;pointer-events:none;}
+.mi span{position:absolute;left:16px;right:16px;bottom:14px;z-index:1;font-family:var(--fm);font-size:14px;font-weight:600;color:var(--white);line-height:1.35;}
+.dark .mi{background:var(--g800);}
+.mi.nocap::after{display:none;}
 
-/* DG CATALOGUES SECTION */
-.dg-cat-sec{padding:80px 0 96px;background:var(--g50);border-top:1px solid var(--g200);}
-.dg-cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;}
-.dg-cat{background:var(--white);border:1px solid var(--g200);padding:28px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;transition:transform .22s,box-shadow .22s;}
-.dg-cat:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.06);}
-.dg-cat-icon{width:48px;height:48px;background:var(--black);display:flex;align-items:center;justify-content:center;color:var(--white);}
-.dg-cat h4{font-family:var(--fm);font-size:13px;font-weight:600;color:var(--black);}
-.dg-cat p{font-size:12px;color:var(--g400);}
-.dg-cat .prod-dl{font-size:10px;margin-top:auto;padding-top:8px;}
+/* SPLIT */
+.split{display:grid;grid-template-columns:1.15fr 1fr;gap:80px;align-items:center;}
+.split.rev-o{grid-template-columns:1fr 1.15fr;}
+.split.rev-o>:first-child{order:2;}
+.split .pic{position:relative;overflow:hidden;}
+.split .pic img{width:100%;height:100%;object-fit:cover;}
+.split .txt .lead{margin:22px 0 30px;}
+.ticks{list-style:none;display:flex;flex-direction:column;gap:14px;margin:6px 0 34px;}
+.ticks li{display:flex;gap:14px;align-items:flex-start;font-size:17px;color:var(--g700);}
+.ticks li::before{content:'';width:10px;height:10px;background:var(--teal);flex-shrink:0;margin-top:9px;}
+.dark .ticks li{color:rgba(255,255,255,.85);}
 
-/* CTA */
-.prod-cta{background:var(--teal);padding:80px 0;}
-.prod-cta-i{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
-.prod-cta h2{font-family:var(--fm);font-size:clamp(22px,3.5vw,40px);font-weight:300;color:var(--white);margin-bottom:8px;line-height:1.2;}
-.prod-cta p{font-size:15px;color:rgba(255,255,255,.62);}
-.btn-ws{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--teal);font-family:var(--fb);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;}.btn-ws:hover{background:var(--black);color:var(--white);}
+/* IMAGE CARDS */
+.icards{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:20px;}
+.icard{position:relative;display:block;overflow:hidden;background:var(--g800);color:var(--white);aspect-ratio:var(--ar,4/5);}
+.icard img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1);}
+.icard:hover img{transform:scale(1.05);}
+.icard::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.4) 38%,rgba(0,0,0,0) 65%);}
+.icard .cap{position:absolute;left:0;right:0;bottom:0;padding:28px 28px 26px;z-index:1;}
+.icard .num{font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.14em;color:#9fd0d8;}
+.icard h3{font-family:var(--fm);font-size:clamp(20px,1.8vw,26px);font-weight:600;line-height:1.25;margin:8px 0 8px;}
+.icard p{font-size:15.5px;line-height:1.55;color:rgba(255,255,255,.9);}
+.icard .go{display:inline-flex;align-items:center;gap:10px;margin-top:14px;font-family:var(--fm);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-bottom:1.5px solid rgba(255,255,255,.6);padding-bottom:4px;}
+
+/* STEP CARDS (image on top) */
+.steps{display:grid;grid-template-columns:repeat(var(--cols,4),1fr);gap:20px;}
+.step{background:var(--white);display:flex;flex-direction:column;}
+.alt .step{background:var(--white);}
+.step .pic{aspect-ratio:4/3;overflow:hidden;position:relative;}
+.step .pic img{width:100%;height:100%;object-fit:cover;transition:transform .9s;}
+.step:hover .pic img{transform:scale(1.05);}
+.step .pic b{position:absolute;left:18px;top:16px;font-family:var(--fm);font-size:14px;font-weight:600;letter-spacing:.1em;color:var(--white);background:var(--teal);padding:6px 10px;}
+.step .bd{padding:26px 26px 30px;border:1px solid var(--g200);border-top:none;flex:1;}
+.step h3{font-family:var(--fm);font-size:20px;font-weight:600;color:var(--black);margin-bottom:10px;}
+.step p{font-size:16px;line-height:1.65;color:var(--g600);}
+
+/* FULL-BLEED IMAGE BAND */
+.band{position:relative;padding:150px 0;color:var(--white);overflow:hidden;background:var(--black);}
+.band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.band::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.35));}
+.band .wrap{position:relative;z-index:1;}
+.band h2{font-family:var(--fm);font-size:clamp(30px,4vw,56px);font-weight:500;line-height:1.12;letter-spacing:-.02em;margin:20px 0 22px;max-width:860px;}
+.band p{font-size:19px;color:rgba(255,255,255,.88);max-width:640px;}
+
+/* STATS STRIP */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);}
+.stat{padding:40px 32px;border-right:1px solid var(--g200);}
+.stat:last-child{border-right:none;}
+.stat b{display:block;font-family:var(--fm);font-size:48px;font-weight:600;line-height:1;color:var(--black);letter-spacing:-.02em;}
+.stat b sup{font-size:24px;color:var(--teal);vertical-align:top;position:relative;top:4px;}
+.stat span{display:block;margin-top:12px;font-family:var(--fm);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--g600);}
+
+/* CATALOGUE BAND (light, sits above the teal CTA) */
+.catb{background:var(--g100);padding:0;}
+.catb-in{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:360px;}
+.catb .pic{position:relative;overflow:hidden;}
+.catb .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.catb .txt{padding:64px 64px 64px 72px;display:flex;flex-direction:column;justify-content:center;}
+.catb h2{font-family:var(--fm);font-size:clamp(26px,2.6vw,38px);font-weight:500;line-height:1.2;color:var(--black);margin:16px 0 14px;}
+.catb p{font-size:17px;color:var(--g600);margin-bottom:28px;max-width:460px;}
+
+/* PRE-FOOTER CTA (teal, distinct from black footer) */
+.ctab{position:relative;padding:100px 0;color:var(--white);overflow:hidden;background:var(--teal);}
+.ctab>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.ctab::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,66,73,.95) 0%,rgba(30,66,73,.82) 55%,rgba(30,66,73,.55) 100%);}
+.ctai{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;}
+.ctai h2{font-family:var(--fm);font-size:clamp(30px,3.6vw,50px);font-weight:500;line-height:1.15;letter-spacing:-.015em;margin-bottom:14px;}
+.ctai p{font-size:18px;color:rgba(255,255,255,.88);max-width:560px;}
+.ctaa{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.ctaa .btn{justify-content:center;}
 
 /* FOOTER */
-#ft{background:var(--black);padding:72px 0 0;}
-.ftg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:52px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.07);}
-.fli{height:38px;width:auto;display:block;margin-bottom:18px;opacity:.85;}
-.ftag{font-size:13px;line-height:1.65;color:rgba(255,255,255,.38);max-width:240px;margin-bottom:24px;}
-.fso{display:flex;gap:10px;}
-.fsl{width:32px;height:32px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.38);font-size:11px;transition:border-color .2s,color .2s;}.fsl:hover{border-color:var(--teal);color:var(--teal);}
-.fc h4{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;}
-.fc ul{list-style:none;}.fc ul li{margin-bottom:9px;}.fc ul li a{font-size:13px;color:rgba(255,255,255,.42);transition:color .2s;}.fc ul li a:hover{color:var(--teal);}
-.fci{display:flex;flex-direction:column;gap:9px;}.fca{font-size:13px;color:rgba(255,255,255,.42);transition:color .2s;}.fca:hover{color:var(--teal);}
-.fbb{padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
-.fbcp{font-size:11px;color:rgba(255,255,255,.18);}
-.fbl{display:flex;gap:18px;}.fbl a{font-size:11px;color:rgba(255,255,255,.18);transition:color .2s;}.fbl a:hover{color:var(--teal);}
+#ft{background:var(--black);padding:88px 0 0;color:rgba(255,255,255,.72);}
+.ft{display:grid;grid-template-columns:1.5fr 1.1fr 1fr 1.4fr;gap:56px;padding-bottom:64px;border-bottom:1px solid rgba(255,255,255,.1);}
+.fli{height:44px;width:auto;display:block;margin-bottom:22px;filter:brightness(0) invert(1);}
+.ftag{font-size:16px;line-height:1.7;color:rgba(255,255,255,.7);max-width:300px;margin-bottom:26px;}
+.fso{display:flex;gap:10px;flex-wrap:wrap;}
+.fsl{width:42px;height:42px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.85);transition:all .2s;}
+.fsl:hover{border-color:var(--teal);background:var(--teal);color:var(--white);}
+.fc h4{font-family:var(--fm);font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--white);margin-bottom:22px;}
+.fc ul{list-style:none;}
+.fc ul li{margin-bottom:12px;}
+.fc ul li a{font-size:16px;color:rgba(255,255,255,.7);transition:color .2s;}
+.fc ul li a:hover{color:#9fd0d8;}
+.fc address{font-style:normal;font-size:15px;line-height:1.65;color:rgba(255,255,255,.7);margin-bottom:18px;}
+.fc address b{display:block;font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.95);margin-bottom:4px;}
+.fb{padding:26px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.fbcp,.fbl a{font-size:14px;color:rgba(255,255,255,.5);}
+.fbl{display:flex;gap:22px;}.fbl a:hover{color:#9fd0d8;}
+.wa-fab{position:fixed;bottom:28px;right:28px;z-index:8000;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .22s;color:#fff;}
+.wa-fab:hover{transform:scale(1.08);}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:9500;background:rgba(5,5,5,.94);display:none;align-items:center;justify-content:center;padding:70px 80px;}
+.lb.on{display:flex;}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.lb button{position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);color:var(--white);width:52px;height:52px;font-size:26px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.lb button:hover{background:var(--teal);}
+.lb-x{top:18px;right:18px;}.lb-p{left:18px;top:50%;transform:translateY(-50%);}.lb-n{right:18px;top:50%;transform:translateY(-50%);}
+.lb-c{position:absolute;bottom:20px;left:0;right:0;text-align:center;font-family:var(--fm);font-size:14px;color:rgba(255,255,255,.85);letter-spacing:.04em;}
+
+/* MODAL */
+.mdl{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9000;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);}
+.mdl.on{display:flex;}
+.mdl-b{background:#fff;width:100%;max-width:460px;position:relative;border-top:3px solid var(--teal);padding:40px 36px 34px;}
+.mdl-x{position:absolute;top:12px;right:16px;background:none;border:none;cursor:pointer;color:#6a6a6a;font-size:28px;line-height:1;}
+.mdl h3{font-family:var(--fm);font-size:24px;font-weight:600;color:var(--black);margin-bottom:8px;}
+.mdl p{font-size:16px;color:var(--g600);margin-bottom:24px;}
+.fld{margin-bottom:18px;}
+.fld label{display:block;font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--g700);margin-bottom:8px;}
+.fld label span{font-weight:400;text-transform:none;letter-spacing:0;color:var(--g400);}
+.fld input,.fld select,.fld textarea{width:100%;border:1px solid #CFCFCB;padding:13px 15px;font-size:16px;color:var(--black);outline:none;font-family:var(--fb);background:#fff;transition:border-color .2s;}
+.fld textarea{min-height:120px;resize:vertical;}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--teal);}
+.fld input.err{border-color:#c53030;}
+.fld .em{font-size:13px;color:#c53030;margin-top:5px;display:none;}
+.fld .em.on{display:block;}
+.mdl .btn{width:100%;justify-content:center;}
+.mdl small{display:block;font-size:13px;color:var(--g400);text-align:center;margin-top:14px;}
+.okb{display:none;text-align:center;padding:12px 0 6px;}
+.okb.on{display:block;}
+.okb i{width:60px;height:60px;border:2px solid var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:var(--teal);font-style:normal;font-size:26px;}
+
+/* TABS */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px;}
+.tab{font-family:var(--fm);font-size:13.5px;font-weight:600;letter-spacing:.04em;padding:11px 20px;border:1.5px solid var(--g200);background:var(--white);color:var(--g700);cursor:pointer;transition:all .2s;}
+.tab:hover{border-color:var(--black);}
+.tab.on{background:var(--black);border-color:var(--black);color:var(--white);}
+.dark .tab{background:transparent;color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25);}
+.dark .tab.on{background:var(--white);color:var(--black);border-color:var(--white);}
 
 /* RESPONSIVE */
-@media(max-width:1024px){.prod-grid{grid-template-columns:repeat(2,1fr);}.dg-cat-grid{grid-template-columns:repeat(2,1fr);}.ftg{grid-template-columns:1fr 1fr;}}
-@media(max-width:900px){.nl,.nr .btn-blk{display:none;}.hbg{display:flex;}.wrap,.nav{padding-left:24px;padding-right:24px;}.prod-cta-i{flex-direction:column;align-items:flex-start;}}
-@media(max-width:640px){.wrap,.nav{padding-left:18px;padding-right:18px;}.prod-grid,.dg-cat-grid{grid-template-columns:1fr;}.ftg{grid-template-columns:1fr;}.fbb{flex-direction:column;align-items:flex-start;}}
-.wa-fab{position:fixed;bottom:28px;right:28px;z-index:8000;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .22s,box-shadow .22s;text-decoration:none;}
-.wa-fab:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55);}
+@media(max-width:1180px){.nl,.nr .btn{display:none;}.hbg{display:flex;}}
+@media(max-width:1024px){
+  .wrap,.nav{padding-left:32px;padding-right:32px;}
+  .split,.split.rev-o{grid-template-columns:1fr;gap:48px;}
+  .split.rev-o>:first-child{order:0;}
+  .icards{grid-template-columns:repeat(2,1fr);}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .stat:nth-child(2){border-right:none;}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--g200);}
+  .catb-in{grid-template-columns:1fr;}
+  .catb .pic{min-height:280px;}
+  .catb .txt{padding:56px 32px;}
+  .ft{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  body{font-size:16.5px;}
+  .wrap,.nav{padding-left:20px;padding-right:20px;}
+  .nav{height:68px;}
+  .phero{margin-top:68px;min-height:calc(78svh - 68px);padding-top:90px;}
+  .phero .chips{display:none;}
+  .phero h1{font-size:38px;}
+  .phero .wrap{padding-bottom:40px;}
+  .phero p{font-size:17px;}
+  .mob{max-height:calc(100vh - 68px);}
+  .sec{padding:76px 0;}
+  .band{padding:100px 0;}
+  .mason,.mason.c3{columns:2;column-gap:8px;}
+  .mi{margin-bottom:8px;}
+  .mi span{font-size:12.5px;left:10px;right:10px;bottom:9px;}
+  .icards,.steps{grid-template-columns:1fr;}
+  .stat{padding:28px 20px;}.stat b{font-size:36px;}
+  .ctaa{grid-template-columns:1fr;width:100%;}
+  .ft{grid-template-columns:1fr;}
+  .lb{padding:70px 12px;}
+  .lb-p,.lb-n{top:auto!important;bottom:14px;transform:none!important;}
+  .catb .txt{padding:48px 20px;}
+}
+@media(prefers-reduced-motion:reduce){.rev,.phero>img{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;}}
+
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;grid-auto-flow:dense;}
+.pt.big{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;}
+.pt.big h3{font-size:30px;}.pt.big p{font-size:17px;max-width:460px;}
+.pt{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;color:var(--white);background:var(--g800);}
+.pt img,.pt .sw{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1);}
+.pt:hover img,.pt:hover .sw{transform:scale(1.05);}
+.pt::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.3) 40%,rgba(0,0,0,0) 65%);}
+.pt .cap{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:24px 22px 22px;}
+.pt h3{font-family:var(--fm);font-size:20px;font-weight:600;line-height:1.25;margin-bottom:6px;}
+.pt p{font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.88);margin-bottom:12px;}
+.pt .go{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border-bottom:1.5px solid rgba(255,255,255,.6);padding-bottom:3px;}
+.sw::before{content:'';position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.28) 46%,rgba(255,255,255,0) 60%);}
+.sw-lac{background:linear-gradient(160deg,#2f6f79 0%,#1d4a52 55%,#123238 100%);}
+.sw-cla{background:linear-gradient(160deg,#efe6d6 0%,#d8c7a8 60%,#b9a27c 100%);}
+.sw-spe{background:radial-gradient(circle at 30% 30%,#c9b8e6 0%,transparent 45%),radial-gradient(circle at 70% 65%,#8fd3cf 0%,transparent 50%),linear-gradient(160deg,#3a2f55,#16323a);}
+.sw-dig{background:conic-gradient(from 200deg at 60% 40%,#f2a65a,#e2557b,#6a5acd,#2bb3c0,#f2a65a);}
+.sw-met{background:linear-gradient(120deg,#6b5a35 0%,#c9ad6a 30%,#f3e2ad 45%,#a88b4d 60%,#5e4d2b 100%);}
+.sw-lea{background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.06) 0 2px,transparent 3px) 0 0/9px 9px,linear-gradient(160deg,#5a3a26,#2e1c12);}
+.sw-rdy{background:linear-gradient(160deg,#dfeef0 0%,#b9d6da 50%,#8fb4ba 100%);}
+.sw-rdy~.cap,.sw-cla~.cap{color:var(--white);}
+.ccat{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+@media(max-width:1024px){.pgrid,.ccat{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.pgrid{grid-template-columns:1fr 1fr;gap:8px;}.pt h3{font-size:16px;}.pt p{display:none;}.pt .cap{padding:16px 14px;}.ccat{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -117,35 +306,35 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
     <ul class="nl">
       <li><a href="index.html">Home</a></li>
       <li class="drop">
-        <a href="#">Solutions <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+        <a href="partitions.html">Solutions <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
         <ul class="dd">
-          <li><a href="windows-doors.html">Windows</a></li>
-          <li><a href="railings.html">Railings</a></li>
-          <li><a href="partitions.html">Partitions and Doors</a></li>
-          <li><a href="shower-cubicles.html">Shower Cubicles</a></li>
-          <li><a href="mirrors.html">Mirrors</a></li>
+          <li><a href="partitions.html">Partitions &amp; Door Systems</a></li>
+          <li><a href="shower-cubicles.html">Shower Partition Systems</a></li>
+          <li><a href="railings.html">Railing Systems</a></li>
+          <li><a href="mirrors.html">Architectural Mirrors</a></li>
+          <li><a href="windows-doors.html">Window Systems</a></li>
         </ul>
       </li>
       <li class="act"><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Inspiration</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="architects.html">Architects</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nr">
-      <a href="contact.html" class="btn btn-blk" style="padding:9px 18px;font-size:11px;">Book a Visit</a>
-    </div>
-    <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+    <div class="nr"><a href="contact.html" class="btn btn-blk">Book a Visit</a></div>
+    <button class="hbg" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
   <nav class="mob" id="mob">
     <a href="index.html">Home</a>
-    <a href="windows-doors.html">Windows</a>
-    <a href="railings.html">Railings</a>
-    <a href="partitions.html">Partitions and Doors</a>
-    <a href="shower-cubicles.html">Shower Cubicles</a>
-    <a href="mirrors.html">Mirrors</a>
+    <a href="partitions.html" class="sub">Partitions &amp; Door Systems</a>
+    <a href="shower-cubicles.html" class="sub">Shower Partition Systems</a>
+    <a href="railings.html" class="sub">Railing Systems</a>
+    <a href="mirrors.html" class="sub">Architectural Mirrors</a>
+    <a href="windows-doors.html" class="sub">Window Systems</a>
     <a href="products.html">Products</a>
+    <a href="gallery.html">Inspiration</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About Us</a>
     <a href="architects.html">Architects</a>
@@ -155,228 +344,155 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
   </nav>
 </header>
 
-<section class="ph">
-  <div class="wrap phi">
-    <span class="eyebrow-w rev">Explore Our Range</span>
+<section class="phero">
+  <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2F001%2520%284%29.jpg&w=2200&q=80&output=webp" alt="" width="1672" height="941" fetchpriority="high" style="object-position:center" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/001%20(4).jpg'"/>
+  <div class="wrap">
+    <div class="crumb rev"><a href="index.html">Home</a><span>/</span><span>Products</span></div>
+    <span class="eyebrow light rev">Explore Our Range</span>
     <h1 class="rev d1">Glass <em>Products</em></h1>
-    <p class="rev d2">Browse our complete catalogue of decorative, lacquered, tinted, textured and specialty glass products, available for customisation and nationwide delivery.</p>
+    <p class="rev d2">Decorative, lacquered, tinted, textured and specialty glass, available for customisation and delivery across India.</p>
+    <div class="acts rev d3"><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="btn btn-w"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> All Catalogues</a><a href="contact.html" class="btn btn-ol-w">Request Samples</a></div>
   </div>
 </section>
 
-<section class="prod-sec">
+<section class="sec">
   <div class="wrap">
-    <div class="rev">
-      <span class="teal-bar"></span>
-      <span class="eyebrow-g">Product Catalogues</span>
-      <h2>Specialty Glass Collections</h2>
-      <p>Download detailed catalogues with specifications, colour options and application guides for each glass type.</p>
+    <div class="sec-head">
+      <div><span class="eyebrow rev">Product Catalogues</span><h2 class="h2 rev d1">Specialty Glass Collections</h2>
+      <p class="lead rev d2">Tap any collection to open its catalogue with specifications, colour options and application guides.</p></div>
     </div>
-    <div class="prod-grid">
-
-      <div class="prod-card rev d1">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/lacquered-glass/3.jpg" alt="Lacquered Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Lacquered Glass</h3>
-          <p>Premium back-painted glass in a wide spectrum of colours for kitchen backsplashes, wall cladding and wardrobe shutters.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d2">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/lacquered-glass/1.jpg" alt="Classic Lacquered Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Classic Lacquered Glass</h3>
-          <p>Time-tested lacquered glass finishes in classic tones, ideal for residential and commercial interiors.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d3">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/lacquered-glass/2.jpg" alt="Special Effects Lacquered Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Special Effects Lacquered Glass</h3>
-          <p>Unique patterns, gradients and textured lacquered finishes for statement interiors and feature walls.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d1">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/tinted-glass/1.jpg" alt="Coloured Tinted Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Coloured Tinted Glass</h3>
-          <p>Body-tinted glass in a range of shades for facades, partitions and decorative panels with UV protection.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d2">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/decorative-glass/1.jpg" alt="Decorative Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Decorative Glass</h3>
-          <p>Art glass, etched panels and patterned glass for partitions, doors and feature installations.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d3">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/digital-glass/1.jpg" alt="Digital Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Digital Glass</h3>
-          <p>High-resolution digitally printed glass for custom murals, signage and bespoke interior surfaces.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d1">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/metallic-glass/1.jpg" alt="Metallic Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Metallic Glass</h3>
-          <p>Glass with metallic coatings and reflective finishes for contemporary facades and high-end interiors.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d2">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/metal-mesh-glass/1.jpg" alt="Metal Mesh Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Metal Mesh Glass</h3>
-          <p>Wire mesh laminated between glass layers for industrial aesthetics, partitions and security glazing.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d3">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/mesh-fabric-glass/1.jpg" alt="Mesh and Fabric Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Mesh and Fabric Glass</h3>
-          <p>Fabric and mesh interlayers laminated within glass for textured, translucent design surfaces.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d1">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/fluted-glass/1.jpg" alt="Fluted Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Fluted Glass</h3>
-          <p>Ribbed and reeded glass panels for privacy-enhancing partitions, doors and shower enclosures.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d2">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/leather-glass/1.jpg" alt="Leather Finish Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Leather Finish Glass</h3>
-          <p>Glass with genuine leather-effect back coating for luxury wardrobe doors and feature panels.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d3">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/glass-bricks/1.jpg" alt="Glass Bricks" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Glass Bricks</h3>
-          <p>Solid and hollow glass blocks for walls, partitions and feature elements with natural light diffusion.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-      <div class="prod-card rev d1">
-        <div class="prod-card-img"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/ready-to-use/1.jpg" alt="Ready to Use Glass" onerror="this.parentElement.style.background='var(--g100)'"/></div>
-        <div class="prod-card-body">
-          <h3>Ready to Use Glass</h3>
-          <p>Pre-cut, processed and finished glass panels ready for immediate installation across projects.</p>
-          <a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" class="prod-dl">Download Catalogue <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-
-    </div>
+    <div class="pgrid"><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d1"><div class="sw sw-lac"></div><div class="cap"><h3>Lacquered Glass</h3><p>Premium back-painted glass in a wide spectrum of colours for kitchen backsplashes, wall cladding and wardrobe shutters.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d2"><div class="sw sw-cla"></div><div class="cap"><h3>Classic Lacquered Glass</h3><p>Time-tested lacquered finishes in classic tones, ideal for residential and commercial interiors.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d3"><div class="sw sw-spe"></div><div class="cap"><h3>Special Effects Lacquered Glass</h3><p>Patterns, gradients and textured lacquered finishes for statement interiors and feature walls.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt big rev d4"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2F001%2520%284%29.jpg&w=800&q=80&output=webp" alt="Coloured Tinted Glass" width="1672" height="941" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/001%20(4).jpg'"/><div class="cap"><h3>Coloured Tinted Glass</h3><p>Body-tinted glass in a range of shades for facades, partitions and decorative panels.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d1"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FNewSliding_0035.jpg&w=800&q=80&output=webp" alt="Decorative Glass" width="4019" height="6614" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/NewSliding_0035.jpg'"/><div class="cap"><h3>Decorative Glass</h3><p>Art glass, etched panels and patterned glass for partitions, doors and feature installations.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d2"><div class="sw sw-dig"></div><div class="cap"><h3>Digital Glass</h3><p>High-resolution digitally printed glass for custom murals, signage and bespoke surfaces.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d3"><div class="sw sw-met"></div><div class="cap"><h3>Metallic Glass</h3><p>Glass with metallic coatings and reflective finishes for contemporary facades and interiors.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d4"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FBackDoor_0076.jpg&w=800&q=80&output=webp" alt="Metal Mesh Glass" width="4160" height="6240" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/BackDoor_0076.jpg'"/><div class="cap"><h3>Metal Mesh Glass</h3><p>Metal mesh laminated between glass for industrial aesthetics, partitions and doors.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d1"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FFabric-Glass-Fixed-Partition-Gold-01.jpg&w=800&q=80&output=webp" alt="Mesh and Fabric Glass" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Fabric-Glass-Fixed-Partition-Gold-01.jpg'"/><div class="cap"><h3>Mesh and Fabric Glass</h3><p>Fabric and mesh interlayers laminated within glass for textured, translucent surfaces.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d2"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FSliding%2520Partitions%2FTelescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg&w=800&q=80&output=webp" alt="Fluted Glass" width="6504" height="4352" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Sliding%20Partitions/Telescopic-Sliding-Fluted-Glass-Midnight-Black-01.jpg'"/><div class="cap"><h3>Fluted Glass</h3><p>Ribbed and reeded glass for privacy-enhancing partitions, doors and shower enclosures.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d3"><div class="sw sw-lea"></div><div class="cap"><h3>Leather Finish Glass</h3><p>Glass with a leather-effect back coating for luxury wardrobe doors and feature panels.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d4"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FPartitions%2520%2526%2520Doors%2FFixed%2520Partitions%2FGlass-Brick-Fixed-Partition-Gold-01.jpg&w=800&q=80&output=webp" alt="Glass Bricks" width="4586" height="3034" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Partitions%20%26%20Doors/Fixed%20Partitions/Glass-Brick-Fixed-Partition-Gold-01.jpg'"/><div class="cap"><h3>Glass Bricks</h3><p>Solid and hollow glass blocks for walls, partitions and features with natural light diffusion.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a><a href="https://drive.google.com/drive/folders/1r7adZyOMtSPGvrjVEk6vyHQeDa-1D9ik" target="_blank" rel="noopener" class="pt rev d1"><div class="sw sw-rdy"></div><div class="cap"><h3>Ready to Use Glass</h3><p>Pre-cut, processed and finished glass panels ready for immediate installation.</p><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Catalogue</span></div></a></div>
   </div>
 </section>
-
-<section class="dg-cat-sec">
+<section class="sec alt">
   <div class="wrap">
-    <div class="rev">
-      <span class="teal-bar"></span>
-      <span class="eyebrow-g">Solution Catalogues</span>
-      <h2 style="font-family:var(--fm);font-size:clamp(24px,3vw,36px);font-weight:300;color:var(--black);margin-top:14px;line-height:1.2;">Installation and Project Catalogues</h2>
-      <p style="font-size:14px;color:var(--g600);margin-bottom:0;max-width:560px;">Detailed solution catalogues showcasing our completed installations, systems and specifications.</p>
+    <div class="sec-head">
+      <div><span class="eyebrow rev">Solution Catalogues</span><h2 class="h2 rev d1">Installation and Project Catalogues</h2>
+      <p class="lead rev d2">Detailed catalogues of our installed systems, finishes and completed projects.</p></div>
     </div>
-    <div class="dg-cat-grid">
-
-      <a href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Shower%20Partition%20%26%20Door%20Systems.pdf" target="_blank" class="dg-cat rev d1">
-        <div class="dg-cat-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="1.5"/><path d="M14 2v6h6M12 13v5M9 16l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <h4>Shower Partition and Door Systems</h4>
-        <p>Frameless and framed systems</p>
-        <span class="prod-dl">Download <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
-      </a>
-
-      <a href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20MIRRORS.pdf" target="_blank" class="dg-cat rev d2">
-        <div class="dg-cat-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="1.5"/><path d="M14 2v6h6M12 13v5M9 16l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <h4>Mirrors</h4>
-        <p>Custom mirror solutions</p>
-        <span class="prod-dl">Download <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
-      </a>
-
-      <a href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Partitions.pdf" target="_blank" class="dg-cat rev d3">
-        <div class="dg-cat-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="1.5"/><path d="M14 2v6h6M12 13v5M9 16l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <h4>Partitions</h4>
-        <p>Office and residential partitions</p>
-        <span class="prod-dl">Download <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
-      </a>
-
-      <a href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Completed%20works.pdf" target="_blank" class="dg-cat rev d4">
-        <div class="dg-cat-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="1.5"/><path d="M14 2v6h6M12 13v5M9 16l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <h4>Completed Works</h4>
-        <p>Full project portfolio</p>
-        <span class="prod-dl">Download <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M5 1v6M2 5l3 3 3-3M1 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
-      </a>
-
-    </div>
+    <div class="ccat"><a href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Partitions.pdf" target="_blank" rel="noopener" class="icard rev d1" style="--ar:3/4"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FThumbnail%2FThumbnail%2520Partition%2520%2526%2520Doors.jpg&w=800&q=80&output=webp" alt="Partitions and Doors" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Thumbnail/Thumbnail%20Partition%20%26%20Doors.jpg'"/><div class="cap"><span class="num">PDF Catalogue</span><h3>Partitions and Doors</h3><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Download</span></div></a><a href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Shower%20Partition%20%26%20Door%20Systems.pdf" target="_blank" rel="noopener" class="icard rev d2" style="--ar:3/4"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FThumbnail%2FThumbnail%2520Shower%2520Cubicals.jpg&w=800&q=80&output=webp" alt="Shower Partition and Door Systems" width="4174" height="6242" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Thumbnail/Thumbnail%20Shower%20Cubicals.jpg'"/><div class="cap"><span class="num">PDF Catalogue</span><h3>Shower Partition and Door Systems</h3><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Download</span></div></a><a href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20MIRRORS.pdf" target="_blank" rel="noopener" class="icard rev d3" style="--ar:3/4"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FThumbnail%2FThumbnail%2520Mirrors.jpg&w=800&q=80&output=webp" alt="Architectural Mirrors" width="4160" height="6240" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Thumbnail/Thumbnail%20Mirrors.jpg'"/><div class="cap"><span class="num">PDF Catalogue</span><h3>Architectural Mirrors</h3><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Download</span></div></a><a href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Completed%20works.pdf" target="_blank" rel="noopener" class="icard rev d4" style="--ar:3/4"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0024%2520%281%29.JPG&w=800&q=80&output=webp" alt="Completed Works" width="6240" height="4160" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/IMG_0024%20(1).JPG'"/><div class="cap"><span class="num">PDF Catalogue</span><h3>Completed Works</h3><span class="go"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Download</span></div></a></div>
   </div>
 </section>
-
-<section class="prod-cta">
+<section class="ctab">
+  <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdeepaklogidiog%2Fdomestic-glass-live%40main%2Fimages%2FIMG_0136%2520copy.jpg&w=1800&q=80&output=webp" alt="" width="6240" height="4162" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/IMG_0136%20copy.jpg'"/>
   <div class="wrap">
-    <div class="prod-cta-i">
-      <div>
-        <h2>Need Help Choosing?</h2>
-        <p>Our team can guide you to the right glass for your project.</p>
+    <div class="ctai">
+      <div class="rev"><h2>Need Help Choosing?</h2><p>Our team can guide you to the right glass for your project, and arrange samples.</p></div>
+      <div class="ctaa rev d2">
+        <a href="contact.html" class="btn btn-w">Book a Consultation</a>
+        <a href="tel:+919000420253" class="btn btn-ol-w">Call Now</a>
+        <a href="https://wa.me/919553371114" target="_blank" rel="noopener" class="btn btn-ol-w">WhatsApp Us</a>
+        <a href="products.html" class="btn btn-ol-w">View Products</a>
       </div>
-      <a href="https://wa.me/919553371114" target="_blank" class="btn-ws">
-        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.29-1.248l-.29-.174-3.176.834.848-3.1-.19-.3A7.96 7.96 0 014 12a8 8 0 1116 0 8 8 0 01-8 8z"/></svg>
-        Get in Touch
-      </a>
     </div>
   </div>
 </section>
 
 <footer id="ft">
   <div class="wrap">
-    <div class="ftg">
+    <div class="ft">
       <div>
-        <a href="index.html"><img src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Domestic_glass_Logo__1_.png" alt="Domestic Glass" class="fli" onerror="this.outerHTML='<span style=\'font-family:var(--fm);font-size:18px;color:rgba(255,255,255,.85);display:block;margin-bottom:18px;\'>Domestic <span style=\'color:var(--teal)\'>Glass</span></span>'"/></a>
-        <p class="ftag">Custom glass solutions across India since 1991. Precision manufacturing, expert installation, dedicated project management.</p>
-        <div class="fso">
-          <a href="https://www.instagram.com/domesticglass/" target="_blank" class="fsl">IG</a>
-          <a href="https://www.facebook.com/domesticglass" target="_blank" class="fsl">FB</a>
-          <a href="https://www.linkedin.com/company/domestic-glass" target="_blank" class="fsl">IN</a>
-        </div>
+        <img class="fli" src="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none'"/>
+        <p class="ftag">Designing, fabricating, and installing custom glass solutions across India since 1991.</p>
+        <div class="fso"><a href="https://www.instagram.com/domesticglass/" target="_blank" rel="noopener" class="fsl" aria-label="Instagram"><svg width="17" height="17" fill="none" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/company/domesticglass/home/" target="_blank" rel="noopener" class="fsl" aria-label="LinkedIn"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.3 21 14.7V21h-4v-5.6c0-1.34-.03-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V21H9z"/></svg></a><a href="https://pin.it/2w9liAjEJ" target="_blank" rel="noopener" class="fsl" aria-label="Pinterest"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.64 19.31c-.09-.79-.17-2 .03-2.86l1.2-5.08s-.3-.61-.3-1.5c0-1.41.82-2.46 1.83-2.46.87 0 1.29.65 1.29 1.43 0 .87-.56 2.18-.84 3.39-.24 1.01.51 1.84 1.51 1.84 1.81 0 3.2-1.91 3.2-4.66 0-2.44-1.75-4.14-4.25-4.14-2.9 0-4.6 2.17-4.6 4.42 0 .87.34 1.81.76 2.32a.3.3 0 01.07.29l-.28 1.14c-.05.18-.15.22-.34.13-1.27-.59-2.06-2.44-2.06-3.93 0-3.2 2.32-6.13 6.7-6.13 3.52 0 6.25 2.5 6.25 5.85 0 3.5-2.2 6.3-5.26 6.3-1.03 0-2-.53-2.33-1.17l-.63 2.42c-.23.88-.85 1.98-1.26 2.66A10 10 0 1012 2z"/></svg></a><a href="https://youtube.com/@domesticglass?si=Kw6w-u86L7hpt3pt" target="_blank" rel="noopener" class="fsl" aria-label="YouTube"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12 31 31 0 001 16.8a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.75 15.02V8.98L15.5 12z"/></svg></a><a href="https://wa.me/919553371114" target="_blank" rel="noopener" class="fsl" aria-label="WhatsApp"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.2L2 22l4.8-1.4A10 10 0 0012 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18a8 8 0 01-4.3-1.2l-.3-.2-3.2.8.9-3.1-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 00-.7.3 2.8 2.8 0 00-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.2z"/></svg></a></div>
       </div>
-      <div class="fc"><h4>Solutions</h4><ul><li><a href="windows-doors.html">Windows</a></li><li><a href="railings.html">Railings</a></li><li><a href="partitions.html">Partitions and Doors</a></li><li><a href="shower-cubicles.html">Shower Cubicles</a></li><li><a href="mirrors.html">Mirrors</a></li><li><a href="products.html">Products</a></li></ul></div>
-      <div class="fc"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="fc"><h4>Contact</h4><div class="fci"><a href="tel:+919553371114" class="fca"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M12.6 10.1l-2.3-.9a.9.9 0 00-.9.2l-.9.9a9.2 9.2 0 01-4.8-4.8l.9-.9a.9.9 0 00.2-.9l-.9-2.3a.9.9 0 00-.9-.6H1.6a.9.9 0 00-.9 1A11.4 11.4 0 0012 13.3a.9.9 0 001-.9V11a.9.9 0 00-.4-.9z" stroke="currentColor" stroke-width="1"/></svg>+91 95533 71114</a><a href="mailto:info@domesticglass.in" class="fca"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><rect x="1" y="3" width="12" height="9" rx="1" stroke="currentColor" stroke-width="1"/><path d="M1 4l6 4 6-4" stroke="currentColor" stroke-width="1"/></svg>info@domesticglass.in</a><span class="fca" style="cursor:default;"><svg width="14" height="14" fill="none" viewBox="0 0 14 14"><circle cx="7" cy="5.5" r="2.5" stroke="currentColor" stroke-width="1"/><path d="M7 1C4.24 1 2 3.24 2 6c0 4 5 7 5 7s5-3 5-7c0-2.76-2.24-5-5-5z" stroke="currentColor" stroke-width="1"/></svg>Hyderabad, Telangana</span></div></div>
+      <div class="fc"><h4>Solutions</h4><ul><li><a href="partitions.html">Partitions &amp; Door Systems</a></li><li><a href="shower-cubicles.html">Shower Partition Systems</a></li><li><a href="railings.html">Railing Systems</a></li><li><a href="mirrors.html">Architectural Mirrors</a></li><li><a href="windows-doors.html">Window Systems</a></li><li><a href="products.html">Products</a></li></ul></div>
+      <div class="fc"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Inspiration</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <address><b>Showroom</b>8-2-681/A/1/A, 2nd Floor, Zoom Tower, above HDFC Bank, Banjara Hills Road No. 12, Hyderabad 500034</address>
+        <address><b>Factory</b>5-6-171/1, near Charkandil, Agapura, Nampally, Hyderabad 500001</address>
+        <ul>
+          <li><a href="tel:+919000420253">+91 90004 20253</a></li>
+          <li><a href="tel:+917893455590">+91 78934 55590</a></li>
+          <li><a href="tel:+919247522655">+91 92475 22655</a></li>
+          <li><a href="mailto:hello@domesticglass.in">hello@domesticglass.in</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="fbb"><span class="fbcp">&copy; 2025 Domestic Glass. All rights reserved.</span><div class="fbl"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+    <div class="fb"><p class="fbcp">&copy; <span class="yr">2026</span> Domestic Glass. All rights reserved.</p><div class="fbl"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
   </div>
 </footer>
+<a href="https://wa.me/919553371114" target="_blank" rel="noopener" class="wa-fab" aria-label="Chat on WhatsApp"><svg width="28" height="28" fill="#fff" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.17L2 22l4.83-1.44A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a8 8 0 01-4.29-1.25l-.29-.17-3.18.83.85-3.1-.19-.3A7.96 7.96 0 014 12a8 8 0 1116 0 8 8 0 01-8 8z"/></svg></a>
 
-<a href="https://wa.me/919553371114" target="_blank" class="wa-fab" aria-label="Chat on WhatsApp"><svg width="28" height="28" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.29-1.248l-.29-.174-3.176.834.848-3.1-.19-.3A7.96 7.96 0 014 12a8 8 0 1116 0 8 8 0 01-8 8z"/></svg></a>
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="lb-x" onclick="lbClose()" aria-label="Close">&#215;</button>
+  <button class="lb-p" onclick="lbGo(-1)" aria-label="Previous">&#8249;</button>
+  <img id="lbI" src="" alt=""/>
+  <button class="lb-n" onclick="lbGo(1)" aria-label="Next">&#8250;</button>
+  <div class="lb-c" id="lbC"></div>
+</div>
+<div class="mdl" id="catM">
+  <div class="mdl-b">
+    <button class="mdl-x" onclick="closeCat()" aria-label="Close">&#215;</button>
+    <div id="catF">
+      <h3>Download Catalogue</h3>
+      <p>Enter your details to download the PDF.</p>
+      <div class="fld"><label>Name *</label><input type="text" id="catN" placeholder="Your full name"/><div class="em" id="catNE">Please enter your name.</div></div>
+      <div class="fld"><label>Mobile *</label><input type="tel" id="catP" placeholder="+91 XXXXX XXXXX"/><div class="em" id="catPE">Please enter a valid 10-digit number.</div></div>
+      <button class="btn btn-teal" onclick="submitCat()"><svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M8 1.5v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Download Now</button>
+      <small>We respect your privacy. No spam, ever.</small>
+    </div>
+    <div class="okb" id="catOK"><i>&#10003;</i><h3>Downloading...</h3><p>Your download has started. <a id="catL" href="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Completed%20works.pdf" target="_blank" style="color:var(--teal);">Click here</a> if it doesn't begin automatically.</p></div>
+  </div>
+</div>
+<script>
+var CAT_PDF_URL="https://cdn.jsdelivr.net/gh/deepaklogidiog/domestic-glass-live@main/images/Catalogue/DG%20Completed%20works.pdf";
+</script>
 
 <script>
-window.addEventListener('scroll',function(){document.getElementById('hdr').classList.toggle('sc',window.scrollY>20);});
-(function(){var b=document.getElementById('hbg'),m=document.getElementById('mob');b.addEventListener('click',function(){b.classList.toggle('op');m.classList.toggle('op');});})();
-document.querySelectorAll('.rev').forEach(function(e){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');}})},{threshold:.15}).observe(e);});
+(function(){
+var hdr=document.getElementById('hdr');
+window.addEventListener('scroll',function(){hdr.classList.toggle('sc',window.scrollY>20);},{passive:true});
+var hbg=document.getElementById('hbg'),mob=document.getElementById('mob');
+hbg.addEventListener('click',function(){hbg.classList.toggle('op');mob.classList.toggle('op');});
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rev').forEach(function(el){ro.observe(el);});
+document.querySelectorAll('.phero .rev').forEach(function(el){el.classList.add('on');});
+document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
+})();
+/* Lightbox: any element with data-lb="group" */
+var lbSet=[],lbIdx=0;
+function lbShow(){var it=lbSet[lbIdx];document.getElementById('lbI').src=it.href;document.getElementById('lbI').alt=it.cap;document.getElementById('lbC').textContent=it.cap+'  ·  '+(lbIdx+1)+' / '+lbSet.length;}
+function lbClose(){document.getElementById('lb').classList.remove('on');document.body.style.overflow='';}
+function lbGo(d){lbIdx=(lbIdx+d+lbSet.length)%lbSet.length;lbShow();}
+document.addEventListener('click',function(e){
+  var a=e.target.closest('[data-lb]');if(!a)return;e.preventDefault();
+  var g=a.getAttribute('data-lb');
+  var all=[].slice.call(document.querySelectorAll('[data-lb="'+g+'"]')).filter(function(x){return x.offsetParent!==null;});
+  lbSet=all.map(function(x){return{href:x.getAttribute('href'),cap:x.getAttribute('data-cap')||''};});
+  lbIdx=Math.max(0,all.indexOf(a));lbShow();
+  document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';
+});
+document.getElementById('lb').addEventListener('click',function(e){if(e.target===e.currentTarget)lbClose();});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){lbClose();closeCat();}
+  if(!document.getElementById('lb').classList.contains('on'))return;
+  if(e.key==='ArrowRight')lbGo(1);if(e.key==='ArrowLeft')lbGo(-1);
+});
+var lbIm=document.getElementById('lbI');
+lbIm.addEventListener('error',function(){var u=lbIm.src;var m=u.match(/[?&]url=([^&]+)/);if(m){lbIm.src=decodeURIComponent(m[1]);}});
+/* Catalogue modal */
+function openCat(){document.getElementById('catM').classList.add('on');document.body.style.overflow='hidden';}
+function closeCat(){var m=document.getElementById('catM');if(!m.classList.contains('on'))return;m.classList.remove('on');document.body.style.overflow='';setTimeout(function(){document.getElementById('catF').style.display='block';document.getElementById('catOK').classList.remove('on');},300);}
+document.getElementById('catM').addEventListener('click',function(e){if(e.target===e.currentTarget)closeCat();});
+function submitCat(){
+  var n=document.getElementById('catN'),p=document.getElementById('catP'),ok=true;
+  if(!n.value.trim()){n.classList.add('err');document.getElementById('catNE').classList.add('on');ok=false;}else{n.classList.remove('err');document.getElementById('catNE').classList.remove('on');}
+  if(p.value.replace(/\D/g,'').length<10){p.classList.add('err');document.getElementById('catPE').classList.add('on');ok=false;}else{p.classList.remove('err');document.getElementById('catPE').classList.remove('on');}
+  if(!ok)return;
+  document.getElementById('catF').style.display='none';document.getElementById('catOK').classList.add('on');
+  var a=document.createElement('a');a.href=CAT_PDF_URL;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+}
+/* Filter tabs: <div class="tabs" data-for="ID"><button class="tab" data-f="cat"> ... items have data-cat */
+document.querySelectorAll('.tabs').forEach(function(t){
+  var box=document.getElementById(t.getAttribute('data-for'));
+  t.addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;
+    t.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on');});b.classList.add('on');
+    var f=b.getAttribute('data-f');
+    box.querySelectorAll('[data-cat]').forEach(function(it){it.style.display=(f==='all'||it.getAttribute('data-cat').split(' ').indexOf(f)>-1)?'':'none';});
+  });
+});
 </script>
 </body>
 </html>
