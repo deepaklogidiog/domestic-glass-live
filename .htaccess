@@ -1,0 +1,18 @@
+# Clean URLs: /about serves about.html, and old .html links redirect to the clean address
+Options -MultiViews
+RewriteEngine On
+
+# Redirect /page.html -> /page and /index.html -> / (only for direct browser requests)
+RewriteCond %{THE_REQUEST} \s/+(.*?/)?index\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# Remove a trailing slash: /about/ -> /about
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Serve /page from page.html when that file exists
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
