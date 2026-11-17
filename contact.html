@@ -378,7 +378,7 @@ a{text-decoration:none;color:inherit;}
         <div id="formWrap">
           <h3>Request a Consultation</h3>
           <p>Fill in your details and we will get back to you shortly.</p>
-          <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+          <form id="contactForm" onsubmit="handleSubmit(event)" novalidate><input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true"/>
             <div class="frow">
               <div class="fld"><label>Name *</label><input type="text" id="fname" placeholder="Your full name"/></div>
               <div class="fld"><label>Phone *</label><input type="tel" id="fphone" placeholder="+91 XXXXX XXXXX"/></div>
@@ -421,9 +421,19 @@ function handleSubmit(e){
   if(!phone){alert('Please enter your phone number.');return;}
   if(!type){alert('Please select a project type.');return;}
   var lead={name:name,phone:phone,email:document.getElementById('femail').value.trim(),architect:document.getElementById('farchitect').value.trim(),firm:document.getElementById('ffirm').value.trim(),type:type,location:document.getElementById('flocation').value.trim(),message:document.getElementById('fmessage').value.trim(),timestamp:new Date().toISOString()};
-  console.log('Lead submitted:',lead);
-  document.getElementById('formWrap').style.display='none';
-  document.getElementById('formSuccess').classList.add('on');
+  var btn=e.target.querySelector('button[type=submit],button');var btxt=btn?btn.innerHTML:'';
+  if(btn){btn.disabled=true;btn.textContent='Sending...';}
+  var fd=new FormData();for(var k in lead){fd.append(k,lead[k]);}
+  fd.append('source','Contact page');fd.append('page',location.href);
+  var hp=e.target.querySelector('input[name=website]');fd.append('website',hp?hp.value:'');
+  fetch('send-enquiry.php',{method:'POST',body:fd}).then(function(r){return r.json();}).then(function(d){
+    if(!d.ok)throw new Error(d.error);
+    document.getElementById('formWrap').style.display='none';
+    document.getElementById('formSuccess').classList.add('on');
+  }).catch(function(){
+    if(btn){btn.disabled=false;btn.innerHTML=btxt;}
+    alert('Sorry, your message could not be sent. Please call or WhatsApp us on +91 92475 22655, or email hello@domesticglass.in.');
+  });
 }
 </script>
 <section class="ctab">

@@ -360,7 +360,7 @@ a{text-decoration:none;color:inherit;}
       <h2>Book Your Free Site Visit</h2>
       <p>Our specialist will visit, assess, and quote at no cost.</p>
       <div class="lurg">We respond within 2 hours. Visits available across Hyderabad and major cities.</div>
-      <form onsubmit="lsub(event)">
+      <form onsubmit="lsub(event)"><input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true"/>
         <div class="fld"><label>Your Name *</label><input type="text" placeholder="Full name" required/></div>
         <div class="fld"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX" required/></div>
         <div class="fld"><label>What do you need? *</label><select required><option value="" disabled selected>Select a solution</option><option>Partitions &amp; Door Systems</option><option>Shower Partition Systems</option><option>Railing Systems</option><option>Architectural Mirrors</option><option>Window Systems</option><option>Multiple Solutions</option><option>Not sure yet</option></select></div>
@@ -402,7 +402,15 @@ a{text-decoration:none;color:inherit;}
 </section>
 <script>
 (function(){var s=document.querySelectorAll('.lhero .sl'),i=0;setInterval(function(){s[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on');},5500);})();
-function lsub(e){e.preventDefault();var b=e.target.querySelector('button');b.textContent='Submitting...';b.disabled=true;setTimeout(function(){e.target.innerHTML='<div style="text-align:center;padding:40px 0;"><div style="font-family:var(--fm);font-size:28px;font-weight:600;color:var(--black);margin-bottom:12px;">Thank You!</div><p style="color:var(--g600);font-size:17px;line-height:1.7;">We have received your request. Our team will call you within 2 hours to confirm your site visit.</p></div>';},900);}
+function lsub(e){e.preventDefault();var f=e.target,b=f.querySelector('button'),bt=b.innerHTML;b.textContent='Submitting...';b.disabled=true;
+var t=f.querySelectorAll('input[type=text]:not([name=website])'),fd=new FormData();
+fd.append('name',t[0].value.trim());fd.append('phone',f.querySelector('input[type=tel]').value.trim());
+fd.append('type',f.querySelector('select').value);fd.append('location',t[1]?t[1].value.trim():'');
+fd.append('source','Landing page - free site visit');fd.append('page',location.href);
+var hp=f.querySelector('input[name=website]');fd.append('website',hp?hp.value:'');
+fetch('send-enquiry.php',{method:'POST',body:fd}).then(function(r){return r.json();}).then(function(d){if(!d.ok)throw new Error(d.error);
+f.innerHTML='<div style="text-align:center;padding:40px 0;"><div style="font-family:var(--fm);font-size:28px;font-weight:600;color:var(--black);margin-bottom:12px;">Thank You!</div><p style="color:var(--g600);font-size:17px;line-height:1.7;">We have received your request. Our team will call you within 2 hours to confirm your site visit.</p></div>';
+}).catch(function(){b.disabled=false;b.innerHTML=bt;alert('Sorry, your request could not be sent. Please call or WhatsApp us on +91 92475 22655, or email hello@domesticglass.in.');});}
 </script>
 <footer id="ft">
   <div class="wrap">
