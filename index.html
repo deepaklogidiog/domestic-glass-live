@@ -316,6 +316,11 @@ a{text-decoration:none;color:inherit;}
   .rev,.slide,.slide img,.logo-row,.hbar i{animation:none!important;transition:none!important;opacity:1;transform:none!important;}
   .slide:not(.on){opacity:0;}
 }
+
+/* Hero fix: let the hero grow with its content so nothing is cut off on short screens */
+#hero{height:auto;max-height:none;min-height:min(calc(100vh - 76px),1000px);min-height:min(calc(100svh - 76px),1000px);display:flex;flex-direction:column;}
+.hero-in{position:relative;inset:auto;flex:1 0 auto;padding-top:56px;}
+@media(max-width:1024px){#hero{min-height:calc(100svh - 68px);}.hero-in{padding-top:40px;}}
 </style>
 </head>
 <body>
@@ -372,9 +377,9 @@ a{text-decoration:none;color:inherit;}
 
 <!-- HERO -->
 <section id="hero">
-  <div class="slide on"><img src="images/IMG_0024%20(1).JPG" alt="Glass partition in a contemporary lounge by Domestic Glass" fetchpriority="high"/></div>
-  <div class="slide"><img src="images/001%20(5).jpg" alt="Residential living space with custom glass" loading="lazy"/></div>
-  <div class="slide"><img src="images/IMG_0017%20(1).JPG" alt="Commercial glass facade and partitions" loading="lazy"/></div>
+  <div class="slide on"><img src="images-opt/IMG_0024%20%281%29-w1920.webp" alt="Glass partition in a contemporary lounge by Domestic Glass" fetchpriority="high"/></div>
+  <div class="slide"><img src="images-opt/001%20%285%29-w1920.webp" alt="Residential living space with custom glass" loading="lazy"/></div>
+  <div class="slide"><img src="images-opt/IMG_0017%20%281%29-w1920.webp" alt="Commercial glass facade and partitions" loading="lazy"/></div>
   <div class="slide"><img src="images-opt/IMG_0372-w1920.webp" alt="Glass installation opening onto greenery" loading="lazy"/></div>
 
   <div class="hero-in">
@@ -468,7 +473,7 @@ a{text-decoration:none;color:inherit;}
   <div class="wrap">
     <div class="feat-g">
       <div class="feat-img rev">
-        <img src="images/001%20(4).jpg" alt="Arched glass panels in amber, blue and clear textured glass" loading="lazy" width="1672" height="941"/>
+        <img src="images-opt/001%20%284%29-w1920.webp" alt="Arched glass panels in amber, blue and clear textured glass" loading="lazy" width="1672" height="941"/>
         <span class="feat-tag">Featured Work</span>
       </div>
       <div class="feat-txt">
@@ -554,7 +559,7 @@ a{text-decoration:none;color:inherit;}
       <a href="/gallery" class="ig t rev d2"><img src="images-opt/IMG_0153%20copy-w1920.webp" alt="Bedroom glass feature wall" loading="lazy"/><span>Residential</span></a>
       <a href="/gallery" class="ig rev d3"><img src="images-opt/filmnagar-w1920.webp" alt="Glass railing in double-height space" loading="lazy"/><span>Railings</span></a>
       <a href="/gallery" class="ig w rev"><img src="images-opt/kompally-w1920.webp" alt="Fluted glass sliding partition" loading="lazy"/><span>Partitions</span></a>
-      <a href="/gallery" class="ig rev d1"><img src="images/IMG_0084%20(1).jpg" alt="Framed glass office partition" loading="lazy"/><span>Partitions</span></a>
+      <a href="/gallery" class="ig rev d1"><img src="images-opt/IMG_0084%20%281%29-w1920.webp" alt="Framed glass office partition" loading="lazy"/><span>Partitions</span></a>
     </div>
   </div>
 </section>
